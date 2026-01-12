@@ -62,6 +62,8 @@ struct ContentView: View {
                 LabyrinthView()
             case .wuerfel:
                 WuerfelView()
+            case .waehleZahl:
+                WaehleZahlView()
             default:
                 // Placeholder for activities not yet implemented
                 PlayingPlaceholder(activityType: activityType, subActivity: subActivity)

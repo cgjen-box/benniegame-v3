@@ -43,13 +43,18 @@ struct ZahlenSelectionView: View {
                     }
                     .buttonStyle(.plain)
 
-                    // Wähle die Zahl - Coming in 03-04
-                    subActivityButton(
-                        title: "Wähle die Zahl",
-                        subtitle: "Zahlen finden",
-                        icon: "number.circle.fill",
-                        comingSoon: true
-                    )
+                    // Wähle die Zahl - NOW PLAYABLE
+                    Button {
+                        coordinator.startPlaying(.zahlen, .waehleZahl)
+                    } label: {
+                        subActivityButton(
+                            title: "Wähle die Zahl",
+                            subtitle: "Zahlen finden",
+                            icon: "number.circle.fill",
+                            comingSoon: false
+                        )
+                    }
+                    .buttonStyle(.plain)
                 }
 
                 Spacer()
