@@ -307,9 +307,9 @@ struct DiceFace: View {
 
     var body: some View {
         ZStack {
-            // White dice background
+            // Cream dice background (avoiding pure white per PLAYBOOK)
             RoundedRectangle(cornerRadius: 16)
-                .fill(Color.white)
+                .fill(BennieColors.cream)
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
                         .stroke(BennieColors.woodDark, lineWidth: 3)

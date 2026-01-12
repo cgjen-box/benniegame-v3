@@ -161,7 +161,7 @@ struct VideoManagementView: View {
                         .frame(height: 56)
                         .background(
                             RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.white)
+                                .fill(BennieColors.cream)
                         )
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
@@ -182,7 +182,7 @@ struct VideoManagementView: View {
                         .frame(height: 56)
                         .background(
                             RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.white)
+                                .fill(BennieColors.cream)
                         )
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)

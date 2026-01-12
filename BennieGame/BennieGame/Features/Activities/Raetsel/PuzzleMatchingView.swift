@@ -210,9 +210,9 @@ struct PuzzleMatchingView: View {
 
         GeometryReader { geometry in
             ZStack {
-                // Cell background
+                // Cell background (using cream for empty cells per PLAYBOOK)
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(color?.swiftUIColor ?? Color.white)
+                    .fill(color?.swiftUIColor ?? BennieColors.cream)
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(BennieColors.woodDark.opacity(0.5), lineWidth: 2)
@@ -298,7 +298,7 @@ struct PuzzleMatchingView: View {
         } label: {
             ZStack {
                 Circle()
-                    .fill(Color.white)
+                    .fill(BennieColors.cream)
                     .frame(width: 96, height: 96)
                     .overlay(
                         Circle()
