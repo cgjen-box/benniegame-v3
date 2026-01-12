@@ -33,7 +33,7 @@ enum GameState: Equatable {
     case videoSelection
 
     /// Playing YouTube video with countdown
-    case videoPlaying(minutesRemaining: Int)
+    case videoPlaying(minutesRemaining: Int, videoId: String)
 
     /// Parent gate math challenge
     case parentGate

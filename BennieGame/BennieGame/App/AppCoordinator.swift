@@ -70,9 +70,9 @@ final class AppCoordinator {
         transition(to: .videoSelection)
     }
 
-    /// Start video playback with time limit
-    func startVideoPlayback(minutes: Int) {
-        transition(to: .videoPlaying(minutesRemaining: minutes))
+    /// Start video playback with time limit and video ID
+    func startVideoPlayback(minutes: Int, videoId: String) {
+        transition(to: .videoPlaying(minutesRemaining: minutes, videoId: videoId))
     }
 
     /// Show parent gate

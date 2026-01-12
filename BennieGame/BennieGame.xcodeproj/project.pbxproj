@@ -35,6 +35,7 @@
 		K1000003299E000100000001 /* WaehleZahlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = K1000004299E000100000001 /* WaehleZahlView.swift */; };
 		L1000001299E000100000001 /* CoinFlyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = L1000002299E000100000001 /* CoinFlyAnimation.swift */; };
 		M1000001299E000100000001 /* CelebrationOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = M1000002299E000100000001 /* CelebrationOverlay.swift */; };
+		N1000001299E000100000001 /* VideoSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = N1000002299E000100000001 /* VideoSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		K1000004299E000100000001 /* WaehleZahlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaehleZahlView.swift; sourceTree = "<group>"; };
 		L1000002299E000100000001 /* CoinFlyAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFlyAnimation.swift; sourceTree = "<group>"; };
 		M1000002299E000100000001 /* CelebrationOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationOverlay.swift; sourceTree = "<group>"; };
+		N1000002299E000100000001 /* VideoSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 		C100000F299E000100000001 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				N1000002299E000100000001 /* VideoSelectionView.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				K1000003299E000100000001 /* WaehleZahlView.swift in Sources */,
 				L1000001299E000100000001 /* CoinFlyAnimation.swift in Sources */,
 				M1000001299E000100000001 /* CelebrationOverlay.swift in Sources */,
+				N1000001299E000100000001 /* VideoSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

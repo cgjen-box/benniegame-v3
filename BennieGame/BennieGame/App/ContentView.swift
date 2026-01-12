@@ -78,8 +78,8 @@ struct ContentView: View {
         case .videoSelection:
             VideoSelectionPlaceholder()
 
-        case .videoPlaying(let minutesRemaining):
-            VideoPlayingPlaceholder(minutesRemaining: minutesRemaining)
+        case .videoPlaying(let minutesRemaining, let videoId):
+            VideoPlayingPlaceholder(minutesRemaining: minutesRemaining, videoId: videoId)
 
         case .parentDashboard:
             ParentDashboardPlaceholder()
@@ -239,7 +239,7 @@ private struct TreasurePlaceholder: View {
                 VStack(spacing: 16) {
                     Button("5 Min YouTube (10 Münzen)") {
                         if playerStore.spendCoins(10) {
-                            coordinator.startVideoPlayback(minutes: 5)
+                            coordinator.startVideoPlayback(minutes: 5, videoId: "qw0Jz5zJkgE")
                         }
                     }
                     .buttonStyle(.borderedProminent)
@@ -247,7 +247,7 @@ private struct TreasurePlaceholder: View {
 
                     Button("12 Min YouTube (20 Münzen)") {
                         if playerStore.spendCoins(20) {
-                            coordinator.startVideoPlayback(minutes: 12)
+                            coordinator.startVideoPlayback(minutes: 12, videoId: "qw0Jz5zJkgE")
                         }
                     }
                     .buttonStyle(.borderedProminent)
@@ -286,6 +286,7 @@ private struct VideoSelectionPlaceholder: View {
 private struct VideoPlayingPlaceholder: View {
     @Environment(AppCoordinator.self) private var coordinator
     let minutesRemaining: Int
+    let videoId: String
 
     var body: some View {
         VStack(spacing: 24) {
@@ -295,6 +296,10 @@ private struct VideoPlayingPlaceholder: View {
 
             Text("\(minutesRemaining) Minuten")
                 .font(BennieFont.number())
+
+            Text("Video ID: \(videoId)")
+                .font(BennieFont.label())
+                .foregroundStyle(BennieColors.woodMedium)
 
             Button("Fertig") {
                 coordinator.navigateHome()
