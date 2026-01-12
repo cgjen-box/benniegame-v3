@@ -28,15 +28,22 @@ struct ZahlenSelectionView: View {
 
                 Spacer()
 
-                // Sub-activity placeholders
+                // Sub-activity buttons
                 VStack(spacing: 24) {
-                    subActivityButton(
-                        title: "Würfel",
-                        subtitle: "Punkte zählen",
-                        icon: "die.face.5.fill",
-                        comingSoon: true
-                    )
+                    // Würfel - NOW PLAYABLE
+                    Button {
+                        coordinator.startPlaying(.zahlen, .wuerfel)
+                    } label: {
+                        subActivityButton(
+                            title: "Würfel",
+                            subtitle: "Punkte zählen",
+                            icon: "die.face.5.fill",
+                            comingSoon: false
+                        )
+                    }
+                    .buttonStyle(.plain)
 
+                    // Wähle die Zahl - Coming in 03-04
                     subActivityButton(
                         title: "Wähle die Zahl",
                         subtitle: "Zahlen finden",
