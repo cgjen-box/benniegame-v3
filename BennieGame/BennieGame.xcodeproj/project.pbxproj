@@ -22,6 +22,9 @@
 		G1000001299E000100000001 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = G1000002299E000100000001 /* GameState.swift */; };
 		G1000003299E000100000001 /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = G1000004299E000100000001 /* PlayerData.swift */; };
 		G1000005299E000100000001 /* PlayerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = G1000006299E000100000001 /* PlayerStore.swift */; };
+		H1000001299E000100000001 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = H1000002299E000100000001 /* LoadingView.swift */; };
+		H1000003299E000100000001 /* PlayerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = H1000004299E000100000001 /* PlayerSelectionView.swift */; };
+		H1000005299E000100000001 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = H1000006299E000100000001 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		G1000002299E000100000001 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		G1000004299E000100000001 /* PlayerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
 		G1000006299E000100000001 /* PlayerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStore.swift; sourceTree = "<group>"; };
+		H1000002299E000100000001 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		H1000004299E000100000001 /* PlayerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionView.swift; sourceTree = "<group>"; };
+		H1000006299E000100000001 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 		C1000009299E000100000001 /* Loading */ = {
 			isa = PBXGroup;
 			children = (
+				H1000002299E000100000001 /* LoadingView.swift */,
 			);
 			path = Loading;
 			sourceTree = "<group>";
@@ -154,6 +161,7 @@
 		C100000A299E000100000001 /* PlayerSelection */ = {
 			isa = PBXGroup;
 			children = (
+				H1000004299E000100000001 /* PlayerSelectionView.swift */,
 			);
 			path = PlayerSelection;
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 		C100000B299E000100000001 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				H1000006299E000100000001 /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -389,6 +398,9 @@
 				G1000001299E000100000001 /* GameState.swift in Sources */,
 				G1000003299E000100000001 /* PlayerData.swift in Sources */,
 				G1000005299E000100000001 /* PlayerStore.swift in Sources */,
+				H1000001299E000100000001 /* LoadingView.swift in Sources */,
+				H1000003299E000100000001 /* PlayerSelectionView.swift in Sources */,
+				H1000005299E000100000001 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
