@@ -12,6 +12,8 @@
 		A1000005299E000100000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000006299E000100000001 /* Assets.xcassets */; };
 		B1000001299E000100000001 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000002299E000100000001 /* AppCoordinator.swift */; };
 		B1000003299E000100000001 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000004299E000100000001 /* Extensions.swift */; };
+		E1000001299E000100000001 /* BennieColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000002299E000100000001 /* BennieColors.swift */; };
+		E1000003299E000100000001 /* BennieTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000004299E000100000001 /* BennieTypography.swift */; };
 		D1000001299E000100000001 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D1000002299E000100000001 /* Lottie */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 		A1000008299E000100000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1000002299E000100000001 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B1000004299E000100000001 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E1000002299E000100000001 /* BennieColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BennieColors.swift; sourceTree = "<group>"; };
+		E1000004299E000100000001 /* BennieTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BennieTypography.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 		C1000011299E000100000001 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				E1000002299E000100000001 /* BennieColors.swift */,
+				E1000004299E000100000001 /* BennieTypography.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -353,6 +359,8 @@
 				A1000001299E000100000001 /* BennieGameApp.swift in Sources */,
 				B1000001299E000100000001 /* AppCoordinator.swift in Sources */,
 				B1000003299E000100000001 /* Extensions.swift in Sources */,
+				E1000001299E000100000001 /* BennieColors.swift in Sources */,
+				E1000003299E000100000001 /* BennieTypography.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
