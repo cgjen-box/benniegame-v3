@@ -25,6 +25,11 @@ struct LabyrinthView: View {
     @State private var currentPath: [CGPoint] = []
     @State private var mazeSize: CGSize = .zero
 
+    // MARK: - Coin Animation State
+
+    @State private var showCoinAnimation: Bool = false
+    @State private var coinStartPosition: CGPoint = .zero
+
     // MARK: - Constants
 
     private let pathWidth: CGFloat = 44
@@ -41,22 +46,36 @@ struct LabyrinthView: View {
     // MARK: - Body
 
     var body: some View {
-        VStack(spacing: 0) {
-            // Navigation header
-            navigationHeader
+        ZStack {
+            VStack(spacing: 0) {
+                // Navigation header
+                navigationHeader
 
-            Spacer()
+                Spacer()
 
-            // Maze area
-            mazeSection
+                // Maze area
+                mazeSection
 
-            Spacer()
+                Spacer()
 
-            // Instructions
-            instructionSection
+                // Instructions
+                instructionSection
+            }
+            .background(BennieColors.cream.ignoresSafeArea())
+            .overlay(errorOverlay)
+
+            // Coin fly animation overlay
+            if showCoinAnimation {
+                CoinFlyAnimation(
+                    startPosition: coinStartPosition,
+                    targetPosition: CGPoint(x: UIScreen.main.bounds.width / 2, y: 80),
+                    onComplete: {
+                        showCoinAnimation = false
+                        handleCoinAnimationComplete()
+                    }
+                )
+            }
         }
-        .background(BennieColors.cream.ignoresSafeArea())
-        .overlay(errorOverlay)
     }
 
     // MARK: - Navigation Header
@@ -402,17 +421,31 @@ struct LabyrinthView: View {
         hasCompleted = true
         isTracing = false
 
-        // Award coin
+        // Get goal position for coin animation start
+        let scaledPoints = scaledPathPoints(in: mazeSize)
+        if let goalPoint = scaledPoints.last {
+            coinStartPosition = goalPoint
+        } else {
+            coinStartPosition = CGPoint(x: UIScreen.main.bounds.width / 2, y: 400)
+        }
+
+        // Trigger coin animation after brief delay
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            showCoinAnimation = true
+        }
+    }
+
+    /// Called when coin fly animation completes
+    private func handleCoinAnimationComplete() {
+        // Award coin after animation
         if let newCoins = playerStore.awardCoin() {
             // Check for celebration
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                if coordinator.shouldShowCelebration(for: newCoins) {
-                    coordinator.showCelebration(coinsEarned: newCoins)
-                } else {
-                    // Next maze
-                    currentLevel += 1
-                    resetTracing()
-                }
+            if coordinator.shouldShowCelebration(for: newCoins) {
+                coordinator.showCelebration(coinsEarned: newCoins)
+            } else {
+                // Next maze
+                currentLevel += 1
+                resetTracing()
             }
         }
     }

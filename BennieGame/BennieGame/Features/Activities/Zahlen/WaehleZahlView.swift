@@ -24,28 +24,47 @@ struct WaehleZahlView: View {
     @State private var questionsAnswered: Int = 0
     @State private var lastTargetNumber: Int = 0  // Avoid repeats
 
+    // MARK: - Coin Animation State
+
+    @State private var showCoinAnimation: Bool = false
+    @State private var coinStartPosition: CGPoint = .zero
+
     // MARK: - Body
 
     var body: some View {
-        VStack(spacing: 0) {
-            // Navigation header
-            navigationHeader
+        ZStack {
+            VStack(spacing: 0) {
+                // Navigation header
+                navigationHeader
 
-            Spacer()
+                Spacer()
 
-            // Target number display
-            targetSection
+                // Target number display
+                targetSection
 
-            Spacer()
+                Spacer()
 
-            // Number grid
-            numberGridSection
+                // Number grid
+                numberGridSection
 
-            Spacer()
-        }
-        .background(BennieColors.cream.ignoresSafeArea())
-        .onAppear {
-            selectNewTarget()
+                Spacer()
+            }
+            .background(BennieColors.cream.ignoresSafeArea())
+            .onAppear {
+                selectNewTarget()
+            }
+
+            // Coin fly animation overlay
+            if showCoinAnimation {
+                CoinFlyAnimation(
+                    startPosition: coinStartPosition,
+                    targetPosition: CGPoint(x: UIScreen.main.bounds.width / 2, y: 80),
+                    onComplete: {
+                        showCoinAnimation = false
+                        handleCoinAnimationComplete()
+                    }
+                )
+            }
         }
     }
 
@@ -164,34 +183,39 @@ struct WaehleZahlView: View {
     // MARK: - Number Button
 
     private func numberButton(_ number: Int) -> some View {
-        Button {
-            handleNumberTap(number)
-        } label: {
-            ZStack {
-                // Background circle
-                Circle()
-                    .fill(buttonColor(for: number))
-                    .overlay(
-                        Circle()
-                            .stroke(buttonBorderColor(for: number), lineWidth: 3)
-                    )
+        GeometryReader { geometry in
+            Button {
+                // Store button center for coin animation
+                let frame = geometry.frame(in: .global)
+                coinStartPosition = CGPoint(x: frame.midX, y: frame.midY)
+                handleNumberTap(number)
+            } label: {
+                ZStack {
+                    // Background circle
+                    Circle()
+                        .fill(buttonColor(for: number))
+                        .overlay(
+                            Circle()
+                                .stroke(buttonBorderColor(for: number), lineWidth: 3)
+                        )
 
-                // Number text
-                Text(number == 10 ? "10" : "\(number)")
-                    .font(BennieFont.number(number == 10 ? 32 : 40))
-                    .foregroundColor(BennieColors.textOnWood)
+                    // Number text
+                    Text(number == 10 ? "10" : "\(number)")
+                        .font(BennieFont.number(number == 10 ? 32 : 40))
+                        .foregroundColor(BennieColors.textOnWood)
+                }
+                .shadow(
+                    color: buttonShadowColor(for: number),
+                    radius: isHighlighted(number) ? 8 : 2,
+                    x: 0,
+                    y: 2
+                )
             }
-            .frame(width: 80, height: 80)
-            .shadow(
-                color: buttonShadowColor(for: number),
-                radius: isHighlighted(number) ? 8 : 2,
-                x: 0,
-                y: 2
-            )
+            .buttonStyle(.plain)
+            .disabled(showFeedback || showCoinAnimation)
+            .accessibilityLabel("Zahl \(number)")
         }
-        .buttonStyle(.plain)
-        .disabled(showFeedback)
-        .accessibilityLabel("Zahl \(number)")
+        .frame(width: 80, height: 80)
     }
 
     // MARK: - Button Styling
@@ -257,22 +281,26 @@ struct WaehleZahlView: View {
     private func handleCorrectAnswer() {
         feedbackIsCorrect = true
         showFeedback = true
+        questionsAnswered += 1
 
-        // Award coin
+        // Trigger coin animation after brief feedback
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            showFeedback = false
+            selectedNumber = nil
+            showCoinAnimation = true
+        }
+    }
+
+    /// Called when coin fly animation completes
+    private func handleCoinAnimationComplete() {
+        // Award coin after animation
         if let newCoins = playerStore.awardCoin() {
-            questionsAnswered += 1
-
             // Check for celebration
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                showFeedback = false
-                selectedNumber = nil
-
-                if coordinator.shouldShowCelebration(for: newCoins) {
-                    coordinator.showCelebration(coinsEarned: newCoins)
-                } else {
-                    // Select new target
-                    selectNewTarget()
-                }
+            if coordinator.shouldShowCelebration(for: newCoins) {
+                coordinator.showCelebration(coinsEarned: newCoins)
+            } else {
+                // Select new target
+                selectNewTarget()
             }
         }
     }

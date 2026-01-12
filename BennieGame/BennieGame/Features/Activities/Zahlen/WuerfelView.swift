@@ -24,28 +24,48 @@ struct WuerfelView: View {
     @State private var tappedNumber: Int? = nil
     @State private var score: Int = 0
 
+    // MARK: - Coin Animation State
+
+    @State private var showCoinAnimation: Bool = false
+    @State private var coinStartPosition: CGPoint = .zero
+    @State private var pendingCoinCount: Int? = nil
+
     // MARK: - Body
 
     var body: some View {
-        VStack(spacing: 0) {
-            // Navigation header
-            navigationHeader
+        ZStack {
+            VStack(spacing: 0) {
+                // Navigation header
+                navigationHeader
 
-            Spacer()
+                Spacer()
 
-            // Dice display
-            diceSection
+                // Dice display
+                diceSection
 
-            Spacer()
+                Spacer()
 
-            // Number buttons
-            numberButtonsSection
+                // Number buttons
+                numberButtonsSection
 
-            Spacer()
-        }
-        .background(BennieColors.cream.ignoresSafeArea())
-        .onAppear {
-            rollDice()
+                Spacer()
+            }
+            .background(BennieColors.cream.ignoresSafeArea())
+            .onAppear {
+                rollDice()
+            }
+
+            // Coin fly animation overlay
+            if showCoinAnimation {
+                CoinFlyAnimation(
+                    startPosition: coinStartPosition,
+                    targetPosition: CGPoint(x: UIScreen.main.bounds.width / 2, y: 80),
+                    onComplete: {
+                        showCoinAnimation = false
+                        handleCoinAnimationComplete()
+                    }
+                )
+            }
         }
     }
 
@@ -144,34 +164,39 @@ struct WuerfelView: View {
     // MARK: - Number Button
 
     private func numberButton(_ number: Int) -> some View {
-        Button {
-            handleNumberTap(number)
-        } label: {
-            ZStack {
-                // Background
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(buttonColor(for: number))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(buttonBorderColor(for: number), lineWidth: 3)
-                    )
+        GeometryReader { geometry in
+            Button {
+                // Store button center for coin animation
+                let frame = geometry.frame(in: .global)
+                coinStartPosition = CGPoint(x: frame.midX, y: frame.midY)
+                handleNumberTap(number)
+            } label: {
+                ZStack {
+                    // Background
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(buttonColor(for: number))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(buttonBorderColor(for: number), lineWidth: 3)
+                        )
 
-                // Number
-                Text("\(number)")
-                    .font(BennieFont.number(48))
-                    .foregroundColor(BennieColors.textOnWood)
+                    // Number
+                    Text("\(number)")
+                        .font(BennieFont.number(48))
+                        .foregroundColor(BennieColors.textOnWood)
+                }
+                .shadow(
+                    color: buttonShadowColor(for: number),
+                    radius: showFeedback && tappedNumber == number ? 8 : 2,
+                    x: 0,
+                    y: 2
+                )
             }
-            .frame(width: 96, height: 96)
-            .shadow(
-                color: buttonShadowColor(for: number),
-                radius: showFeedback && tappedNumber == number ? 8 : 2,
-                x: 0,
-                y: 2
-            )
+            .buttonStyle(.plain)
+            .disabled(isRolling || showFeedback || showCoinAnimation)
+            .accessibilityLabel("Zahl \(number)")
         }
-        .buttonStyle(.plain)
-        .disabled(isRolling || showFeedback)
-        .accessibilityLabel("Zahl \(number)")
+        .frame(width: 96, height: 96)
     }
 
     // MARK: - Button Styling
@@ -233,22 +258,26 @@ struct WuerfelView: View {
     private func handleCorrectAnswer() {
         feedbackIsCorrect = true
         showFeedback = true
+        score += 1
 
-        // Award coin
+        // Trigger coin animation after brief feedback
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            showFeedback = false
+            tappedNumber = nil
+            showCoinAnimation = true
+        }
+    }
+
+    /// Called when coin fly animation completes
+    private func handleCoinAnimationComplete() {
+        // Award coin after animation
         if let newCoins = playerStore.awardCoin() {
-            score += 1
-
             // Check for celebration
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                showFeedback = false
-                tappedNumber = nil
-
-                if coordinator.shouldShowCelebration(for: newCoins) {
-                    coordinator.showCelebration(coinsEarned: newCoins)
-                } else {
-                    // Roll next dice
-                    rollDice()
-                }
+            if coordinator.shouldShowCelebration(for: newCoins) {
+                coordinator.showCelebration(coinsEarned: newCoins)
+            } else {
+                // Roll next dice
+                rollDice()
             }
         }
     }

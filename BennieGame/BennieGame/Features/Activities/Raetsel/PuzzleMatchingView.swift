@@ -23,6 +23,12 @@ struct PuzzleMatchingView: View {
     @State private var currentLevel: Int = 1
     @State private var showingSuccess: Bool = false
 
+    // MARK: - Coin Animation State
+
+    @State private var showCoinAnimation: Bool = false
+    @State private var coinStartPosition: CGPoint = .zero
+    @State private var lastTappedCellCenter: CGPoint = .zero
+
     // MARK: - Computed Properties
 
     /// Grid size based on current level
@@ -61,26 +67,40 @@ struct PuzzleMatchingView: View {
     // MARK: - Body
 
     var body: some View {
-        VStack(spacing: 0) {
-            // Navigation header
-            navigationHeader
+        ZStack {
+            VStack(spacing: 0) {
+                // Navigation header
+                navigationHeader
 
-            Spacer()
+                Spacer()
 
-            // Dual grid display
-            dualGridSection
+                // Dual grid display
+                dualGridSection
 
-            Spacer()
+                Spacer()
 
-            // Color picker
-            colorPickerSection
-        }
-        .background(BennieColors.cream.ignoresSafeArea())
-        .onAppear {
-            generateLevel()
-        }
-        .onChange(of: playerGrid) { _, _ in
-            checkForMatch()
+                // Color picker
+                colorPickerSection
+            }
+            .background(BennieColors.cream.ignoresSafeArea())
+            .onAppear {
+                generateLevel()
+            }
+            .onChange(of: playerGrid) { _, _ in
+                checkForMatch()
+            }
+
+            // Coin fly animation overlay
+            if showCoinAnimation {
+                CoinFlyAnimation(
+                    startPosition: coinStartPosition,
+                    targetPosition: CGPoint(x: UIScreen.main.bounds.width / 2, y: 80),
+                    onComplete: {
+                        showCoinAnimation = false
+                        handleCoinAnimationComplete()
+                    }
+                )
+            }
         }
     }
 
@@ -198,21 +218,29 @@ struct PuzzleMatchingView: View {
     private func cellView(color: PuzzleColor?, row: Int, col: Int, isInteractive: Bool) -> some View {
         let cellSize: CGFloat = gridSize <= 4 ? 96 : (gridSize == 5 ? 80 : 70)
 
-        ZStack {
-            // Cell background
-            RoundedRectangle(cornerRadius: 8)
-                .fill(color?.swiftUIColor ?? Color.white)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(BennieColors.woodDark.opacity(0.5), lineWidth: 2)
-                )
-        }
-        .frame(width: cellSize, height: cellSize)
-        .onTapGesture {
-            if isInteractive {
-                handleCellTap(row: row, col: col)
+        GeometryReader { geometry in
+            ZStack {
+                // Cell background
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(color?.swiftUIColor ?? Color.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(BennieColors.woodDark.opacity(0.5), lineWidth: 2)
+                    )
+            }
+            .onTapGesture {
+                if isInteractive {
+                    // Store cell center position for coin animation
+                    let frame = geometry.frame(in: .global)
+                    lastTappedCellCenter = CGPoint(
+                        x: frame.midX,
+                        y: frame.midY
+                    )
+                    handleCellTap(row: row, col: col)
+                }
             }
         }
+        .frame(width: cellSize, height: cellSize)
         .accessibilityLabel("Zelle \(row + 1), \(col + 1)")
         .accessibilityHint(isInteractive ? "Tippe um Farbe zu setzen" : "")
     }
@@ -396,7 +424,14 @@ struct PuzzleMatchingView: View {
     private func checkForMatch() {
         guard isGridMatched else { return }
 
-        // Success! Award coin
+        // Success! Trigger coin animation from grid center
+        coinStartPosition = lastTappedCellCenter
+        showCoinAnimation = true
+    }
+
+    /// Called when coin fly animation completes
+    private func handleCoinAnimationComplete() {
+        // Award coin after animation
         if let newCoins = playerStore.awardCoin() {
             // Check for celebration
             if coordinator.shouldShowCelebration(for: newCoins) {
