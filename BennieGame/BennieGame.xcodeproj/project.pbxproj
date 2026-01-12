@@ -34,6 +34,7 @@
 		I1000003299E000100000001 /* ZahlenSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I1000004299E000100000001 /* ZahlenSelectionView.swift */; };
 		I1000005299E000100000001 /* TreasureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I1000006299E000100000001 /* TreasureView.swift */; };
 		I1000007299E000100000001 /* ParentGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I1000008299E000100000001 /* ParentGateView.swift */; };
+		PD000001299E000100000001 /* ParentDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PD000002299E000100000001 /* ParentDashboardView.swift */; };
 		J1000001299E000100000001 /* PuzzleMatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = J1000002299E000100000001 /* PuzzleMatchingView.swift */; };
 		J1000003299E000100000001 /* LabyrinthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = J1000004299E000100000001 /* LabyrinthView.swift */; };
 		K1000001299E000100000001 /* WuerfelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = K1000002299E000100000001 /* WuerfelView.swift */; };
@@ -73,6 +74,7 @@
 		I1000004299E000100000001 /* ZahlenSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZahlenSelectionView.swift; sourceTree = "<group>"; };
 		I1000006299E000100000001 /* TreasureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureView.swift; sourceTree = "<group>"; };
 		I1000008299E000100000001 /* ParentGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentGateView.swift; sourceTree = "<group>"; };
+		PD000002299E000100000001 /* ParentDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDashboardView.swift; sourceTree = "<group>"; };
 		J1000002299E000100000001 /* PuzzleMatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleMatchingView.swift; sourceTree = "<group>"; };
 		J1000004299E000100000001 /* LabyrinthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabyrinthView.swift; sourceTree = "<group>"; };
 		K1000002299E000100000001 /* WuerfelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WuerfelView.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				I1000008299E000100000001 /* ParentGateView.swift */,
+				PD000002299E000100000001 /* ParentDashboardView.swift */,
 			);
 			path = Parent;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				I1000003299E000100000001 /* ZahlenSelectionView.swift in Sources */,
 				I1000005299E000100000001 /* TreasureView.swift in Sources */,
 				I1000007299E000100000001 /* ParentGateView.swift in Sources */,
+				PD000001299E000100000001 /* ParentDashboardView.swift in Sources */,
 				J1000001299E000100000001 /* PuzzleMatchingView.swift in Sources */,
 				J1000003299E000100000001 /* LabyrinthView.swift in Sources */,
 				K1000001299E000100000001 /* WuerfelView.swift in Sources */,

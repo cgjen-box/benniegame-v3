@@ -82,7 +82,7 @@ struct ContentView: View {
             VideoPlayerView(minutesRemaining: minutesRemaining, videoId: videoId)
 
         case .parentDashboard:
-            ParentDashboardPlaceholder()
+            ParentDashboardView()
         }
     }
 
