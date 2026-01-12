@@ -43,13 +43,18 @@ struct RaetselSelectionView: View {
                     }
                     .buttonStyle(.plain)
 
-                    // Labyrinth - Coming in 03-02
-                    subActivityButton(
-                        title: "Labyrinth",
-                        subtitle: "Den Weg finden",
-                        icon: "arrow.triangle.turn.up.right.circle.fill",
-                        comingSoon: true
-                    )
+                    // Labyrinth - NOW PLAYABLE
+                    Button {
+                        coordinator.startPlaying(.raetsel, .labyrinth)
+                    } label: {
+                        subActivityButton(
+                            title: "Labyrinth",
+                            subtitle: "Den Weg finden",
+                            icon: "arrow.triangle.turn.up.right.circle.fill",
+                            comingSoon: false
+                        )
+                    }
+                    .buttonStyle(.plain)
                 }
 
                 Spacer()

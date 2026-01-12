@@ -58,6 +58,8 @@ struct ContentView: View {
             switch subActivity {
             case .puzzleMatching:
                 PuzzleMatchingView()
+            case .labyrinth:
+                LabyrinthView()
             default:
                 // Placeholder for activities not yet implemented
                 PlayingPlaceholder(activityType: activityType, subActivity: subActivity)

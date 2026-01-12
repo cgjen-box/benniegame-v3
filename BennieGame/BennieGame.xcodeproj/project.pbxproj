@@ -30,6 +30,7 @@
 		I1000005299E000100000001 /* TreasureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I1000006299E000100000001 /* TreasureView.swift */; };
 		I1000007299E000100000001 /* ParentGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I1000008299E000100000001 /* ParentGateView.swift */; };
 		J1000001299E000100000001 /* PuzzleMatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = J1000002299E000100000001 /* PuzzleMatchingView.swift */; };
+		J1000003299E000100000001 /* LabyrinthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = J1000004299E000100000001 /* LabyrinthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		I1000006299E000100000001 /* TreasureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureView.swift; sourceTree = "<group>"; };
 		I1000008299E000100000001 /* ParentGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentGateView.swift; sourceTree = "<group>"; };
 		J1000002299E000100000001 /* PuzzleMatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleMatchingView.swift; sourceTree = "<group>"; };
+		J1000004299E000100000001 /* LabyrinthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabyrinthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			children = (
 				I1000002299E000100000001 /* RaetselSelectionView.swift */,
 				J1000002299E000100000001 /* PuzzleMatchingView.swift */,
+				J1000004299E000100000001 /* LabyrinthView.swift */,
 			);
 			path = Raetsel;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				I1000005299E000100000001 /* TreasureView.swift in Sources */,
 				I1000007299E000100000001 /* ParentGateView.swift in Sources */,
 				J1000001299E000100000001 /* PuzzleMatchingView.swift in Sources */,
+				J1000003299E000100000001 /* LabyrinthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
