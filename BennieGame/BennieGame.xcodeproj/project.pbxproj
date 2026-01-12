@@ -36,6 +36,7 @@
 		L1000001299E000100000001 /* CoinFlyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = L1000002299E000100000001 /* CoinFlyAnimation.swift */; };
 		M1000001299E000100000001 /* CelebrationOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = M1000002299E000100000001 /* CelebrationOverlay.swift */; };
 		N1000001299E000100000001 /* VideoSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = N1000002299E000100000001 /* VideoSelectionView.swift */; };
+		N1000003299E000100000001 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = N1000004299E000100000001 /* VideoPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		L1000002299E000100000001 /* CoinFlyAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFlyAnimation.swift; sourceTree = "<group>"; };
 		M1000002299E000100000001 /* CelebrationOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationOverlay.swift; sourceTree = "<group>"; };
 		N1000002299E000100000001 /* VideoSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSelectionView.swift; sourceTree = "<group>"; };
+		N1000004299E000100000001 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				N1000002299E000100000001 /* VideoSelectionView.swift */,
+				N1000004299E000100000001 /* VideoPlayerView.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				L1000001299E000100000001 /* CoinFlyAnimation.swift in Sources */,
 				M1000001299E000100000001 /* CelebrationOverlay.swift in Sources */,
 				N1000001299E000100000001 /* VideoSelectionView.swift in Sources */,
+				N1000003299E000100000001 /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
