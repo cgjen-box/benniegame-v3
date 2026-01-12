@@ -28,15 +28,22 @@ struct RaetselSelectionView: View {
 
                 Spacer()
 
-                // Sub-activity placeholders
+                // Sub-activity buttons
                 VStack(spacing: 24) {
-                    subActivityButton(
-                        title: "Puzzle",
-                        subtitle: "Muster nachmachen",
-                        icon: "puzzlepiece.fill",
-                        comingSoon: true
-                    )
+                    // Puzzle Matching - NOW PLAYABLE
+                    Button {
+                        coordinator.startPlaying(.raetsel, .puzzleMatching)
+                    } label: {
+                        subActivityButton(
+                            title: "Puzzle",
+                            subtitle: "Muster nachmachen",
+                            icon: "puzzlepiece.fill",
+                            comingSoon: false
+                        )
+                    }
+                    .buttonStyle(.plain)
 
+                    // Labyrinth - Coming in 03-02
                     subActivityButton(
                         title: "Labyrinth",
                         subtitle: "Den Weg finden",

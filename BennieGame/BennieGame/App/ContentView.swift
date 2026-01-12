@@ -53,9 +53,15 @@ struct ContentView: View {
         case .parentGate:
             ParentGateView()
 
-        // Phase 3+ - Placeholder screens
+        // Phase 3 - Activity screens
         case .playing(let activityType, let subActivity):
-            PlayingPlaceholder(activityType: activityType, subActivity: subActivity)
+            switch subActivity {
+            case .puzzleMatching:
+                PuzzleMatchingView()
+            default:
+                // Placeholder for activities not yet implemented
+                PlayingPlaceholder(activityType: activityType, subActivity: subActivity)
+            }
 
         case .levelComplete:
             LevelCompletePlaceholder()
