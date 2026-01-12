@@ -11,6 +11,9 @@ final class AppCoordinator {
     /// History of states for potential back navigation
     private var stateHistory: [GameState] = []
 
+    /// Allocated video time in minutes (set when redeeming coins)
+    var allocatedVideoMinutes: Int = 0
+
     // MARK: - Navigation
 
     /// Transition to a new game state
