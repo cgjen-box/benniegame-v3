@@ -1,0 +1,31 @@
+{
+  "$schema": "https://claude.ai/schemas/settings.json",
+  "mcpServers": {
+    "ios-simulator": {
+      "command": "ssh",
+      "args": [
+        "-i", "${SSH_KEY_PATH}",
+        "-o", "StrictHostKeyChecking=no",
+        "-o", "ServerAliveInterval=60",
+        "${MACINCLOUD_USER}@${MACINCLOUD_HOST}",
+        "cd ${MACINCLOUD_PROJECT} && ~/.pyenv/versions/3.12.12/bin/python3 'mcp-servers/ios_simulator_mcp.py'"
+      ],
+      "env": {
+        "GIT_TERMINAL_PROMPT": "0",
+        "GIT_ASKPASS": ""
+      }
+    }
+  },
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "mcp__chrome-devtools__*",
+      "mcp__ios-simulator__*"
+    ]
+  }
+}

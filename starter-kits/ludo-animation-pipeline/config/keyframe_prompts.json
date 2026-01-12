@@ -1,0 +1,58 @@
+{
+  "bennie": {
+    "idle": {
+      "start": "standing relaxed with arms at sides, eyes open, gentle smile, feet flat on ground",
+      "end": "same pose, chest slightly expanded (breathing in), subtle shift in stance"
+    },
+    "happy": {
+      "start": "standing with arms at sides, happy expression, feet flat on ground, slight smile",
+      "end": "slight bounce up with feet lifting, arms slightly raised, eyes squinted with joy, big smile"
+    },
+    "thinking": {
+      "start": "standing with one paw raised near chin, eyes looking up thoughtfully, curious expression",
+      "end": "head tilted slightly to other side, paw still on chin, eyes looking up-right"
+    },
+    "encouraging": {
+      "start": "standing with arms close to body, supportive warm expression, slight lean forward",
+      "end": "arms open wide in welcoming gesture, warm encouraging smile, slight nod"
+    },
+    "celebrating": {
+      "start": "standing with arms at sides, excited expression, feet on ground",
+      "end": "arms raised high above head in victory pose, eyes closed with joy, slight jump"
+    },
+    "waving": {
+      "start": "one arm raised at shoulder height, paw facing forward, friendly smile",
+      "end": "same arm extended higher, paw tilted sideways in classic wave, warm expression"
+    },
+    "pointing": {
+      "start": "standing with arms relaxed, looking forward, alert expression",
+      "end": "one arm fully extended pointing right, head turned to look at pointed direction"
+    }
+  },
+  "lemminge": {
+    "idle": {
+      "start": "body in neutral compressed state, eyes forward, neutral expression",
+      "end": "body slightly expanded (breathing), same neutral expression"
+    },
+    "curious": {
+      "start": "head straight, wide curious eyes, leaning slightly forward",
+      "end": "head tilted to one side, eyes even wider, more pronounced lean"
+    },
+    "excited": {
+      "start": "feet on ground, arms at sides, excited expression",
+      "end": "mid-bounce with feet off ground, arms raised slightly, huge smile"
+    },
+    "celebrating": {
+      "start": "standing with big smile, arms at sides",
+      "end": "jumping with arms raised high, eyes closed with joy"
+    },
+    "hiding": {
+      "start": "standing normally but with nervous expression, paws together",
+      "end": "crouched down, paws covering face partially, shy expression"
+    },
+    "mischievous": {
+      "start": "standing with slight grin, hands together in front",
+      "end": "rubbing hands together, sideways glance, bigger mischievous grin"
+    }
+  }
+}

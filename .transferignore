@@ -1,0 +1,21 @@
+# Bennie Bear - MacinCloud Transfer
+# Ignore these files when transferring
+
+# Temp/backup files
+*.zip
+compass_artifact_*.md
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+.venv/

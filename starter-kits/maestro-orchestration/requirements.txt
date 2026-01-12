@@ -1,0 +1,36 @@
+# =============================================================================
+# Maestro Orchestration - Python Dependencies
+# =============================================================================
+
+# MCP Server Framework
+mcp>=0.1.0
+
+# Google Gemini
+google-genai>=0.3.0
+
+# Image Processing
+pillow>=10.0.0
+
+# HTTP/SSH
+paramiko>=3.0.0
+requests>=2.31.0
+
+# Environment Variables
+python-dotenv>=1.0.0
+
+# JSON Schema Validation
+jsonschema>=4.20.0
+
+# CLI Tools
+click>=8.1.0
+rich>=13.0.0
+
+# Async Support
+aiohttp>=3.9.0
+asyncio-throttle>=1.0.0
+
+# Optional: Anthropic SDK (for Claude API)
+anthropic>=0.18.0
+
+# Optional: Replicate (fallback image generation)
+replicate>=0.25.0

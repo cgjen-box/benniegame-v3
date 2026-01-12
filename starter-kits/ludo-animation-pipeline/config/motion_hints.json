@@ -1,0 +1,19 @@
+{
+  "bennie": {
+    "idle": "gentle breathing cycle, chest slowly rising and falling, calm peaceful rhythmic motion, standing still",
+    "happy": "gentle bounce up and down, cheerful rhythmic movement, slight hop with joy",
+    "thinking": "head tilting side to side slowly, thoughtful pondering motion, hand on chin",
+    "encouraging": "arms opening outward in welcoming gesture, supportive nodding movement",
+    "celebrating": "arms raising up high in celebration, joyful controlled bouncing",
+    "waving": "hand waving side to side smoothly, friendly greeting gesture, arm moving",
+    "pointing": "arm extending outward to point, head turning to look at pointed direction"
+  },
+  "lemminge": {
+    "idle": "subtle breathing pulse, gentle body expanding and contracting rhythmically",
+    "curious": "head tilting curiously from side to side, leaning forward with interest",
+    "excited": "bouncing up and down rapidly, energetic jumping motion, arms raising",
+    "celebrating": "jumping with arms raised high, victory dance movement, joyful bounce",
+    "hiding": "shrinking down motion, paws moving to cover face, nervous shaking",
+    "mischievous": "sneaky side-to-side swaying, hands rubbing together, shifty eyes"
+  }
+}

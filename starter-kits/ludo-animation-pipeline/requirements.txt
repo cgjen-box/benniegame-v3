@@ -1,0 +1,14 @@
+# Ludo.ai Animation Pipeline - Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core - Google Gemini API (for keyframes)
+google-genai>=0.4.0
+
+# Image Processing
+pillow>=10.0.0
+
+# Environment Management
+python-dotenv>=1.0.0
+
+# HTTP Client
+requests>=2.31.0

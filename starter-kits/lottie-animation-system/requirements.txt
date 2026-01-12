@@ -1,0 +1,8 @@
+# Lottie Animation System - Dependencies
+# Install with: pip install -r requirements.txt
+
+# Image Processing
+pillow>=10.0.0
+
+# JSON validation
+jsonschema>=4.0.0

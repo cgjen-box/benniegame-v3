@@ -1,0 +1,67 @@
+{
+  "version": "1.0",
+  "description": "Per-animation timing specifications for Ludo.ai output",
+  "defaults": {
+    "fps": 30,
+    "frame_count": 42,
+    "target_duration_ms": 1400
+  },
+  "characters": {
+    "bennie": {
+      "idle": {
+        "target_duration_ms": 2000,
+        "notes": "slow breathing cycle"
+      },
+      "happy": {
+        "target_duration_ms": 1400,
+        "notes": "gentle bounce"
+      },
+      "thinking": {
+        "target_duration_ms": 2000,
+        "notes": "slow pondering"
+      },
+      "encouraging": {
+        "target_duration_ms": 1600,
+        "notes": "supportive nod"
+      },
+      "celebrating": {
+        "target_duration_ms": 1400,
+        "notes": "controlled jump"
+      },
+      "waving": {
+        "target_duration_ms": 1400,
+        "notes": "friendly wave"
+      },
+      "pointing": {
+        "target_duration_ms": 1200,
+        "notes": "quick point"
+      }
+    },
+    "lemminge": {
+      "idle": {
+        "target_duration_ms": 1000,
+        "notes": "quick breathing"
+      },
+      "curious": {
+        "target_duration_ms": 800,
+        "notes": "head tilt"
+      },
+      "excited": {
+        "target_duration_ms": 600,
+        "notes": "rapid bounce"
+      },
+      "celebrating": {
+        "target_duration_ms": 800,
+        "notes": "quick jump"
+      },
+      "hiding": {
+        "target_duration_ms": 1000,
+        "notes": "shrink motion"
+      },
+      "mischievous": {
+        "target_duration_ms": 1000,
+        "notes": "sneaky sway"
+      }
+    }
+  }
+}

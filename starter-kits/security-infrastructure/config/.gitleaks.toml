@@ -1,0 +1,131 @@
+# Gitleaks configuration for secret scanning
+# Usage: gitleaks detect --source . --config .gitleaks.toml
+
+title = "Gitleaks Secret Scan Config"
+
+[extend]
+useDefault = true
+
+# Custom rules
+[[rules]]
+id = "elevenlabs-api-key"
+description = "ElevenLabs API Key"
+regex = '''sk_[a-zA-Z0-9]{20,}'''
+tags = ["api", "elevenlabs"]
+
+[[rules]]
+id = "google-api-key"
+description = "Google/Gemini API Key"
+regex = '''AIza[0-9A-Za-z_-]{35}'''
+tags = ["api", "google", "gemini"]
+
+[[rules]]
+id = "openai-api-key"
+description = "OpenAI API Key"
+regex = '''sk-[a-zA-Z0-9]{20,}'''
+tags = ["api", "openai"]
+
+[[rules]]
+id = "anthropic-api-key"
+description = "Anthropic API Key"
+regex = '''sk-ant-[a-zA-Z0-9_-]{20,}'''
+tags = ["api", "anthropic"]
+
+[[rules]]
+id = "aws-access-key"
+description = "AWS Access Key ID"
+regex = '''AKIA[0-9A-Z]{16}'''
+tags = ["api", "aws"]
+
+[[rules]]
+id = "github-token"
+description = "GitHub Personal Access Token"
+regex = '''ghp_[0-9a-zA-Z]{36}'''
+tags = ["api", "github"]
+
+[[rules]]
+id = "github-pat"
+description = "GitHub PAT (new format)"
+regex = '''github_pat_[0-9a-zA-Z_]{22,}'''
+tags = ["api", "github"]
+
+[[rules]]
+id = "gitlab-token"
+description = "GitLab Personal Access Token"
+regex = '''glpat-[0-9a-zA-Z_-]{20}'''
+tags = ["api", "gitlab"]
+
+[[rules]]
+id = "slack-token"
+description = "Slack Token"
+regex = '''xox[baprs]-[0-9a-zA-Z-]{10,}'''
+tags = ["api", "slack"]
+
+[[rules]]
+id = "stripe-secret"
+description = "Stripe Secret Key"
+regex = '''sk_live_[0-9a-zA-Z]{24,}'''
+tags = ["api", "stripe", "payment"]
+
+[[rules]]
+id = "stripe-restricted"
+description = "Stripe Restricted Key"
+regex = '''rk_live_[0-9a-zA-Z]{24,}'''
+tags = ["api", "stripe", "payment"]
+
+[[rules]]
+id = "sendgrid-api-key"
+description = "SendGrid API Key"
+regex = '''SG\.[a-zA-Z0-9_-]{22}\.[a-zA-Z0-9_-]{43}'''
+tags = ["api", "sendgrid", "email"]
+
+[[rules]]
+id = "twilio-api-key"
+description = "Twilio API Key"
+regex = '''SK[a-zA-Z0-9]{32}'''
+tags = ["api", "twilio"]
+
+[[rules]]
+id = "mongodb-uri"
+description = "MongoDB Connection URI"
+regex = '''mongodb(\+srv)?://[^:]+:[^@]+@'''
+tags = ["database", "mongodb"]
+
+[[rules]]
+id = "postgres-uri"
+description = "PostgreSQL Connection URI"
+regex = '''postgres(ql)?://[^:]+:[^@]+@'''
+tags = ["database", "postgres"]
+
+[[rules]]
+id = "mysql-uri"
+description = "MySQL Connection URI"
+regex = '''mysql://[^:]+:[^@]+@'''
+tags = ["database", "mysql"]
+
+[[rules]]
+id = "private-key"
+description = "Private Key"
+regex = '''-----BEGIN.*PRIVATE KEY-----'''
+tags = ["key", "private"]
+
+[[rules]]
+id = "jwt-token"
+description = "JWT Token"
+regex = '''eyJ[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}'''
+tags = ["token", "jwt"]
+
+# Allowlist patterns (false positives to ignore)
+[allowlist]
+description = "Allowlist"
+paths = [
+    '''\.env\.example$''',
+    '''requirements\.txt$''',
+    '''package-lock\.json$''',
+    '''yarn\.lock$''',
+]
+regexes = [
+    '''your_.*_here''',
+    '''placeholder''',
+    '''example\.com''',
+]

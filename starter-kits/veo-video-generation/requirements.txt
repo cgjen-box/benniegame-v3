@@ -1,0 +1,11 @@
+# Veo 3.1 Video Generation - Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core - Google Gemini/Veo API
+google-genai>=0.4.0
+
+# Environment Management
+python-dotenv>=1.0.0
+
+# Image Processing (for reference images)
+pillow>=10.0.0

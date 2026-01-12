@@ -1,0 +1,150 @@
+{
+  "version": "1.0",
+  "name": "Maestro Orchestration",
+  "description": "Complete Claude Code orchestration capabilities for AI-powered development",
+
+  "mcp_servers": {
+    "ios-simulator": {
+      "description": "Remote iPad Simulator control for app development",
+      "transport": "ssh-stdio",
+      "script": "mcp-servers/ios_simulator_mcp.py",
+      "tools": [
+        "build_and_deploy",
+        "launch_app",
+        "terminate_app",
+        "take_screenshot",
+        "tap",
+        "swipe",
+        "type_text",
+        "press_button",
+        "run_tests",
+        "get_logs",
+        "boot_simulator",
+        "reset_simulator",
+        "verify_design_checklist",
+        "save_baseline",
+        "load_baseline",
+        "compare_to_baseline",
+        "run_regression_flow"
+      ],
+      "required_env": [
+        "SSH_KEY_PATH",
+        "MACINCLOUD_HOST",
+        "MACINCLOUD_USER"
+      ],
+      "optional_env": [
+        "MACINCLOUD_PROJECT",
+        "MCP_IOS_PORT"
+      ]
+    },
+
+    "image-generator": {
+      "description": "AI image and video generation with Gemini 3.0",
+      "transport": "stdio",
+      "script": "mcp-servers/mcp_image_server.py",
+      "tools": [
+        "generate_image",
+        "generate_ab_comparison",
+        "record_feedback",
+        "get_learnings",
+        "list_generated",
+        "generate_video_reference_images",
+        "generate_video_from_folder",
+        "review_video_inputs",
+        "extend_video_clip",
+        "generate_transition_video",
+        "list_generated_videos"
+      ],
+      "required_env": [
+        "GOOGLE_API_KEY"
+      ],
+      "optional_env": [
+        "GEMINI_API_KEY",
+        "MCP_IMAGE_PORT"
+      ]
+    },
+
+    "chrome-devtools": {
+      "description": "Browser automation for web testing and Ludo.ai",
+      "transport": "built-in",
+      "script": null,
+      "tools": [
+        "navigate_page",
+        "take_snapshot",
+        "take_screenshot",
+        "click",
+        "fill",
+        "upload_file",
+        "evaluate_script",
+        "wait_for",
+        "list_pages",
+        "select_page",
+        "hover",
+        "press_key",
+        "list_console_messages",
+        "list_network_requests"
+      ],
+      "required_env": [],
+      "optional_env": []
+    }
+  },
+
+  "skills": {
+    "core": [
+      {
+        "name": "ios-dev",
+        "description": "iPad app development with MCP simulator control",
+        "mcp_servers": ["ios-simulator"]
+      },
+      {
+        "name": "image-generation",
+        "description": "Character art with reference image consistency",
+        "mcp_servers": ["image-generator"]
+      },
+      {
+        "name": "ludo-automation",
+        "description": "Sprite animation pipeline with Ludo.ai",
+        "mcp_servers": ["chrome-devtools", "image-generator"]
+      }
+    ],
+    "domain": [
+      "animation-system",
+      "audio-voice",
+      "design-autism",
+      "gameplay",
+      "visual-design",
+      "swiftui-ipad",
+      "story-characters",
+      "parent-dashboard",
+      "testing"
+    ],
+    "utility": [
+      "website-review"
+    ]
+  },
+
+  "workflows": {
+    "build-test-fix": {
+      "description": "Recursive build, screenshot, evaluate, fix loop",
+      "steps": ["build_and_deploy", "launch_app", "take_screenshot", "evaluate", "fix", "repeat"],
+      "mcp_servers": ["ios-simulator"]
+    },
+    "keyframe-to-lottie": {
+      "description": "Generate character animation from keyframes",
+      "steps": ["generate_keyframes", "upload_to_ludo", "download_spritesheet", "process_to_lottie"],
+      "mcp_servers": ["image-generator", "chrome-devtools"]
+    },
+    "design-verify": {
+      "description": "Screenshot and verify design compliance",
+      "steps": ["take_screenshot", "verify_design_checklist", "report_issues"],
+      "mcp_servers": ["ios-simulator"]
+    }
+  },
+
+  "security": {
+    "secret_guard": true,
+    "patterns_detected": 40,
+    "hooks": ["pre-commit", "pre-push"],
+    "ci_cd": "github-actions"
+  }
+}
