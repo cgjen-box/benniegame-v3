@@ -4,7 +4,7 @@ import SwiftUI
 // ContentView - Main routing view
 // ═══════════════════════════════════════════════════════════════════════════
 // Routes to the appropriate screen based on current game state
-// Uses new LoadingView, PlayerSelectionView, and HomeView implementations
+// Uses implemented views for Phase 2 screens, placeholders for future phases
 // ═══════════════════════════════════════════════════════════════════════════
 
 /// Main content view that routes to different screens based on game state
@@ -34,6 +34,7 @@ struct ContentView: View {
     @ViewBuilder
     private func viewForState(_ state: GameState) -> some View {
         switch state {
+        // Phase 2 - Implemented screens
         case .loading:
             LoadingView()
 
@@ -44,8 +45,15 @@ struct ContentView: View {
             HomeView()
 
         case .activitySelection(let activityType):
-            ActivitySelectionPlaceholder(activityType: activityType)
+            activitySelectionView(for: activityType)
 
+        case .treasureScreen:
+            TreasureView()
+
+        case .parentGate:
+            ParentGateView()
+
+        // Phase 3+ - Placeholder screens
         case .playing(let activityType, let subActivity):
             PlayingPlaceholder(activityType: activityType, subActivity: subActivity)
 
@@ -55,20 +63,56 @@ struct ContentView: View {
         case .celebrationOverlay(let coinsEarned):
             CelebrationPlaceholder(coinsEarned: coinsEarned)
 
-        case .treasureScreen:
-            TreasurePlaceholder()
-
         case .videoSelection:
             VideoSelectionPlaceholder()
 
         case .videoPlaying(let minutesRemaining):
             VideoPlayingPlaceholder(minutesRemaining: minutesRemaining)
 
-        case .parentGate:
-            ParentGatePlaceholder()
-
         case .parentDashboard:
             ParentDashboardPlaceholder()
+        }
+    }
+
+    // MARK: - Activity Selection Routing
+
+    /// Routes to the appropriate activity selection view based on activity type
+    @ViewBuilder
+    private func activitySelectionView(for activityType: ActivityType) -> some View {
+        switch activityType {
+        case .raetsel:
+            RaetselSelectionView()
+
+        case .zahlen:
+            ZahlenSelectionView()
+
+        case .zeichnen, .logik:
+            // Locked activities should never reach here, but provide fallback
+            LockedActivityFallback(activityType: activityType)
+        }
+    }
+}
+
+// MARK: - Locked Activity Fallback
+
+/// Fallback view for locked activities (should not normally be shown)
+private struct LockedActivityFallback: View {
+    @Environment(AppCoordinator.self) private var coordinator
+    let activityType: ActivityType
+
+    var body: some View {
+        VStack(spacing: 24) {
+            Image(systemName: "lock.fill")
+                .font(.system(size: 60))
+                .foregroundColor(BennieColors.chain)
+
+            Text("\(activityType.displayName) ist noch gesperrt")
+                .font(BennieFont.screenHeader())
+                .foregroundColor(BennieColors.textDark)
+
+            WoodButton("Zurück") {
+                coordinator.navigateHome()
+            }
         }
     }
 }

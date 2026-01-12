@@ -25,6 +25,10 @@
 		H1000001299E000100000001 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = H1000002299E000100000001 /* LoadingView.swift */; };
 		H1000003299E000100000001 /* PlayerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = H1000004299E000100000001 /* PlayerSelectionView.swift */; };
 		H1000005299E000100000001 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = H1000006299E000100000001 /* HomeView.swift */; };
+		I1000001299E000100000001 /* RaetselSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I1000002299E000100000001 /* RaetselSelectionView.swift */; };
+		I1000003299E000100000001 /* ZahlenSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I1000004299E000100000001 /* ZahlenSelectionView.swift */; };
+		I1000005299E000100000001 /* TreasureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I1000006299E000100000001 /* TreasureView.swift */; };
+		I1000007299E000100000001 /* ParentGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I1000008299E000100000001 /* ParentGateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		H1000002299E000100000001 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		H1000004299E000100000001 /* PlayerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionView.swift; sourceTree = "<group>"; };
 		H1000006299E000100000001 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		I1000002299E000100000001 /* RaetselSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaetselSelectionView.swift; sourceTree = "<group>"; };
+		I1000004299E000100000001 /* ZahlenSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZahlenSelectionView.swift; sourceTree = "<group>"; };
+		I1000006299E000100000001 /* TreasureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureView.swift; sourceTree = "<group>"; };
+		I1000008299E000100000001 /* ParentGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentGateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +185,26 @@
 		C100000C299E000100000001 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
+				I100000A299E000100000001 /* Raetsel */,
+				I100000B299E000100000001 /* Zahlen */,
 			);
 			path = Activities;
+			sourceTree = "<group>";
+		};
+		I100000A299E000100000001 /* Raetsel */ = {
+			isa = PBXGroup;
+			children = (
+				I1000002299E000100000001 /* RaetselSelectionView.swift */,
+			);
+			path = Raetsel;
+			sourceTree = "<group>";
+		};
+		I100000B299E000100000001 /* Zahlen */ = {
+			isa = PBXGroup;
+			children = (
+				I1000004299E000100000001 /* ZahlenSelectionView.swift */,
+			);
+			path = Zahlen;
 			sourceTree = "<group>";
 		};
 		C100000D299E000100000001 /* Celebration */ = {
@@ -191,6 +217,7 @@
 		C100000E299E000100000001 /* Treasure */ = {
 			isa = PBXGroup;
 			children = (
+				I1000006299E000100000001 /* TreasureView.swift */,
 			);
 			path = Treasure;
 			sourceTree = "<group>";
@@ -205,6 +232,7 @@
 		C1000010299E000100000001 /* Parent */ = {
 			isa = PBXGroup;
 			children = (
+				I1000008299E000100000001 /* ParentGateView.swift */,
 			);
 			path = Parent;
 			sourceTree = "<group>";
@@ -401,6 +429,10 @@
 				H1000001299E000100000001 /* LoadingView.swift in Sources */,
 				H1000003299E000100000001 /* PlayerSelectionView.swift in Sources */,
 				H1000005299E000100000001 /* HomeView.swift in Sources */,
+				I1000001299E000100000001 /* RaetselSelectionView.swift in Sources */,
+				I1000003299E000100000001 /* ZahlenSelectionView.swift in Sources */,
+				I1000005299E000100000001 /* TreasureView.swift in Sources */,
+				I1000007299E000100000001 /* ParentGateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
