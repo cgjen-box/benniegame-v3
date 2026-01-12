@@ -26,7 +26,8 @@ None (no matching expertise folder available)
 - [x] **Phase 4: Reward System** - Coins, celebrations, treasure, YouTube redemption
 - [x] **Phase 5: Audio Integration** - 3-channel audio, ElevenLabs voices, effects
 - [x] **Phase 6: Parent Features** - Gate, dashboard, video management, time limits
-- [ ] **Phase 7: Polish & Testing** - QA validation, accessibility, full playthrough
+- [x] **Phase 7: Polish & Testing** - QA validation, accessibility, full playthrough
+- [ ] **Phase 8: Asset Production** - Generate UI components, backgrounds, animations
 
 ## Phase Details
 
@@ -122,6 +123,19 @@ Plans:
 
 **Playbook validation**: Run full DESIGN_QA_CHECKLIST.md, 100% critical + 90% high priority = PASS
 
+### Phase 8: Asset Production
+**Goal**: Generate and import all visual/audio assets for production
+**Depends on**: Phase 7
+**Research**: Likely (Gemini Imagen API, Ludo.ai)
+**Plans**: 3 plans
+
+Plans:
+- [x] 08-01: UI Components (buttons, signs, progress bar, treasure chest)
+- [x] 08-02: Background Images (4 forest parallax layers)
+- [ ] 08-03: Lottie Animations (15 character animations)
+
+**Playbook validation**: All generated assets match brand colors, style guide
+
 ## Progress
 
 **Execution Order:**
@@ -136,4 +150,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 5. Audio Integration | 3/3 | Complete | 2026-01-12 |
 | 6. Parent Features | 2/2 | Complete | 2026-01-12 |
 | 7. Polish & Testing | 2/2 | Complete | 2026-01-12 |
-| **Total** | **20/20** | | |
+| 8. Asset Production | 2/3 | In Progress | — |
+| **Total** | **22/23** | | |
