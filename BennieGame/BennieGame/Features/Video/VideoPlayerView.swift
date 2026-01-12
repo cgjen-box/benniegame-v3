@@ -48,6 +48,8 @@ struct VideoPlayerView: View {
 
     @Environment(AppCoordinator.self) private var coordinator
     @Environment(BennieService.self) private var bennie
+    @Environment(ParentSettings.self) private var parentSettings
+    @Environment(PlayerStore.self) private var playerStore
 
     // MARK: - Properties
 
@@ -61,6 +63,7 @@ struct VideoPlayerView: View {
     @State private var clockPulse: Bool = false
     @State private var timer: Timer?
     @State private var hasPlayedOneMinuteWarning: Bool = false
+    @State private var startTime: Date = Date()
 
     // MARK: - Initialization
 
@@ -94,10 +97,12 @@ struct VideoPlayerView: View {
             }
         }
         .onAppear {
+            startTime = Date()
             startTimer()
         }
         .onDisappear {
             stopTimer()
+            recordTimeWatched()
         }
     }
 
@@ -254,12 +259,29 @@ struct VideoPlayerView: View {
         stopTimer()
         showTimeUpMessage = true
 
+        // Record time watched before navigating
+        recordTimeWatched()
+
         // Play time up audio
         bennie.playTimeUp()
 
         // Navigate home after 2 seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             coordinator.navigateHome()
+        }
+    }
+
+    /// Record the time watched to ParentSettings for the active player
+    private func recordTimeWatched() {
+        guard let playerId = playerStore.activePlayer?.id else { return }
+
+        // Calculate minutes watched (round up to nearest minute)
+        let elapsedSeconds = Date().timeIntervalSince(startTime)
+        let minutesWatched = Int(ceil(elapsedSeconds / 60.0))
+
+        // Only record if at least 1 minute was watched
+        if minutesWatched > 0 {
+            parentSettings.recordTimeWatched(playerId: playerId, minutes: minutesWatched)
         }
     }
 
@@ -297,6 +319,8 @@ struct VideoPlayerView: View {
     return VideoPlayerView(minutesRemaining: 5, videoId: "qw0Jz5zJkgE")
         .environment(AppCoordinator())
         .environment(BennieService(audioManager: audioManager))
+        .environment(ParentSettings())
+        .environment(PlayerStore())
 }
 
 #Preview("VideoPlayerView - 1 Minute") {
@@ -304,4 +328,6 @@ struct VideoPlayerView: View {
     return VideoPlayerView(minutesRemaining: 1, videoId: "qw0Jz5zJkgE")
         .environment(AppCoordinator())
         .environment(BennieService(audioManager: audioManager))
+        .environment(ParentSettings())
+        .environment(PlayerStore())
 }

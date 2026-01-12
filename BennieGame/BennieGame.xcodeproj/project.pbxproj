@@ -12,6 +12,8 @@
 		A1000005299E000100000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000006299E000100000001 /* Assets.xcassets */; };
 		VS000001299E000100000001 /* VideoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = VS000002299E000100000001 /* VideoStore.swift */; };
 		VM000001299E000100000001 /* VideoManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = VM000002299E000100000001 /* VideoManagementView.swift */; };
+		PS000001299E000100000001 /* ParentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = PS000002299E000100000001 /* ParentSettings.swift */; };
+		TS000001299E000100000001 /* TimeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = TS000002299E000100000001 /* TimeSettingsView.swift */; };
 		AM000001299E000100000001 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AM000002299E000100000001 /* AudioManager.swift */; };
 		NS000001299E000100000001 /* NarratorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = NS000002299E000100000001 /* NarratorService.swift */; };
 		BS000001299E000100000001 /* BennieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BS000002299E000100000001 /* BennieService.swift */; };
@@ -87,6 +89,8 @@
 		N1000004299E000100000001 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		VS000002299E000100000001 /* VideoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStore.swift; sourceTree = "<group>"; };
 		VM000002299E000100000001 /* VideoManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManagementView.swift; sourceTree = "<group>"; };
+		PS000002299E000100000001 /* ParentSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentSettings.swift; sourceTree = "<group>"; };
+		TS000002299E000100000001 /* TimeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 				NS000002299E000100000001 /* NarratorService.swift */,
 				SE000002299E000100000001 /* SoundEffects.swift */,
 				VS000002299E000100000001 /* VideoStore.swift */,
+				PS000002299E000100000001 /* ParentSettings.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				I1000008299E000100000001 /* ParentGateView.swift */,
 				PD000002299E000100000001 /* ParentDashboardView.swift */,
 				VM000002299E000100000001 /* VideoManagementView.swift */,
+				TS000002299E000100000001 /* TimeSettingsView.swift */,
 			);
 			path = Parent;
 			sourceTree = "<group>";
@@ -497,6 +503,8 @@
 				MB000001299E000100000001 /* MuteButton.swift in Sources */,
 				VS000001299E000100000001 /* VideoStore.swift in Sources */,
 				VM000001299E000100000001 /* VideoManagementView.swift in Sources */,
+				PS000001299E000100000001 /* ParentSettings.swift in Sources */,
+				TS000001299E000100000001 /* TimeSettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

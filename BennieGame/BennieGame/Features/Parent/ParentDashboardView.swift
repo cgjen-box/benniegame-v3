@@ -85,6 +85,9 @@ struct ParentDashboardView: View {
         .sheet(isPresented: $showVideoManagement) {
             VideoManagementView()
         }
+        .sheet(isPresented: $showTimeSettings) {
+            TimeSettingsView()
+        }
     }
 
     // MARK: - Header Section

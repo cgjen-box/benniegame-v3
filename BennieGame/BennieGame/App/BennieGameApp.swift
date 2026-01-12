@@ -16,6 +16,9 @@ struct BennieGameApp: App {
     /// The video store manages approved videos list
     @State private var videoStore = VideoStore()
 
+    /// The parent settings manages time limits and parental controls
+    @State private var parentSettings = ParentSettings()
+
     // MARK: - Voice Services (computed properties to use shared AudioManager)
 
     /// Narrator service for instructional voice lines
@@ -35,6 +38,7 @@ struct BennieGameApp: App {
                 .environment(narratorService)
                 .environment(bennieService)
                 .environment(videoStore)
+                .environment(parentSettings)
         }
     }
 }
