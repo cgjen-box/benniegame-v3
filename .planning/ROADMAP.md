@@ -21,7 +21,7 @@ None (no matching expertise folder available)
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
 - [x] **Phase 1: Foundation** - Xcode project, design system, basic components
-- [ ] **Phase 2: Core Screens** - Loading, player selection, home, navigation
+- [x] **Phase 2: Core Screens** - Loading, player selection, home, navigation
 - [ ] **Phase 3: Activities** - 4 playable games (puzzle, labyrinth, dice, numbers)
 - [ ] **Phase 4: Reward System** - Coins, celebrations, treasure, YouTube redemption
 - [ ] **Phase 5: Audio Integration** - 3-channel audio, ElevenLabs voices, effects
@@ -52,7 +52,7 @@ Plans:
 Plans:
 - [x] 02-01: State management (GameState, PlayerData, navigation coordinator)
 - [x] 02-02: Loading & player selection screens
-- [ ] 02-03: Home screen with activity signs and treasure chest
+- [x] 02-03: Home screen with activity signs and treasure chest
 
 **Playbook validation**: Bennie brown (#8C7259, NO clothing), Lemminge blue (#6FA8DC)
 
@@ -130,10 +130,10 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-01-12 |
-| 2. Core Screens | 2/3 | In progress | - |
-| 3. Activities | 0/4 | Not started | - |
+| 2. Core Screens | 3/3 | Complete | 2026-01-12 |
+| 3. Activities | 0/4 | Next | - |
 | 4. Reward System | 0/3 | Not started | - |
 | 5. Audio Integration | 0/3 | Not started | - |
 | 6. Parent Features | 0/2 | Not started | - |
 | 7. Polish & Testing | 0/2 | Not started | - |
-| **Total** | **5/20** | | |
+| **Total** | **6/20** | | |
