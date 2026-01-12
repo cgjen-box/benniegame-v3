@@ -76,10 +76,10 @@ struct ContentView: View {
             CelebrationOverlay(coinsEarned: coinsEarned)
 
         case .videoSelection:
-            VideoSelectionPlaceholder()
+            VideoSelectionView()
 
         case .videoPlaying(let minutesRemaining, let videoId):
-            VideoPlayingPlaceholder(minutesRemaining: minutesRemaining, videoId: videoId)
+            VideoPlayerView(minutesRemaining: minutesRemaining, videoId: videoId)
 
         case .parentDashboard:
             ParentDashboardPlaceholder()
@@ -259,52 +259,6 @@ private struct TreasurePlaceholder: View {
                 coordinator.navigateHome()
             }
             .buttonStyle(.bordered)
-        }
-    }
-}
-
-private struct VideoSelectionPlaceholder: View {
-    @Environment(AppCoordinator.self) private var coordinator
-
-    var body: some View {
-        VStack(spacing: 24) {
-            Text("Video auswählen")
-                .font(BennieFont.title())
-                .foregroundStyle(BennieColors.woodDark)
-
-            Text("(Videos werden später hinzugefügt)")
-                .font(BennieFont.body())
-
-            Button("Zurück") {
-                coordinator.navigateHome()
-            }
-            .buttonStyle(.bordered)
-        }
-    }
-}
-
-private struct VideoPlayingPlaceholder: View {
-    @Environment(AppCoordinator.self) private var coordinator
-    let minutesRemaining: Int
-    let videoId: String
-
-    var body: some View {
-        VStack(spacing: 24) {
-            Text("Video läuft...")
-                .font(BennieFont.title())
-                .foregroundStyle(BennieColors.woodDark)
-
-            Text("\(minutesRemaining) Minuten")
-                .font(BennieFont.number())
-
-            Text("Video ID: \(videoId)")
-                .font(BennieFont.label())
-                .foregroundStyle(BennieColors.woodMedium)
-
-            Button("Fertig") {
-                coordinator.navigateHome()
-            }
-            .buttonStyle(.borderedProminent)
         }
     }
 }
