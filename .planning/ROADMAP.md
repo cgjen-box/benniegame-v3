@@ -50,7 +50,7 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: State management (GameState, PlayerData, navigation coordinator)
+- [x] 02-01: State management (GameState, PlayerData, navigation coordinator)
 - [ ] 02-02: Loading & player selection screens
 - [ ] 02-03: Home screen with activity signs and treasure chest
 
@@ -130,10 +130,10 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-01-12 |
-| 2. Core Screens | 0/3 | Next | - |
+| 2. Core Screens | 1/3 | In progress | - |
 | 3. Activities | 0/4 | Not started | - |
 | 4. Reward System | 0/3 | Not started | - |
 | 5. Audio Integration | 0/3 | Not started | - |
 | 6. Parent Features | 0/2 | Not started | - |
 | 7. Polish & Testing | 0/2 | Not started | - |
-| **Total** | **3/20** | | |
+| **Total** | **4/20** | | |
