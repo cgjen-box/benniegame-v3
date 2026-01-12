@@ -14,6 +14,9 @@ struct LabyrinthView: View {
 
     @Environment(AppCoordinator.self) private var coordinator
     @Environment(PlayerStore.self) private var playerStore
+    @Environment(AudioManager.self) private var audioManager
+    @Environment(NarratorService.self) private var narrator
+    @Environment(BennieService.self) private var bennie
 
     // MARK: - Game State
 
@@ -109,24 +112,8 @@ struct LabyrinthView: View {
 
             Spacer()
 
-            // Volume toggle (placeholder)
-            Button {
-                // Volume toggle action - Phase 9
-            } label: {
-                Image(systemName: "speaker.wave.2.fill")
-                    .font(.system(size: 28))
-                    .foregroundColor(BennieColors.woodDark)
-                    .frame(width: 96, height: 96)
-                    .background(
-                        Circle()
-                            .fill(BennieColors.woodLight)
-                            .overlay(
-                                Circle()
-                                    .stroke(BennieColors.woodDark, lineWidth: 2)
-                            )
-                    )
-            }
-            .buttonStyle(.plain)
+            // Mute toggle
+            MuteButton()
         }
         .padding(.horizontal, 24)
         .padding(.top, 16)
@@ -161,6 +148,9 @@ struct LabyrinthView: View {
             .gesture(tracingGesture(in: geometry.size))
             .onAppear {
                 mazeSize = geometry.size
+                // Play activity start audio
+                narrator.playLabyrinthStart()
+                bennie.playLabyrinthStart()
             }
         }
         .aspectRatio(1.5, contentMode: .fit)
@@ -342,7 +332,9 @@ struct LabyrinthView: View {
                     handleSuccess()
                 }
             } else {
-                // Off path - show error
+                // Off path - play gentle feedback and show error
+                audioManager.playEffect(.gentleBoop)
+                bennie.playLabyrinthWrong()
                 withAnimation {
                     showError = true
                     isTracing = false
@@ -421,6 +413,9 @@ struct LabyrinthView: View {
         hasCompleted = true
         isTracing = false
 
+        // Play success audio
+        audioManager.playEffect(.successChime)
+
         // Get goal position for coin animation start
         let scaledPoints = scaledPathPoints(in: mazeSize)
         if let goalPoint = scaledPoints.last {
@@ -437,13 +432,17 @@ struct LabyrinthView: View {
 
     /// Called when coin fly animation completes
     private func handleCoinAnimationComplete() {
+        // Play coin collect sound
+        audioManager.playEffect(.coinCollect)
+
         // Award coin after animation
         if let newCoins = playerStore.awardCoin() {
             // Check for celebration
             if coordinator.shouldShowCelebration(for: newCoins) {
                 coordinator.showCelebration(coinsEarned: newCoins)
             } else {
-                // Next maze
+                // Play success voice and next maze
+                narrator.playRandomSuccess()
                 currentLevel += 1
                 resetTracing()
             }
@@ -518,7 +517,11 @@ struct MazeConfig {
 // MARK: - Previews
 
 #Preview("LabyrinthView") {
-    LabyrinthView()
+    let audioManager = AudioManager()
+    return LabyrinthView()
         .environment(AppCoordinator())
         .environment(PlayerStore())
+        .environment(audioManager)
+        .environment(NarratorService(audioManager: audioManager))
+        .environment(BennieService(audioManager: audioManager))
 }

@@ -14,6 +14,9 @@ struct WaehleZahlView: View {
 
     @Environment(AppCoordinator.self) private var coordinator
     @Environment(PlayerStore.self) private var playerStore
+    @Environment(AudioManager.self) private var audioManager
+    @Environment(NarratorService.self) private var narrator
+    @Environment(BennieService.self) private var bennie
 
     // MARK: - Game State
 
@@ -99,24 +102,8 @@ struct WaehleZahlView: View {
 
             Spacer()
 
-            // Volume toggle (placeholder)
-            Button {
-                // Volume toggle action - Phase 9
-            } label: {
-                Image(systemName: "speaker.wave.2.fill")
-                    .font(.system(size: 28))
-                    .foregroundColor(BennieColors.woodDark)
-                    .frame(width: 96, height: 96)
-                    .background(
-                        Circle()
-                            .fill(BennieColors.woodLight)
-                            .overlay(
-                                Circle()
-                                    .stroke(BennieColors.woodDark, lineWidth: 2)
-                            )
-                    )
-            }
-            .buttonStyle(.plain)
+            // Mute toggle
+            MuteButton()
         }
         .padding(.horizontal, 24)
         .padding(.top, 16)
@@ -264,6 +251,9 @@ struct WaehleZahlView: View {
 
         lastTargetNumber = targetNumber
         targetNumber = newTarget
+
+        // Announce the new target number
+        narrator.playChooseNumber(newTarget)
     }
 
     private func handleNumberTap(_ number: Int) {
@@ -283,6 +273,9 @@ struct WaehleZahlView: View {
         showFeedback = true
         questionsAnswered += 1
 
+        // Play success chime
+        audioManager.playEffect(.successChime)
+
         // Trigger coin animation after brief feedback
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             showFeedback = false
@@ -293,13 +286,17 @@ struct WaehleZahlView: View {
 
     /// Called when coin fly animation completes
     private func handleCoinAnimationComplete() {
+        // Play coin collect sound
+        audioManager.playEffect(.coinCollect)
+
         // Award coin after animation
         if let newCoins = playerStore.awardCoin() {
             // Check for celebration
             if coordinator.shouldShowCelebration(for: newCoins) {
                 coordinator.showCelebration(coinsEarned: newCoins)
             } else {
-                // Select new target
+                // Play success voice and select new target
+                narrator.playRandomSuccess()
                 selectNewTarget()
             }
         }
@@ -308,6 +305,10 @@ struct WaehleZahlView: View {
     private func handleWrongAnswer() {
         feedbackIsCorrect = false
         showFeedback = true
+
+        // Play gentle feedback sounds
+        audioManager.playEffect(.gentleBoop)
+        bennie.playWrongNumber()
 
         // Brief feedback showing correct answer, then allow retry
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
@@ -321,7 +322,11 @@ struct WaehleZahlView: View {
 // MARK: - Previews
 
 #Preview("WaehleZahlView") {
-    WaehleZahlView()
+    let audioManager = AudioManager()
+    return WaehleZahlView()
         .environment(AppCoordinator())
         .environment(PlayerStore())
+        .environment(audioManager)
+        .environment(NarratorService(audioManager: audioManager))
+        .environment(BennieService(audioManager: audioManager))
 }
