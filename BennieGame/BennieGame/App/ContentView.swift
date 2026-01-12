@@ -73,7 +73,7 @@ struct ContentView: View {
             LevelCompletePlaceholder()
 
         case .celebrationOverlay(let coinsEarned):
-            CelebrationPlaceholder(coinsEarned: coinsEarned)
+            CelebrationOverlay(coinsEarned: coinsEarned)
 
         case .videoSelection:
             VideoSelectionPlaceholder()
@@ -218,36 +218,6 @@ private struct LevelCompletePlaceholder: View {
                 coordinator.navigateHome()
             }
             .buttonStyle(.borderedProminent)
-        }
-    }
-}
-
-private struct CelebrationPlaceholder: View {
-    @Environment(AppCoordinator.self) private var coordinator
-    @Environment(PlayerStore.self) private var playerStore
-    let coinsEarned: Int
-
-    var body: some View {
-        VStack(spacing: 24) {
-            Text("Super gemacht!")
-                .font(BennieFont.title())
-                .foregroundStyle(BennieColors.coinGold)
-
-            Text("\(coinsEarned) Münzen!")
-                .font(BennieFont.number())
-                .foregroundStyle(BennieColors.coinGold)
-
-            if playerStore.activePlayer?.canRedeemTier1 == true {
-                Button("Zur Schatztruhe!") {
-                    coordinator.navigateToTreasure()
-                }
-                .buttonStyle(.borderedProminent)
-            }
-
-            Button("Weiter spielen") {
-                coordinator.navigateHome()
-            }
-            .buttonStyle(.bordered)
         }
     }
 }
