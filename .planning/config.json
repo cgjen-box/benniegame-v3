@@ -1,0 +1,56 @@
+{
+  "project_name": "Bennie Bear Learning Game",
+  "project_type": "ios_app",
+  "description": "Autism-friendly educational iPad game for children ages 4-5",
+  "primary_language": "swift",
+  "languages": ["swift", "python"],
+  "frameworks": ["swiftui", "swiftdata", "lottie", "avfoundation"],
+  "platform": {
+    "target": "ipad",
+    "os": "ipados",
+    "min_version": "17.0",
+    "orientation": "landscape"
+  },
+  "build": {
+    "tool": "xcode",
+    "remote": "macincloud"
+  },
+  "external_services": {
+    "voice_generation": "elevenlabs",
+    "image_generation": "google_gemini",
+    "video_embedding": "youtube"
+  },
+  "key_directories": {
+    "planning": ".planning",
+    "gsd": ".gsd",
+    "design_references": "design/references",
+    "documentation": "docs/playbook",
+    "starter_kits": "starter-kits",
+    "swift_code": "BennieGame"
+  },
+  "key_files": {
+    "main_execution_plan": "CLAUDE.md",
+    "design_quick_ref": "PLAYBOOK_CONDENSED.md",
+    "coding_guidelines": "SWIFTUI_CODING_GUIDELINES.md",
+    "qa_checklist": "DESIGN_QA_CHECKLIST.md"
+  },
+  "design_constraints": {
+    "bennie_color": "#8C7259",
+    "bennie_clothing": "NEVER",
+    "lemminge_color": "#6FA8DC",
+    "lemminge_forbidden_colors": ["green", "brown"],
+    "min_touch_target": "96pt",
+    "forbidden_colors": ["#FF0000", "neon"],
+    "forbidden_animations": ["flashing", "shaking", "strobing"],
+    "ui_language": "german",
+    "feedback_type": "positive_only"
+  },
+  "target_users": {
+    "primary": ["Alexander (5, autism)", "Oliver (4)"],
+    "secondary": ["Parents"]
+  },
+  "status": "planning_complete",
+  "current_phase": 1,
+  "total_phases": 7,
+  "estimated_hours": "33-45"
+}
