@@ -24,7 +24,7 @@ None (no matching expertise folder available)
 - [x] **Phase 2: Core Screens** - Loading, player selection, home, navigation
 - [x] **Phase 3: Activities** - 4 playable games (puzzle, labyrinth, dice, numbers)
 - [x] **Phase 4: Reward System** - Coins, celebrations, treasure, YouTube redemption
-- [ ] **Phase 5: Audio Integration** - 3-channel audio, ElevenLabs voices, effects
+- [x] **Phase 5: Audio Integration** - 3-channel audio, ElevenLabs voices, effects
 - [ ] **Phase 6: Parent Features** - Gate, dashboard, video management, time limits
 - [ ] **Phase 7: Polish & Testing** - QA validation, accessibility, full playthrough
 
@@ -92,9 +92,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 05-01: AudioManager (3-channel: music, voice, effects; voice ducking)
-- [ ] 05-02: Voice generation (ElevenLabs narrator + Bennie voices, ~50 lines)
-- [ ] 05-03: Integration (trigger points, speech bubbles, sound effects)
+- [x] 05-01: AudioManager (3-channel: music, voice, effects; voice ducking)
+- [x] 05-02: Voice services (NarratorService, BennieService, SoundEffect enum)
+- [x] 05-03: Integration (trigger points, mute button, audio wired to all screens)
 
 **Playbook validation**: Voice ducking works, mute control affects all channels
 
@@ -133,7 +133,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 2. Core Screens | 3/3 | Complete | 2026-01-12 |
 | 3. Activities | 4/4 | Complete | 2026-01-12 |
 | 4. Reward System | 3/3 | Complete | 2026-01-12 |
-| 5. Audio Integration | 0/3 | Not started | - |
+| 5. Audio Integration | 3/3 | Complete | 2026-01-12 |
 | 6. Parent Features | 0/2 | Not started | - |
 | 7. Polish & Testing | 0/2 | Not started | - |
-| **Total** | **13/20** | | |
+| **Total** | **16/20** | | |
