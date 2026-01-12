@@ -13,6 +13,7 @@
 		AM000001299E000100000001 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AM000002299E000100000001 /* AudioManager.swift */; };
 		NS000001299E000100000001 /* NarratorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = NS000002299E000100000001 /* NarratorService.swift */; };
 		BS000001299E000100000001 /* BennieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BS000002299E000100000001 /* BennieService.swift */; };
+		SE000001299E000100000001 /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = SE000002299E000100000001 /* SoundEffects.swift */; };
 		B1000001299E000100000001 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000002299E000100000001 /* AppCoordinator.swift */; };
 		B1000003299E000100000001 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000004299E000100000001 /* Extensions.swift */; };
 		E1000001299E000100000001 /* BennieColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000002299E000100000001 /* BennieColors.swift */; };
@@ -48,6 +49,7 @@
 		AM000002299E000100000001 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		NS000002299E000100000001 /* NarratorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarratorService.swift; sourceTree = "<group>"; };
 		BS000002299E000100000001 /* BennieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BennieService.swift; sourceTree = "<group>"; };
+		SE000002299E000100000001 /* SoundEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffects.swift; sourceTree = "<group>"; };
 		A1000004299E000100000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1000006299E000100000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1000008299E000100000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				AM000002299E000100000001 /* AudioManager.swift */,
 				BS000002299E000100000001 /* BennieService.swift */,
 				NS000002299E000100000001 /* NarratorService.swift */,
+				SE000002299E000100000001 /* SoundEffects.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				AM000001299E000100000001 /* AudioManager.swift in Sources */,
 				NS000001299E000100000001 /* NarratorService.swift in Sources */,
 				BS000001299E000100000001 /* BennieService.swift in Sources */,
+				SE000001299E000100000001 /* SoundEffects.swift in Sources */,
 				B1000001299E000100000001 /* AppCoordinator.swift in Sources */,
 				B1000003299E000100000001 /* Extensions.swift in Sources */,
 				E1000001299E000100000001 /* BennieColors.swift in Sources */,
