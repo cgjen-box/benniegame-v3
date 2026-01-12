@@ -25,7 +25,7 @@ None (no matching expertise folder available)
 - [x] **Phase 3: Activities** - 4 playable games (puzzle, labyrinth, dice, numbers)
 - [x] **Phase 4: Reward System** - Coins, celebrations, treasure, YouTube redemption
 - [x] **Phase 5: Audio Integration** - 3-channel audio, ElevenLabs voices, effects
-- [ ] **Phase 6: Parent Features** - Gate, dashboard, video management, time limits
+- [x] **Phase 6: Parent Features** - Gate, dashboard, video management, time limits
 - [ ] **Phase 7: Polish & Testing** - QA validation, accessibility, full playthrough
 
 ## Phase Details
@@ -105,8 +105,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 06-01: Parent gate (math question) and dashboard (per-player stats)
-- [ ] 06-02: Video management and time limit controls
+- [x] 06-01: Parent gate (math question) and dashboard (per-player stats)
+- [x] 06-02: Video management and time limit controls
 
 **Playbook validation**: Math gate range 5-15, graceful time limit enforcement
 
@@ -134,6 +134,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 3. Activities | 4/4 | Complete | 2026-01-12 |
 | 4. Reward System | 3/3 | Complete | 2026-01-12 |
 | 5. Audio Integration | 3/3 | Complete | 2026-01-12 |
-| 6. Parent Features | 0/2 | Not started | - |
+| 6. Parent Features | 2/2 | Complete | 2026-01-12 |
 | 7. Polish & Testing | 0/2 | Not started | - |
-| **Total** | **16/20** | | |
+| **Total** | **18/20** | | |
