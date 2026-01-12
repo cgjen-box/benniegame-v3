@@ -14,6 +14,8 @@ struct CelebrationOverlay: View {
 
     @Environment(AppCoordinator.self) private var coordinator
     @Environment(PlayerStore.self) private var playerStore
+    @Environment(AudioManager.self) private var audioManager
+    @Environment(BennieService.self) private var bennie
 
     // MARK: - Properties
 
@@ -101,6 +103,11 @@ struct CelebrationOverlay: View {
                     .stroke(BennieColors.woodDark, lineWidth: 4)
             )
             .shadow(color: .black.opacity(0.3), radius: 20, x: 0, y: 10)
+        }
+        .onAppear {
+            // Play celebration audio
+            audioManager.playEffect(.celebrationFanfare)
+            bennie.playCelebration(coins: coinsEarned)
         }
     }
 }
@@ -294,19 +301,28 @@ private struct ConfettiParticleView: View {
 // MARK: - Preview
 
 #Preview("Celebration - 5 Coins") {
-    CelebrationOverlay(coinsEarned: 5)
+    let audioManager = AudioManager()
+    return CelebrationOverlay(coinsEarned: 5)
         .environment(AppCoordinator())
         .environment(PlayerStore())
+        .environment(audioManager)
+        .environment(BennieService(audioManager: audioManager))
 }
 
 #Preview("Celebration - 10 Coins") {
-    CelebrationOverlay(coinsEarned: 10)
+    let audioManager = AudioManager()
+    return CelebrationOverlay(coinsEarned: 10)
         .environment(AppCoordinator())
         .environment(PlayerStore())
+        .environment(audioManager)
+        .environment(BennieService(audioManager: audioManager))
 }
 
 #Preview("Celebration - 20 Coins") {
-    CelebrationOverlay(coinsEarned: 20)
+    let audioManager = AudioManager()
+    return CelebrationOverlay(coinsEarned: 20)
         .environment(AppCoordinator())
         .environment(PlayerStore())
+        .environment(audioManager)
+        .environment(BennieService(audioManager: audioManager))
 }

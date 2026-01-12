@@ -14,6 +14,7 @@ struct PlayerSelectionView: View {
 
     @Environment(AppCoordinator.self) private var coordinator
     @Environment(PlayerStore.self) private var playerStore
+    @Environment(NarratorService.self) private var narrator
 
     // MARK: - State
 
@@ -61,6 +62,10 @@ struct PlayerSelectionView: View {
                 }
             }
         }
+        .onAppear {
+            // Play player question audio
+            narrator.playPlayerQuestion()
+        }
     }
 
     // MARK: - Subviews
@@ -101,6 +106,10 @@ struct PlayerSelectionView: View {
 
         // Select player in store
         playerStore.selectPlayer(id: id)
+
+        // Play hello audio for selected player
+        let playerName = playerStore.getPlayer(id: id)?.name ?? id.capitalized
+        narrator.playHello(playerName: playerName)
 
         // Navigate to home after brief delay
         DispatchQueue.main.asyncAfter(deadline: .now() + navigationDelay) {
@@ -173,9 +182,11 @@ private struct PlayerButton: View {
 // MARK: - Previews
 
 #Preview("PlayerSelectionView") {
-    PlayerSelectionView()
+    let audioManager = AudioManager()
+    return PlayerSelectionView()
         .environment(AppCoordinator())
         .environment(PlayerStore())
+        .environment(NarratorService(audioManager: audioManager))
 }
 
 #Preview("PlayerButton - Normal") {

@@ -13,10 +13,13 @@ struct HomeView: View {
 
     @Environment(AppCoordinator.self) private var coordinator
     @Environment(PlayerStore.self) private var playerStore
+    @Environment(NarratorService.self) private var narrator
+    @Environment(BennieService.self) private var bennie
 
     // MARK: - State
 
     @State private var showingTreasureMessage = false
+    @State private var hasPlayedGreeting = false
 
     // MARK: - Body
 
@@ -44,6 +47,31 @@ struct HomeView: View {
                     .padding(.bottom, 32)
             }
             .padding(.horizontal, 24)
+        }
+        .onAppear {
+            playHomeAudio()
+        }
+    }
+
+    // MARK: - Audio
+
+    private func playHomeAudio() {
+        // Play home question
+        narrator.playHomeQuestion()
+
+        // Play Bennie greeting on first visit (one-time per session)
+        if !hasPlayedGreeting, let player = playerStore.activePlayer {
+            hasPlayedGreeting = true
+
+            // Delay greeting after narrator
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                bennie.playGreetingPart1(playerName: player.name)
+
+                // Play part 2 after part 1
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    bennie.playGreetingPart2()
+                }
+            }
         }
     }
 
@@ -220,7 +248,8 @@ struct HomeView: View {
 
     private func handleActivityTap(_ activity: ActivityType) {
         guard !activity.isLocked else {
-            // Locked activities do nothing on tap (visual indication via WoodSign)
+            // Locked activities play Bennie locked message
+            bennie.playLocked()
             return
         }
         coordinator.navigateToActivity(activity)
@@ -273,19 +302,25 @@ private struct ActivitySignView: View {
 #Preview("HomeView") {
     let store = PlayerStore()
     store.selectPlayer(id: "alexander")
+    let audioManager = AudioManager()
 
     return HomeView()
         .environment(AppCoordinator())
         .environment(store)
+        .environment(NarratorService(audioManager: audioManager))
+        .environment(BennieService(audioManager: audioManager))
 }
 
 #Preview("HomeView - Oliver") {
     let store = PlayerStore()
     store.selectPlayer(id: "oliver")
+    let audioManager = AudioManager()
 
     return HomeView()
         .environment(AppCoordinator())
         .environment(store)
+        .environment(NarratorService(audioManager: audioManager))
+        .environment(BennieService(audioManager: audioManager))
 }
 
 #Preview("HomeView - Many Coins") {
@@ -295,8 +330,11 @@ private struct ActivitySignView: View {
     for _ in 0..<15 {
         store.awardCoin()
     }
+    let audioManager = AudioManager()
 
     return HomeView()
         .environment(AppCoordinator())
         .environment(store)
+        .environment(NarratorService(audioManager: audioManager))
+        .environment(BennieService(audioManager: audioManager))
 }

@@ -47,6 +47,7 @@ struct VideoPlayerView: View {
     // MARK: - Environment
 
     @Environment(AppCoordinator.self) private var coordinator
+    @Environment(BennieService.self) private var bennie
 
     // MARK: - Properties
 
@@ -59,6 +60,7 @@ struct VideoPlayerView: View {
     @State private var showTimeUpMessage: Bool = false
     @State private var clockPulse: Bool = false
     @State private var timer: Timer?
+    @State private var hasPlayedOneMinuteWarning: Bool = false
 
     // MARK: - Initialization
 
@@ -225,8 +227,10 @@ struct VideoPlayerView: View {
                 secondsRemaining -= 1
 
                 // Check for 1-minute warning (60 seconds)
-                if secondsRemaining == 60 {
+                if secondsRemaining == 60 && !hasPlayedOneMinuteWarning {
+                    hasPlayedOneMinuteWarning = true
                     startClockPulse()
+                    bennie.playOneMinuteWarning()
                 }
 
                 // Check for time up
@@ -249,6 +253,9 @@ struct VideoPlayerView: View {
     private func handleTimeUp() {
         stopTimer()
         showTimeUpMessage = true
+
+        // Play time up audio
+        bennie.playTimeUp()
 
         // Navigate home after 2 seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
@@ -286,11 +293,15 @@ struct VideoPlayerView: View {
 // MARK: - Previews
 
 #Preview("VideoPlayerView - 5 Minutes") {
-    VideoPlayerView(minutesRemaining: 5, videoId: "qw0Jz5zJkgE")
+    let audioManager = AudioManager()
+    return VideoPlayerView(minutesRemaining: 5, videoId: "qw0Jz5zJkgE")
         .environment(AppCoordinator())
+        .environment(BennieService(audioManager: audioManager))
 }
 
 #Preview("VideoPlayerView - 1 Minute") {
-    VideoPlayerView(minutesRemaining: 1, videoId: "qw0Jz5zJkgE")
+    let audioManager = AudioManager()
+    return VideoPlayerView(minutesRemaining: 1, videoId: "qw0Jz5zJkgE")
         .environment(AppCoordinator())
+        .environment(BennieService(audioManager: audioManager))
 }

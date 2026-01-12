@@ -13,6 +13,7 @@ struct LoadingView: View {
     // MARK: - Environment
 
     @Environment(AppCoordinator.self) private var coordinator
+    @Environment(NarratorService.self) private var narrator
 
     // MARK: - State
 
@@ -109,6 +110,9 @@ struct LoadingView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + loadingDuration) {
             isComplete = true
 
+            // Play loading complete audio
+            narrator.playLoadingComplete()
+
             // Transition to player selection after a brief delay
             DispatchQueue.main.asyncAfter(deadline: .now() + transitionDelay) {
                 coordinator.transition(to: .playerSelection)
@@ -161,8 +165,10 @@ private struct LoadingProgressBar: View {
 // MARK: - Previews
 
 #Preview("LoadingView") {
-    LoadingView()
+    let audioManager = AudioManager()
+    return LoadingView()
         .environment(AppCoordinator())
+        .environment(NarratorService(audioManager: audioManager))
 }
 
 #Preview("LoadingProgressBar - Empty") {

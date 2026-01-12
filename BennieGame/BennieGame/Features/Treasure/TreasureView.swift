@@ -13,6 +13,8 @@ struct TreasureView: View {
 
     @Environment(AppCoordinator.self) private var coordinator
     @Environment(PlayerStore.self) private var playerStore
+    @Environment(AudioManager.self) private var audioManager
+    @Environment(BennieService.self) private var bennie
 
     // MARK: - State
 
@@ -54,6 +56,11 @@ struct TreasureView: View {
         }
         .onAppear {
             startAnimations()
+            // Play treasure chest audio
+            audioManager.playEffect(.chestOpen)
+            if let player = playerStore.activePlayer {
+                bennie.playTreasureMessage(coins: player.coins)
+            }
         }
     }
 
@@ -308,10 +315,13 @@ struct TreasureView: View {
 #Preview("TreasureView - No Coins") {
     let store = PlayerStore()
     store.selectPlayer(id: "alexander")
+    let audioManager = AudioManager()
 
     return TreasureView()
         .environment(AppCoordinator())
         .environment(store)
+        .environment(audioManager)
+        .environment(BennieService(audioManager: audioManager))
 }
 
 #Preview("TreasureView - 10 Coins") {
@@ -320,10 +330,13 @@ struct TreasureView: View {
     for _ in 0..<10 {
         store.awardCoin()
     }
+    let audioManager = AudioManager()
 
     return TreasureView()
         .environment(AppCoordinator())
         .environment(store)
+        .environment(audioManager)
+        .environment(BennieService(audioManager: audioManager))
 }
 
 #Preview("TreasureView - 20 Coins") {
@@ -332,8 +345,11 @@ struct TreasureView: View {
     for _ in 0..<20 {
         store.awardCoin()
     }
+    let audioManager = AudioManager()
 
     return TreasureView()
         .environment(AppCoordinator())
         .environment(store)
+        .environment(audioManager)
+        .environment(BennieService(audioManager: audioManager))
 }
