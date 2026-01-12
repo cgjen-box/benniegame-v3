@@ -10,6 +10,9 @@ struct BennieGameApp: App {
     /// The player store manages player data and persistence
     @State private var playerStore = PlayerStore()
 
+    /// The audio manager handles all audio playback (music, voice, effects)
+    @State private var audioManager = AudioManager()
+
     // MARK: - Body
 
     var body: some Scene {
@@ -17,6 +20,7 @@ struct BennieGameApp: App {
             ContentView()
                 .environment(coordinator)
                 .environment(playerStore)
+                .environment(audioManager)
         }
     }
 }
