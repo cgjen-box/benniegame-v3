@@ -19,6 +19,7 @@
 		F1000005299E000100000001 /* WoodSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000006299E000100000001 /* WoodSign.swift */; };
 		F1000007299E000100000001 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000008299E000100000001 /* ProgressBar.swift */; };
 		D1000001299E000100000001 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D1000002299E000100000001 /* Lottie */; };
+		G1000001299E000100000001 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = G1000002299E000100000001 /* GameState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		F1000004299E000100000001 /* WoodButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodButton.swift; sourceTree = "<group>"; };
 		F1000006299E000100000001 /* WoodSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodSign.swift; sourceTree = "<group>"; };
 		F1000008299E000100000001 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		G1000002299E000100000001 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		C1000006299E000100000001 /* State */ = {
 			isa = PBXGroup;
 			children = (
+				G1000002299E000100000001 /* GameState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				F1000003299E000100000001 /* WoodButton.swift in Sources */,
 				F1000005299E000100000001 /* WoodSign.swift in Sources */,
 				F1000007299E000100000001 /* ProgressBar.swift in Sources */,
+				G1000001299E000100000001 /* GameState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
