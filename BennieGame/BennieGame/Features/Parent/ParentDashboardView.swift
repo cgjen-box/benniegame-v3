@@ -20,6 +20,10 @@ struct ParentDashboardView: View {
     @State private var playerToReset: String? = nil
     /// Show reset all confirmation
     @State private var showResetAllConfirmation = false
+    /// Show video management sheet
+    @State private var showVideoManagement = false
+    /// Show time settings sheet
+    @State private var showTimeSettings = false
 
     // MARK: - Body
 
@@ -77,6 +81,9 @@ struct ParentDashboardView: View {
             Button("Abbrechen", role: .cancel) {}
         } message: {
             Text("Alle Münzen und Fortschritte aller Spieler werden gelöscht.")
+        }
+        .sheet(isPresented: $showVideoManagement) {
+            VideoManagementView()
         }
     }
 
@@ -169,9 +176,9 @@ struct ParentDashboardView: View {
                     )
                 }
 
-                // Video management placeholder (for 06-02)
+                // Video management button
                 ChildFriendlyButton(action: {
-                    // Placeholder for 06-02
+                    showVideoManagement = true
                 }) {
                     VStack(spacing: 8) {
                         Image(systemName: "video.fill")
@@ -179,21 +186,21 @@ struct ParentDashboardView: View {
                         Text("Video-Verwaltung")
                             .font(BennieFont.button(18))
                     }
-                    .foregroundColor(BennieColors.textOnWood.opacity(0.5))
+                    .foregroundColor(BennieColors.textOnWood)
                     .frame(width: 180, height: 120)
                     .background(
                         RoundedRectangle(cornerRadius: 12)
-                            .fill(BennieColors.woodLight.opacity(0.3))
+                            .fill(BennieColors.woodLight.opacity(0.7))
                     )
                     .overlay(
                         RoundedRectangle(cornerRadius: 12)
-                            .stroke(BennieColors.woodMedium.opacity(0.5), lineWidth: 2)
+                            .stroke(BennieColors.woodMedium, lineWidth: 2)
                     )
                 }
 
-                // Time settings placeholder (for 06-02)
+                // Time settings button
                 ChildFriendlyButton(action: {
-                    // Placeholder for 06-02
+                    showTimeSettings = true
                 }) {
                     VStack(spacing: 8) {
                         Image(systemName: "clock.fill")
@@ -201,15 +208,15 @@ struct ParentDashboardView: View {
                         Text("Zeit-Einstellungen")
                             .font(BennieFont.button(18))
                     }
-                    .foregroundColor(BennieColors.textOnWood.opacity(0.5))
+                    .foregroundColor(BennieColors.textOnWood)
                     .frame(width: 180, height: 120)
                     .background(
                         RoundedRectangle(cornerRadius: 12)
-                            .fill(BennieColors.woodLight.opacity(0.3))
+                            .fill(BennieColors.woodLight.opacity(0.7))
                     )
                     .overlay(
                         RoundedRectangle(cornerRadius: 12)
-                            .stroke(BennieColors.woodMedium.opacity(0.5), lineWidth: 2)
+                            .stroke(BennieColors.woodMedium, lineWidth: 2)
                     )
                 }
             }

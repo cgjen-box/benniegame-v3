@@ -5,30 +5,8 @@ import SwiftUI
 // ═══════════════════════════════════════════════════════════════════════════
 // Displays a grid of pre-approved kid-friendly German videos
 // Shows allocated time and allows video selection
+// Uses VideoStore for parent-managed video list
 // ═══════════════════════════════════════════════════════════════════════════
-
-/// Represents an approved YouTube video for kids
-struct ApprovedVideo: Identifiable {
-    let id: String  // YouTube video ID
-    let title: String
-
-    /// URL for the video thumbnail from YouTube
-    var thumbnailURL: URL {
-        URL(string: "https://img.youtube.com/vi/\(id)/mqdefault.jpg")!
-    }
-}
-
-/// Hardcoded list of approved kid-friendly German videos
-extension ApprovedVideo {
-    static let approvedVideos: [ApprovedVideo] = [
-        ApprovedVideo(id: "qw0Jz5zJkgE", title: "Peppa Wutz"),
-        ApprovedVideo(id: "eTxkAarT5Sg", title: "Conni"),
-        ApprovedVideo(id: "dBwwePP4dNo", title: "Benjamin Blümchen"),
-        ApprovedVideo(id: "6F53J-sYPhU", title: "Feuerwehrmann Sam"),
-        ApprovedVideo(id: "WvQpDBXZDv4", title: "Bibi Blocksberg"),
-        ApprovedVideo(id: "JE8_TBbW2yE", title: "Bobo Siebenschläfer")
-    ]
-}
 
 /// Video selection screen displaying approved videos
 struct VideoSelectionView: View {
@@ -36,6 +14,7 @@ struct VideoSelectionView: View {
 
     @Environment(AppCoordinator.self) private var coordinator
     @Environment(PlayerStore.self) private var playerStore
+    @Environment(VideoStore.self) private var videoStore
 
     // MARK: - Grid Configuration
 
@@ -67,7 +46,7 @@ struct VideoSelectionView: View {
                 // Video grid
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 24) {
-                        ForEach(ApprovedVideo.approvedVideos) { video in
+                        ForEach(videoStore.approvedVideos) { video in
                             videoThumbnail(video)
                         }
                     }
@@ -223,6 +202,7 @@ struct VideoSelectionView: View {
     return VideoSelectionView()
         .environment(coordinator)
         .environment(PlayerStore())
+        .environment(VideoStore())
 }
 
 #Preview("VideoSelectionView - 12 Minutes") {
@@ -232,4 +212,5 @@ struct VideoSelectionView: View {
     return VideoSelectionView()
         .environment(coordinator)
         .environment(PlayerStore())
+        .environment(VideoStore())
 }

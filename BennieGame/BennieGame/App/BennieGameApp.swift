@@ -13,6 +13,9 @@ struct BennieGameApp: App {
     /// The audio manager handles all audio playback (music, voice, effects)
     @State private var audioManager = AudioManager()
 
+    /// The video store manages approved videos list
+    @State private var videoStore = VideoStore()
+
     // MARK: - Voice Services (computed properties to use shared AudioManager)
 
     /// Narrator service for instructional voice lines
@@ -31,6 +34,7 @@ struct BennieGameApp: App {
                 .environment(audioManager)
                 .environment(narratorService)
                 .environment(bennieService)
+                .environment(videoStore)
         }
     }
 }
