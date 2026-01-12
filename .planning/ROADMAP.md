@@ -23,7 +23,7 @@ None (no matching expertise folder available)
 - [x] **Phase 1: Foundation** - Xcode project, design system, basic components
 - [x] **Phase 2: Core Screens** - Loading, player selection, home, navigation
 - [x] **Phase 3: Activities** - 4 playable games (puzzle, labyrinth, dice, numbers)
-- [ ] **Phase 4: Reward System** - Coins, celebrations, treasure, YouTube redemption
+- [x] **Phase 4: Reward System** - Coins, celebrations, treasure, YouTube redemption
 - [ ] **Phase 5: Audio Integration** - 3-channel audio, ElevenLabs voices, effects
 - [ ] **Phase 6: Parent Features** - Gate, dashboard, video management, time limits
 - [ ] **Phase 7: Polish & Testing** - QA validation, accessibility, full playthrough
@@ -80,7 +80,7 @@ Plans:
 Plans:
 - [x] 04-01: Coin economy (+1 per level, celebration at 5-coin intervals)
 - [x] 04-02: Celebration overlay (confetti, character animations, voice)
-- [ ] 04-03: Treasure & video (redemption, selection, controlled playback)
+- [x] 04-03: Treasure & video (redemption, selection, controlled playback)
 
 **Playbook validation**: Celebration triggers at 5, 10, 15, 20 coins; 10 coins = 5 min, 20 coins = 12 min
 
@@ -132,8 +132,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 1. Foundation | 3/3 | Complete | 2026-01-12 |
 | 2. Core Screens | 3/3 | Complete | 2026-01-12 |
 | 3. Activities | 4/4 | Complete | 2026-01-12 |
-| 4. Reward System | 2/3 | In Progress | - |
+| 4. Reward System | 3/3 | Complete | 2026-01-12 |
 | 5. Audio Integration | 0/3 | Not started | - |
 | 6. Parent Features | 0/2 | Not started | - |
 | 7. Polish & Testing | 0/2 | Not started | - |
-| **Total** | **12/20** | | |
+| **Total** | **13/20** | | |
