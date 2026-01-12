@@ -77,8 +77,8 @@ struct VideoPlayerView: View {
 
     var body: some View {
         ZStack {
-            // Background
-            Color.black
+            // Background (woodDark for autism-friendly video viewing)
+            BennieColors.woodDark
                 .ignoresSafeArea()
 
             VStack(spacing: 0) {
@@ -120,12 +120,12 @@ struct VideoPlayerView: View {
             // Digital time display
             Text(formattedTime)
                 .font(BennieFont.number())
-                .foregroundColor(isLowTime ? BennieColors.coinGold : .white)
+                .foregroundColor(isLowTime ? BennieColors.coinGold : BennieColors.textOnWood)
 
             // Time remaining text
             Text(isLowTime ? "Gleich ist die Zeit um!" : "Verbleibende Zeit")
                 .font(BennieFont.label())
-                .foregroundColor(.white.opacity(0.7))
+                .foregroundColor(BennieColors.textOnWood.opacity(0.7))
 
             Spacer()
         }
@@ -197,8 +197,8 @@ struct VideoPlayerView: View {
 
     private var timeUpOverlay: some View {
         ZStack {
-            // Dark background
-            Color.black.opacity(0.8)
+            // Dark background (woodDark for autism-friendly dimming)
+            BennieColors.woodDark.opacity(0.9)
                 .ignoresSafeArea()
 
             VStack(spacing: 24) {
@@ -210,11 +210,11 @@ struct VideoPlayerView: View {
                 // Message
                 Text("Zeit ist um!")
                     .font(BennieFont.title())
-                    .foregroundColor(.white)
+                    .foregroundColor(BennieColors.textOnWood)
 
                 Text("Zurück zum Spielen!")
                     .font(BennieFont.screenHeader())
-                    .foregroundColor(.white.opacity(0.8))
+                    .foregroundColor(BennieColors.textOnWood.opacity(0.8))
             }
             .padding(48)
             .background(

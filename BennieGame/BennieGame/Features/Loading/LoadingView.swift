@@ -154,8 +154,8 @@ private struct LoadingProgressBar: View {
                 // Percentage text
                 Text("\(Int(progress * 100))%")
                     .font(BennieFont.button(18))
-                    .foregroundColor(.white)
-                    .shadow(color: .black.opacity(0.3), radius: 1, x: 0, y: 1)
+                    .foregroundColor(BennieColors.textOnWood)
+                    .shadow(color: BennieColors.woodDark.opacity(0.3), radius: 1, x: 0, y: 1)
                     .frame(maxWidth: .infinity, alignment: .center)
             }
         }

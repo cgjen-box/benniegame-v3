@@ -89,11 +89,11 @@ struct CoinFlyAnimation: View {
                 .fill(BennieColors.coinGold.opacity(0.8))
                 .frame(width: coinSize * 0.75, height: coinSize * 0.75)
 
-            // Shine effect
+            // Shine effect (using cream for autism-friendly highlight)
             Circle()
                 .fill(
                     LinearGradient(
-                        colors: [.white.opacity(0.4), .clear],
+                        colors: [BennieColors.cream.opacity(0.6), .clear],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     )
@@ -226,7 +226,7 @@ extension View {
                             .overlay(
                                 Text("Fortschritt")
                                     .font(BennieFont.label())
-                                    .foregroundColor(.white)
+                                    .foregroundColor(BennieColors.textOnWood)
                             )
                         Spacer()
                     }

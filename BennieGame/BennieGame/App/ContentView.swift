@@ -326,7 +326,7 @@ private struct ParentDashboardPlaceholder: View {
                 playerStore.resetAllProgress()
             }
             .buttonStyle(.bordered)
-            .tint(.red)
+            .tint(BennieColors.woodDark)
 
             Button("Zurück") {
                 coordinator.navigateHome()

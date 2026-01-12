@@ -265,7 +265,7 @@ struct ParentGateView: View {
 
     private var successOverlay: some View {
         ZStack {
-            Color.black.opacity(0.3)
+            BennieColors.woodDark.opacity(0.4)
                 .ignoresSafeArea()
 
             VStack(spacing: 20) {

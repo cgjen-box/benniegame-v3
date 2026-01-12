@@ -201,7 +201,7 @@ struct VideoManagementView: View {
                         Text("Hinzufügen")
                             .font(BennieFont.button(18))
                     }
-                    .foregroundColor(.white)
+                    .foregroundColor(BennieColors.textOnWood)
                     .padding(.horizontal, 24)
                     .frame(width: 180, height: 96)
                     .background(

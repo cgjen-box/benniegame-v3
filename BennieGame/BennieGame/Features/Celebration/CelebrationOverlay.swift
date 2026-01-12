@@ -44,8 +44,8 @@ struct CelebrationOverlay: View {
 
     var body: some View {
         ZStack {
-            // Semi-transparent background overlay
-            Color.black.opacity(0.4)
+            // Semi-transparent background overlay (woodDark for autism-friendly dimming)
+            BennieColors.woodDark.opacity(0.6)
                 .ignoresSafeArea()
 
             // Confetti animation layer (behind content)

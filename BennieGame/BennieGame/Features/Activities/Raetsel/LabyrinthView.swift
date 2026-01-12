@@ -209,7 +209,7 @@ struct LabyrinthView: View {
                 Text("START")
                     .font(BennieFont.label(12))
                     .fontWeight(.bold)
-                    .foregroundColor(.white)
+                    .foregroundColor(BennieColors.textOnWood)
             }
             .position(startPoint)
         )

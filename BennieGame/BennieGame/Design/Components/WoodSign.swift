@@ -87,7 +87,7 @@ struct LockedOverlay: View {
     var body: some View {
         ZStack {
             // Darkened background
-            Color.black.opacity(0.3)
+            BennieColors.woodDark.opacity(0.3)
 
             // Chain pattern + lock icon
             VStack(spacing: 4) {
