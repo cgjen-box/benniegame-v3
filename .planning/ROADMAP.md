@@ -78,7 +78,7 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: Coin economy (+1 per level, celebration at 5-coin intervals)
+- [x] 04-01: Coin economy (+1 per level, celebration at 5-coin intervals)
 - [ ] 04-02: Celebration overlay (confetti, character animations, voice)
 - [ ] 04-03: Treasure & video (redemption, selection, controlled playback)
 
@@ -132,8 +132,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 1. Foundation | 3/3 | Complete | 2026-01-12 |
 | 2. Core Screens | 3/3 | Complete | 2026-01-12 |
 | 3. Activities | 4/4 | Complete | 2026-01-12 |
-| 4. Reward System | 0/3 | Next | - |
+| 4. Reward System | 1/3 | In Progress | - |
 | 5. Audio Integration | 0/3 | Not started | - |
 | 6. Parent Features | 0/2 | Not started | - |
 | 7. Polish & Testing | 0/2 | Not started | - |
-| **Total** | **10/20** | | |
+| **Total** | **11/20** | | |
