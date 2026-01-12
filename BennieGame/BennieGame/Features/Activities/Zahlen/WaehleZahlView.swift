@@ -202,7 +202,7 @@ struct WaehleZahlView: View {
             .disabled(showFeedback || showCoinAnimation)
             .accessibilityLabel("Zahl \(number)")
         }
-        .frame(width: 80, height: 80)
+        .frame(width: 96, height: 96)
     }
 
     // MARK: - Button Styling
