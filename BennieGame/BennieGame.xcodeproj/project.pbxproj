@@ -14,6 +14,7 @@
 		NS000001299E000100000001 /* NarratorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = NS000002299E000100000001 /* NarratorService.swift */; };
 		BS000001299E000100000001 /* BennieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BS000002299E000100000001 /* BennieService.swift */; };
 		SE000001299E000100000001 /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = SE000002299E000100000001 /* SoundEffects.swift */; };
+		MB000001299E000100000001 /* MuteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = MB000002299E000100000001 /* MuteButton.swift */; };
 		B1000001299E000100000001 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000002299E000100000001 /* AppCoordinator.swift */; };
 		B1000003299E000100000001 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000004299E000100000001 /* Extensions.swift */; };
 		E1000001299E000100000001 /* BennieColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000002299E000100000001 /* BennieColors.swift */; };
@@ -50,6 +51,7 @@
 		NS000002299E000100000001 /* NarratorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarratorService.swift; sourceTree = "<group>"; };
 		BS000002299E000100000001 /* BennieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BennieService.swift; sourceTree = "<group>"; };
 		SE000002299E000100000001 /* SoundEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffects.swift; sourceTree = "<group>"; };
+		MB000002299E000100000001 /* MuteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteButton.swift; sourceTree = "<group>"; };
 		A1000004299E000100000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1000006299E000100000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1000008299E000100000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				F1000006299E000100000001 /* WoodSign.swift */,
 				F1000008299E000100000001 /* ProgressBar.swift */,
 				L1000002299E000100000001 /* CoinFlyAnimation.swift */,
+				MB000002299E000100000001 /* MuteButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				M1000001299E000100000001 /* CelebrationOverlay.swift in Sources */,
 				N1000001299E000100000001 /* VideoSelectionView.swift in Sources */,
 				N1000003299E000100000001 /* VideoPlayerView.swift in Sources */,
+				MB000001299E000100000001 /* MuteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

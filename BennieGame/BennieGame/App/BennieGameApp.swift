@@ -13,6 +13,14 @@ struct BennieGameApp: App {
     /// The audio manager handles all audio playback (music, voice, effects)
     @State private var audioManager = AudioManager()
 
+    // MARK: - Voice Services (computed properties to use shared AudioManager)
+
+    /// Narrator service for instructional voice lines
+    private var narratorService: NarratorService { NarratorService(audioManager: audioManager) }
+
+    /// Bennie character service for companion voice lines
+    private var bennieService: BennieService { BennieService(audioManager: audioManager) }
+
     // MARK: - Body
 
     var body: some Scene {
@@ -21,6 +29,8 @@ struct BennieGameApp: App {
                 .environment(coordinator)
                 .environment(playerStore)
                 .environment(audioManager)
+                .environment(narratorService)
+                .environment(bennieService)
         }
     }
 }
