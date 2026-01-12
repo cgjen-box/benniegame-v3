@@ -33,6 +33,7 @@
 		J1000003299E000100000001 /* LabyrinthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = J1000004299E000100000001 /* LabyrinthView.swift */; };
 		K1000001299E000100000001 /* WuerfelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = K1000002299E000100000001 /* WuerfelView.swift */; };
 		K1000003299E000100000001 /* WaehleZahlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = K1000004299E000100000001 /* WaehleZahlView.swift */; };
+		L1000001299E000100000001 /* CoinFlyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = L1000002299E000100000001 /* CoinFlyAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		J1000004299E000100000001 /* LabyrinthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabyrinthView.swift; sourceTree = "<group>"; };
 		K1000002299E000100000001 /* WuerfelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WuerfelView.swift; sourceTree = "<group>"; };
 		K1000004299E000100000001 /* WaehleZahlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaehleZahlView.swift; sourceTree = "<group>"; };
+		L1000002299E000100000001 /* CoinFlyAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFlyAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +278,7 @@
 				F1000004299E000100000001 /* WoodButton.swift */,
 				F1000006299E000100000001 /* WoodSign.swift */,
 				F1000008299E000100000001 /* ProgressBar.swift */,
+				L1000002299E000100000001 /* CoinFlyAnimation.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				J1000003299E000100000001 /* LabyrinthView.swift in Sources */,
 				K1000001299E000100000001 /* WuerfelView.swift in Sources */,
 				K1000003299E000100000001 /* WaehleZahlView.swift in Sources */,
+				L1000001299E000100000001 /* CoinFlyAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
