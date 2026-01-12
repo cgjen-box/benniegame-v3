@@ -22,7 +22,7 @@ None (no matching expertise folder available)
 
 - [x] **Phase 1: Foundation** - Xcode project, design system, basic components
 - [x] **Phase 2: Core Screens** - Loading, player selection, home, navigation
-- [ ] **Phase 3: Activities** - 4 playable games (puzzle, labyrinth, dice, numbers)
+- [x] **Phase 3: Activities** - 4 playable games (puzzle, labyrinth, dice, numbers)
 - [ ] **Phase 4: Reward System** - Coins, celebrations, treasure, YouTube redemption
 - [ ] **Phase 5: Audio Integration** - 3-channel audio, ElevenLabs voices, effects
 - [ ] **Phase 6: Parent Features** - Gate, dashboard, video management, time limits
@@ -63,10 +63,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 03-01: Puzzle Matching (dual grid, color picker, pattern validation)
-- [ ] 03-02: Labyrinth (path tracing, touch validation, START→ZIEL)
-- [ ] 03-03: Würfel/Dice (dice animation, number buttons 1-6)
-- [ ] 03-04: Wähle die Zahl (numbers 1-10, tracing validation)
+- [x] 03-01: Puzzle Matching (dual grid, color picker, pattern validation)
+- [x] 03-02: Labyrinth (path tracing, touch validation, START→ZIEL)
+- [x] 03-03: Würfel/Dice (dice animation, number buttons 1-6)
+- [x] 03-04: Wähle die Zahl (numbers 1-10, number selection)
 
 **Playbook validation**: German UI only, positive feedback only (never "Falsch")
 
@@ -131,9 +131,9 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-01-12 |
 | 2. Core Screens | 3/3 | Complete | 2026-01-12 |
-| 3. Activities | 0/4 | Next | - |
-| 4. Reward System | 0/3 | Not started | - |
+| 3. Activities | 4/4 | Complete | 2026-01-12 |
+| 4. Reward System | 0/3 | Next | - |
 | 5. Audio Integration | 0/3 | Not started | - |
 | 6. Parent Features | 0/2 | Not started | - |
 | 7. Polish & Testing | 0/2 | Not started | - |
-| **Total** | **6/20** | | |
+| **Total** | **10/20** | | |
