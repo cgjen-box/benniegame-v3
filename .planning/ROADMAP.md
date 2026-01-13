@@ -2,8 +2,8 @@
 
 ## Milestones
 
-- **v1.0 MVP** — Phases 1-8 (shipped 2026-01-13) — [Full archive](milestones/v1.0-ROADMAP.md)
-- **v1.1 TestFlight** — Planned
+- ✅ **v1.0 MVP** — Phases 1-8 (shipped 2026-01-13) — [Full archive](milestones/v1.0-ROADMAP.md)
+- 🚧 **v1.1 Polish & Production** — Phases 9-14 (in progress)
 
 ## Source of Truth
 
@@ -79,15 +79,80 @@
 
 ---
 
-## v1.1 TestFlight (Planned)
+## 🚧 v1.1 Polish & Production (In Progress)
 
-*Run `/gsd:discuss-milestone` or `/gsd:new-milestone` to plan v1.1*
+**Milestone Goal:** Production-quality polish with full spec compliance — visual alignment to references, voice audio generation, adaptive difficulty, accessibility, performance optimization, and recursive testing until 100% Playbook compliance.
 
-Candidate phases:
-- Voice audio generation (ElevenLabs)
-- Lottie Xcode integration
-- TestFlight deployment
-- Real-device testing
+**Key References:**
+- `PLAYBOOK_CONDENSED.md` — Design rules source of truth
+- `design/references/screens/Reference_*.png` — 8 reference screen mockups
+- `plan/12_adaptive_difficulty/` — Adaptive difficulty spec
+- `plan/13_accessibility/` — Accessibility spec
+- `plan/14_performance/` — Performance spec
+- `plan/15_recursive_testing/` — Recursive testing spec
+- `starter-kits/maestro-orchestration/` — MCP servers for automated testing
+
+### Phase 9: Visual QA & Reference Alignment
+
+**Goal**: Screen-by-screen comparison to Reference_*.png, fix all deviations to match exactly
+**Depends on**: v1.0 MVP complete
+**Research**: Unlikely (internal QA patterns)
+**Plans**: TBD
+
+Plans:
+- [ ] 09-01: TBD (run /gsd:plan-phase 9 to break down)
+
+### Phase 10: Voice Audio Generation
+
+**Goal**: Generate all German voice lines via ElevenLabs, integrate into AudioManager
+**Depends on**: Phase 9
+**Research**: Likely (ElevenLabs API integration)
+**Research topics**: ElevenLabs API, German voice selection, audio file format/compression
+**Plans**: TBD
+
+Plans:
+- [ ] 10-01: TBD
+
+### Phase 11: Adaptive Difficulty
+
+**Goal**: Implement LearningProfile, difficulty rules, per-activity configs for Alexander/Oliver
+**Depends on**: Phase 10
+**Research**: Unlikely (spec exists in plan/12_adaptive_difficulty/)
+**Plans**: TBD
+
+Plans:
+- [ ] 11-01: TBD
+
+### Phase 12: Accessibility
+
+**Goal**: Touch target enforcement (96pt), VoiceOver German labels, color blindness, haptics, reduce motion
+**Depends on**: Phase 11
+**Research**: Unlikely (standard iOS accessibility APIs)
+**Plans**: TBD
+
+Plans:
+- [ ] 12-01: TBD
+
+### Phase 13: Performance
+
+**Goal**: Profiling, memory optimization (<200MB), asset optimization, 60fps validation, <100ms touch response
+**Depends on**: Phase 12
+**Research**: Unlikely (Xcode Instruments, internal profiling)
+**Plans**: TBD
+
+Plans:
+- [ ] 13-01: TBD
+
+### Phase 14: Recursive Testing
+
+**Goal**: Full playthrough automation via maestro-orchestration MCP, Playbook compliance validation until 100%
+**Depends on**: Phase 13
+**Research**: Likely (maestro-orchestration MCP integration)
+**Research topics**: iOS Simulator MCP, run_tests(), take_screenshot(), XCUITest automation
+**Plans**: TBD
+
+Plans:
+- [ ] 14-01: TBD
 
 ---
 
@@ -96,4 +161,4 @@ Candidate phases:
 | Milestone | Phases | Plans | Status | Date |
 |-----------|--------|-------|--------|------|
 | v1.0 MVP | 1-8 | 23/23 | SHIPPED | 2026-01-13 |
-| v1.1 TestFlight | TBD | TBD | Planned | — |
+| v1.1 Polish & Production | 9-14 | 0/? | In progress | — |

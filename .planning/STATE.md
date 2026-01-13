@@ -5,25 +5,25 @@
 See: .planning/PROJECT.md (updated 2026-01-13)
 
 **Core value:** Autism-friendly learning through gentle play with Bennie the Bear
-**Current focus:** v1.0 MVP SHIPPED — Ready for v1.1 planning
+**Current focus:** v1.1 Polish & Production — Visual QA, Voice Audio, Adaptive Difficulty, Accessibility, Performance, Recursive Testing
 
 ## Current Position
 
-Phase: 8 of 8 (Asset Production)
-Plan: 3 of 3 (COMPLETE)
-Status: v1.0 MVP SHIPPED
-Last activity: 2026-01-13 — v1.0 milestone complete
+Phase: 9 of 14 (Visual QA & Reference Alignment)
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-01-13 — Milestone v1.1 created
 
-Progress: ████████████████████████████████████████ 100%
+Progress: ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0%
 
 ## Performance Metrics
 
-**Velocity:**
+**v1.0 Velocity:**
 - Total plans completed: 23
 - Average duration: ~10 min
 - Total execution time: ~230 min
 
-**By Phase:**
+**By Phase (v1.0):**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
@@ -36,7 +36,7 @@ Progress: ███████████████████████�
 | 7. Polish & Testing | 2/2 | ~20 min | ~10 min |
 | 8. Asset Production | 3/3 | ~30 min | ~10 min |
 
-**Timeline:**
+**v1.0 Timeline:**
 - Start: 2026-01-12
 - Ship: 2026-01-13
 - Duration: 2 days
@@ -47,30 +47,39 @@ Progress: ███████████████████████�
 
 Key decisions logged in PROJECT.md and milestones/v1.0-ROADMAP.md.
 
-Recent decisions affecting future work:
-- CDP automation preferred over MCP for browser control
+Recent decisions affecting v1.1 work:
+- CDP automation preferred over MCP for browser control (Ludo.ai)
 - Lottie PNG-embedded format for character consistency
-- Voice files structured but need actual generation
+- Voice files structured but need actual ElevenLabs generation
+- Maestro-orchestration MCP for automated recursive testing
 
 ### Deferred Issues
 
 From `.gsd/ISSUES.md`:
-- DEFER-001: Zeichnen (Drawing) activity — post-MVP
-- DEFER-002: Logik (Logic) activity — post-MVP
+- DEFER-001: Zeichnen (Drawing) activity — post-v1.1
+- DEFER-002: Logik (Logic) activity — post-v1.1
 - DEFER-003 to DEFER-012: Various enhancements (see ISSUES.md)
 
-### Blockers/Concerns
+### Blockers/Concerns Cleared
 
-- Voice audio generation needed before TestFlight
-- Lottie files need manual Xcode import
+Previous blockers now addressed in v1.1 scope:
+- ~~Voice audio generation needed~~ → Phase 10
+- ~~Lottie files need manual Xcode import~~ → Address during Phase 9 visual QA
+
+### Roadmap Evolution
+
+- v1.0 MVP shipped: Foundation through Asset Production, 8 phases (2026-01-13)
+- v1.1 Polish & Production created: Visual QA, Voice, Adaptive Difficulty, Accessibility, Performance, Recursive Testing, 6 phases (Phase 9-14)
 
 ## Session Continuity
 
 Last session: 2026-01-13
-Completed: v1.0 MVP milestone
+Stopped at: Milestone v1.1 initialization
 Resume file: None
-Next: Plan v1.1 (TestFlight deployment)
+Next: Plan Phase 9 (Visual QA & Reference Alignment)
 
 ## Next Steps
 
-Run `/gsd:discuss-milestone` to plan v1.1 features.
+Run `/gsd:plan-phase 9` to break down Visual QA & Reference Alignment phase.
+
+Or `/gsd:discuss-phase 9` to gather context first.
