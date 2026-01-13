@@ -1,0 +1,27 @@
+Generated: bennie_waving_start
+Raw Mode: True
+Character: bennie
+============================================================
+FULL PROMPT SENT TO GEMINI:
+============================================================
+KEYFRAME IMAGE FOR LUDO.AI ANIMATION:
+
+Character: Bennie the Bear
+Style: 2D vector art, cartoon illustration, clean digital art
+Body: Adult brown bear proportions (NOT chibi or cute), pear-shaped body
+Colors: Chocolate brown fur (#8C7259), lighter tan snout area only (#FAF5EB)
+Eyes: Small round dark eyes with white highlights
+Nose: Large dark espresso brown triangular nose (#5A4A3A)
+Outlines: Thick dark cel-shaded outlines
+Background: Clean cream/off-white or transparent background
+
+POSE FOR THIS KEYFRAME:
+one arm raised at shoulder height, paw facing forward, friendly smile
+
+CRITICAL REQUIREMENTS:
+- EXACT same character design as reference image
+- Full body visible with feet on ground
+- Clean simple background (no complex scenes)
+- Pose matches description precisely
+- Arms clearly attached to body
+- Consistent proportions throughout

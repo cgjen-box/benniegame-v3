@@ -26,7 +26,20 @@
     "design_references": "design/references",
     "documentation": "docs/playbook",
     "starter_kits": "starter-kits",
+    "skills": ".claude/skills",
     "swift_code": "BennieGame"
+  },
+  "starter_kit_skills": {
+    "image-gen": "starter-kits/gemini-image-pro-3",
+    "animation": ["starter-kits/ludo-animation-pipeline", "starter-kits/lottie-animation-system"],
+    "video-gen": "starter-kits/veo-video-generation",
+    "security": "starter-kits/security-infrastructure",
+    "ios-dev": "starter-kits/maestro-orchestration"
+  },
+  "external_tools": {
+    "chrome_debug_profile": "/Users/user289321/chrome-debug-profile",
+    "chrome_debug_port": 9222,
+    "chrome_binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
   },
   "key_files": {
     "main_execution_plan": "CLAUDE.md",

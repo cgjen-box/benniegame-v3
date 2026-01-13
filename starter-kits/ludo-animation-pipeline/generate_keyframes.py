@@ -31,15 +31,16 @@ from dataclasses import dataclass
 from typing import Optional, Tuple, Dict, Any
 from datetime import datetime
 
-# Add parent directory for imports
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Add gemini-image-pro-3 directory for imports
+gemini_kit_path = Path(__file__).parent.parent / 'gemini-image-pro-3'
+sys.path.insert(0, str(gemini_kit_path))
 
 try:
     from generate_image import generate_single, CONFIG, log
     from reference_style import get_reference_prompt_prefix
 except ImportError as e:
-    print(f"[ERROR] Failed to import from parent: {e}", file=sys.stderr)
-    print("[INFO] Run from designer system directory or add to PYTHONPATH", file=sys.stderr)
+    print(f"[ERROR] Failed to import from gemini-image-pro-3: {e}", file=sys.stderr)
+    print(f"[INFO] Expected path: {gemini_kit_path}", file=sys.stderr)
     sys.exit(1)
 
 

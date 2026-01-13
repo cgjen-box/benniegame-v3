@@ -1,3 +1,8 @@
+---
+name: ios-dev
+description: Build, test, and debug Bennie Bear iPad app on MacinCloud with MCP tools
+---
+
 # iOS Development Skill - Bennie Bear
 
 ## Overview

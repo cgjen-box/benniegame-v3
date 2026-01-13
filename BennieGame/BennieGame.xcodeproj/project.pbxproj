@@ -103,6 +103,7 @@
 		K1000001299E000100000001 /* WuerfelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = K1000002299E000100000001 /* WuerfelView.swift */; };
 		K1000003299E000100000001 /* WaehleZahlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = K1000004299E000100000001 /* WaehleZahlView.swift */; };
 		L1000001299E000100000001 /* CoinFlyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = L1000002299E000100000001 /* CoinFlyAnimation.swift */; };
+		LV000001299E000100000001 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LV000002299E000100000001 /* LottieView.swift */; };
 		M1000001299E000100000001 /* CelebrationOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = M1000002299E000100000001 /* CelebrationOverlay.swift */; };
 		MB000001299E000100000001 /* MuteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = MB000002299E000100000001 /* MuteButton.swift */; };
 		N1000001299E000100000001 /* VideoSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = N1000002299E000100000001 /* VideoSelectionView.swift */; };
@@ -114,6 +115,19 @@
 		TS000001299E000100000001 /* TimeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = TS000002299E000100000001 /* TimeSettingsView.swift */; };
 		VM000001299E000100000001 /* VideoManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = VM000002299E000100000001 /* VideoManagementView.swift */; };
 		VS000001299E000100000001 /* VideoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = VS000002299E000100000001 /* VideoStore.swift */; };
+		5B897879BB374BEB4978C5F3 /* bennie_celebrating.json in Resources */ = {isa = PBXBuildFile; fileRef = 230807B9198F50CAC6C8E1F0 /* bennie_celebrating.json */; };
+		B65E92CDA5BD4A03B2E34096 /* bennie_encouraging.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E73E694946551CB8E92CA13 /* bennie_encouraging.json */; };
+		61603B629FD1D7D0D5D332A7 /* bennie_happy.json in Resources */ = {isa = PBXBuildFile; fileRef = 79374549675E58418FE80587 /* bennie_happy.json */; };
+		6E57216D467B2296A8C9F09F /* bennie_idle.json in Resources */ = {isa = PBXBuildFile; fileRef = D6D70AE2BFA52EC5DAF9C299 /* bennie_idle.json */; };
+		6DD244FFF6B93F00D2CFD4EA /* bennie_pointing.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C94E464A799E41E23D92ACB /* bennie_pointing.json */; };
+		4F6B307863D2698D9A110EB5 /* bennie_thinking.json in Resources */ = {isa = PBXBuildFile; fileRef = 2882BDE9DE456B87FF683EEE /* bennie_thinking.json */; };
+		33F3DC3236A395E54D8FA760 /* bennie_waving.json in Resources */ = {isa = PBXBuildFile; fileRef = EC4A11B0ADD3B2102A3D07EC /* bennie_waving.json */; };
+		80B31B055626C4714B29BE15 /* lemminge_celebrating.json in Resources */ = {isa = PBXBuildFile; fileRef = 90345D0884543A0E0D0E3A20 /* lemminge_celebrating.json */; };
+		878FAA7B6076698DBC395C3E /* lemminge_curious.json in Resources */ = {isa = PBXBuildFile; fileRef = D266250A21F6AE74B45693ED /* lemminge_curious.json */; };
+		41900E6941932CD95FF9F3EF /* lemminge_excited.json in Resources */ = {isa = PBXBuildFile; fileRef = F75ED74146301DEAC06F2DBC /* lemminge_excited.json */; };
+		A972B85963AB2F10D40E048D /* lemminge_hiding.json in Resources */ = {isa = PBXBuildFile; fileRef = 303084CDE688911A482D55F5 /* lemminge_hiding.json */; };
+		F8FF14A2D2ECADE5E51FC3BB /* lemminge_idle.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB842FCA9904A0D29A4BBFB /* lemminge_idle.json */; };
+		9FC6DEC948F210B363108FEF /* lemminge_mischievous.json in Resources */ = {isa = PBXBuildFile; fileRef = 9938617DA5448D40DAAF3288 /* lemminge_mischievous.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -214,6 +228,7 @@
 		K1000002299E000100000001 /* WuerfelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WuerfelView.swift; sourceTree = "<group>"; };
 		K1000004299E000100000001 /* WaehleZahlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaehleZahlView.swift; sourceTree = "<group>"; };
 		L1000002299E000100000001 /* CoinFlyAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFlyAnimation.swift; sourceTree = "<group>"; };
+		LV000002299E000100000001 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		M1000002299E000100000001 /* CelebrationOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationOverlay.swift; sourceTree = "<group>"; };
 		MB000002299E000100000001 /* MuteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteButton.swift; sourceTree = "<group>"; };
 		N1000002299E000100000001 /* VideoSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSelectionView.swift; sourceTree = "<group>"; };
@@ -225,6 +240,19 @@
 		TS000002299E000100000001 /* TimeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingsView.swift; sourceTree = "<group>"; };
 		VM000002299E000100000001 /* VideoManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManagementView.swift; sourceTree = "<group>"; };
 		VS000002299E000100000001 /* VideoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStore.swift; sourceTree = "<group>"; };
+		230807B9198F50CAC6C8E1F0 /* bennie_celebrating.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = bennie_celebrating.json; sourceTree = "<group>"; };
+		5E73E694946551CB8E92CA13 /* bennie_encouraging.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = bennie_encouraging.json; sourceTree = "<group>"; };
+		79374549675E58418FE80587 /* bennie_happy.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = bennie_happy.json; sourceTree = "<group>"; };
+		D6D70AE2BFA52EC5DAF9C299 /* bennie_idle.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = bennie_idle.json; sourceTree = "<group>"; };
+		5C94E464A799E41E23D92ACB /* bennie_pointing.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = bennie_pointing.json; sourceTree = "<group>"; };
+		2882BDE9DE456B87FF683EEE /* bennie_thinking.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = bennie_thinking.json; sourceTree = "<group>"; };
+		EC4A11B0ADD3B2102A3D07EC /* bennie_waving.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = bennie_waving.json; sourceTree = "<group>"; };
+		90345D0884543A0E0D0E3A20 /* lemminge_celebrating.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = lemminge_celebrating.json; sourceTree = "<group>"; };
+		D266250A21F6AE74B45693ED /* lemminge_curious.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = lemminge_curious.json; sourceTree = "<group>"; };
+		F75ED74146301DEAC06F2DBC /* lemminge_excited.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = lemminge_excited.json; sourceTree = "<group>"; };
+		303084CDE688911A482D55F5 /* lemminge_hiding.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = lemminge_hiding.json; sourceTree = "<group>"; };
+		9FB842FCA9904A0D29A4BBFB /* lemminge_idle.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = lemminge_idle.json; sourceTree = "<group>"; };
+		9938617DA5448D40DAAF3288 /* lemminge_mischievous.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = lemminge_mischievous.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -511,6 +539,7 @@
 				F100000A299E000100000001 /* ForestBackground.swift */,
 				L1000002299E000100000001 /* CoinFlyAnimation.swift */,
 				MB000002299E000100000001 /* MuteButton.swift */,
+				LV000002299E000100000001 /* LottieView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -532,6 +561,19 @@
 		C1000015299E000100000001 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				230807B9198F50CAC6C8E1F0 /* bennie_celebrating.json */,
+				5E73E694946551CB8E92CA13 /* bennie_encouraging.json */,
+				79374549675E58418FE80587 /* bennie_happy.json */,
+				D6D70AE2BFA52EC5DAF9C299 /* bennie_idle.json */,
+				5C94E464A799E41E23D92ACB /* bennie_pointing.json */,
+				2882BDE9DE456B87FF683EEE /* bennie_thinking.json */,
+				EC4A11B0ADD3B2102A3D07EC /* bennie_waving.json */,
+				90345D0884543A0E0D0E3A20 /* lemminge_celebrating.json */,
+				D266250A21F6AE74B45693ED /* lemminge_curious.json */,
+				F75ED74146301DEAC06F2DBC /* lemminge_excited.json */,
+				303084CDE688911A482D55F5 /* lemminge_hiding.json */,
+				9FB842FCA9904A0D29A4BBFB /* lemminge_idle.json */,
+				9938617DA5448D40DAAF3288 /* lemminge_mischievous.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -760,6 +802,19 @@
 				78A4F4CAE3F464B6F643F038 /* success_super.mp3 in Resources */,
 				95DEE524491CB6EDCB2F305C /* success_toll_gemacht.mp3 in Resources */,
 				05990AD999070B266475ACE0 /* success_wunderbar.mp3 in Resources */,
+				5B897879BB374BEB4978C5F3 /* bennie_celebrating.json in Resources */,
+				B65E92CDA5BD4A03B2E34096 /* bennie_encouraging.json in Resources */,
+				61603B629FD1D7D0D5D332A7 /* bennie_happy.json in Resources */,
+				6E57216D467B2296A8C9F09F /* bennie_idle.json in Resources */,
+				6DD244FFF6B93F00D2CFD4EA /* bennie_pointing.json in Resources */,
+				4F6B307863D2698D9A110EB5 /* bennie_thinking.json in Resources */,
+				33F3DC3236A395E54D8FA760 /* bennie_waving.json in Resources */,
+				80B31B055626C4714B29BE15 /* lemminge_celebrating.json in Resources */,
+				878FAA7B6076698DBC395C3E /* lemminge_curious.json in Resources */,
+				41900E6941932CD95FF9F3EF /* lemminge_excited.json in Resources */,
+				A972B85963AB2F10D40E048D /* lemminge_hiding.json in Resources */,
+				F8FF14A2D2ECADE5E51FC3BB /* lemminge_idle.json in Resources */,
+				9FC6DEC948F210B363108FEF /* lemminge_mischievous.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,6 +856,7 @@
 				K1000001299E000100000001 /* WuerfelView.swift in Sources */,
 				K1000003299E000100000001 /* WaehleZahlView.swift in Sources */,
 				L1000001299E000100000001 /* CoinFlyAnimation.swift in Sources */,
+				LV000001299E000100000001 /* LottieView.swift in Sources */,
 				M1000001299E000100000001 /* CelebrationOverlay.swift in Sources */,
 				N1000001299E000100000001 /* VideoSelectionView.swift in Sources */,
 				N1000003299E000100000001 /* VideoPlayerView.swift in Sources */,

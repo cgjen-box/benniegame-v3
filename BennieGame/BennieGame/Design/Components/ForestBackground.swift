@@ -24,7 +24,7 @@ struct ForestBackground: View {
                 )
 
                 // Layer 1: Far trees (misty)
-                Image("forest_layer_far")
+                Image("Backgrounds/forest_layer_far")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: geometry.size.width, height: geometry.size.height)
@@ -32,7 +32,7 @@ struct ForestBackground: View {
                     .opacity(0.9)
 
                 // Layer 2: Mid trees (sage)
-                Image("forest_layer_mid")
+                Image("Backgrounds/forest_layer_mid")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: geometry.size.width, height: geometry.size.height)
@@ -40,7 +40,7 @@ struct ForestBackground: View {
                     .opacity(0.85)
 
                 // Layer 3: Near foliage
-                Image("forest_layer_near")
+                Image("Backgrounds/forest_layer_near")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: geometry.size.width, height: geometry.size.height)
@@ -48,7 +48,7 @@ struct ForestBackground: View {
                     .opacity(0.8)
 
                 // Layer 4: Light glow overlay
-                Image("forest_layer_glow")
+                Image("Backgrounds/forest_layer_glow")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: geometry.size.width, height: geometry.size.height)

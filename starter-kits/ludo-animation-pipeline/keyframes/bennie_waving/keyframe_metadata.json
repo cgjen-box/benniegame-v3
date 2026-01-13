@@ -1,0 +1,9 @@
+{
+  "character": "bennie",
+  "emotion": "waving",
+  "start_frame": "/Users/user289321/BennieGame-v3/starter-kits/ludo-animation-pipeline/keyframes/bennie_waving/bennie_waving_start_20260113_073226_v1.png",
+  "end_frame": "/Users/user289321/BennieGame-v3/starter-kits/ludo-animation-pipeline/keyframes/bennie_waving/bennie_waving_end_20260113_073240_v1.png",
+  "motion_hint": "hand waving side to side in friendly greeting",
+  "reference_image": null,
+  "generated_at": "2026-01-13T07:32:53.463020"
+}

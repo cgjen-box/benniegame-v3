@@ -1,0 +1,176 @@
+{
+  "processed": {
+    "bennie_celebrating.zip": {
+      "character": "bennie",
+      "animation": "celebrating",
+      "output": "bennie_celebrating.json",
+      "processed_at": "2026-01-13T12:55:15.776681",
+      "size_bytes": 2650855,
+      "qa_passed": true
+    },
+    "bennie_encouraging.zip": {
+      "character": "bennie",
+      "animation": "encouraging",
+      "output": "bennie_encouraging.json",
+      "processed_at": "2026-01-13T12:55:16.196624",
+      "size_bytes": 2655179,
+      "qa_passed": true
+    },
+    "bennie_happy.zip": {
+      "character": "bennie",
+      "animation": "happy",
+      "output": "bennie_happy.json",
+      "processed_at": "2026-01-13T12:55:16.620732",
+      "size_bytes": 2571437,
+      "qa_passed": true
+    },
+    "bennie_idle.zip": {
+      "character": "bennie",
+      "animation": "idle",
+      "output": "bennie_idle.json",
+      "processed_at": "2026-01-13T12:55:17.074823",
+      "size_bytes": 2688728,
+      "qa_passed": true
+    },
+    "bennie_pointing.zip": {
+      "character": "bennie",
+      "animation": "pointing",
+      "output": "bennie_pointing.json",
+      "processed_at": "2026-01-13T12:55:17.480786",
+      "size_bytes": 2637276,
+      "qa_passed": true
+    },
+    "bennie_thinking.zip": {
+      "character": "bennie",
+      "animation": "thinking",
+      "output": "bennie_thinking.json",
+      "processed_at": "2026-01-13T12:55:17.948718",
+      "size_bytes": 2655684,
+      "qa_passed": true
+    },
+    "bennie_waving.zip": {
+      "character": "bennie",
+      "animation": "waving",
+      "output": "bennie_waving.json",
+      "processed_at": "2026-01-13T12:55:18.398103",
+      "size_bytes": 2405070,
+      "qa_passed": true
+    },
+    "lemminge_celebrating.zip": {
+      "character": "lemminge",
+      "animation": "celebrating",
+      "output": "lemminge_celebrating.json",
+      "processed_at": "2026-01-13T12:55:18.867210",
+      "size_bytes": 2643181,
+      "qa_passed": true
+    },
+    "lemminge_curious.zip": {
+      "character": "lemminge",
+      "animation": "curious",
+      "output": "lemminge_curious.json",
+      "processed_at": "2026-01-13T12:55:19.277001",
+      "size_bytes": 2666513,
+      "qa_passed": true
+    },
+    "lemminge_excited.zip": {
+      "character": "lemminge",
+      "animation": "excited",
+      "output": "lemminge_excited.json",
+      "processed_at": "2026-01-13T12:55:19.736031",
+      "size_bytes": 2666513,
+      "qa_passed": true
+    },
+    "lemminge_hiding.zip": {
+      "character": "lemminge",
+      "animation": "hiding",
+      "output": "lemminge_hiding.json",
+      "processed_at": "2026-01-13T12:55:20.194992",
+      "size_bytes": 2720796,
+      "qa_passed": true
+    },
+    "lemminge_idle.zip": {
+      "character": "lemminge",
+      "animation": "idle",
+      "output": "lemminge_idle.json",
+      "processed_at": "2026-01-13T12:55:20.650381",
+      "size_bytes": 2666510,
+      "qa_passed": true
+    },
+    "lemminge_mischievous.zip": {
+      "character": "lemminge",
+      "animation": "mischievous",
+      "output": "lemminge_mischievous.json",
+      "processed_at": "2026-01-13T12:55:21.068155",
+      "size_bytes": 2653397,
+      "qa_passed": true
+    }
+  },
+  "animations": {
+    "bennie_celebrating": {
+      "status": "complete",
+      "lottie_file": "bennie_celebrating.json",
+      "frames": 36
+    },
+    "bennie_encouraging": {
+      "status": "complete",
+      "lottie_file": "bennie_encouraging.json",
+      "frames": 36
+    },
+    "bennie_happy": {
+      "status": "complete",
+      "lottie_file": "bennie_happy.json",
+      "frames": 36
+    },
+    "bennie_idle": {
+      "status": "complete",
+      "lottie_file": "bennie_idle.json",
+      "frames": 36
+    },
+    "bennie_pointing": {
+      "status": "complete",
+      "lottie_file": "bennie_pointing.json",
+      "frames": 36
+    },
+    "bennie_thinking": {
+      "status": "complete",
+      "lottie_file": "bennie_thinking.json",
+      "frames": 36
+    },
+    "bennie_waving": {
+      "status": "complete",
+      "lottie_file": "bennie_waving.json",
+      "frames": 36
+    },
+    "lemminge_celebrating": {
+      "status": "complete",
+      "lottie_file": "lemminge_celebrating.json",
+      "frames": 36
+    },
+    "lemminge_curious": {
+      "status": "complete",
+      "lottie_file": "lemminge_curious.json",
+      "frames": 36
+    },
+    "lemminge_excited": {
+      "status": "complete",
+      "lottie_file": "lemminge_excited.json",
+      "frames": 36
+    },
+    "lemminge_hiding": {
+      "status": "complete",
+      "lottie_file": "lemminge_hiding.json",
+      "frames": 36
+    },
+    "lemminge_idle": {
+      "status": "complete",
+      "lottie_file": "lemminge_idle.json",
+      "frames": 36
+    },
+    "lemminge_mischievous": {
+      "status": "complete",
+      "lottie_file": "lemminge_mischievous.json",
+      "frames": 36
+    }
+  },
+  "last_updated": "2026-01-13T12:55:21.071985"
+}

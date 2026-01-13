@@ -107,3 +107,18 @@ npm-debug.log*
 # Video Generation (very large files)
 # =============================================================================
 # BennieGame/Resources/Video/Generated/
+
+# =============================================================================
+# Screenshots & Debug Files (root level only)
+# =============================================================================
+debug_screenshot*.png
+loading_*.png
+simulator_screenshot.png
+
+# =============================================================================
+# Python Cache (never commit)
+# =============================================================================
+__pycache__/
+*.pyc
+.venv/
+venv/

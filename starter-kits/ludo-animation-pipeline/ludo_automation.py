@@ -9,9 +9,11 @@ This module is designed to be invoked by Claude Code. It outputs the
 MCP tool calls that Claude should execute to automate the browser.
 
 Prerequisites:
-    1. Chrome running in debug mode: scripts\chrome-ludo-debug.bat
-    2. Logged into ludo.ai account
-    3. Chrome DevTools MCP server connected
+    1. Chrome running in debug mode: ./scripts/launch-chrome-debug.sh
+       Profile path: /Users/user289321/chrome-debug-profile (see .planning/config.json)
+       Debug port: 9222
+    2. Logged into ludo.ai account (session persists in debug profile)
+    3. Chrome DevTools MCP server connected to localhost:9222
 
 Usage:
     # From Claude Code, use the ludo-automation skill
