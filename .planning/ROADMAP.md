@@ -1,8 +1,9 @@
 # Roadmap: Bennie Bear Learning Game
 
-## Overview
+## Milestones
 
-Build an autism-friendly iPad educational game for Alexander (5) and Oliver (4). From Xcode project setup through polished TestFlight build, delivering 4 activities with coin rewards exchangeable for YouTube time.
+- **v1.0 MVP** — Phases 1-8 (shipped 2026-01-13) — [Full archive](milestones/v1.0-ROADMAP.md)
+- **v1.1 TestFlight** — Planned
 
 ## Source of Truth
 
@@ -10,145 +11,89 @@ Build an autism-friendly iPad educational game for Alexander (5) and Oliver (4).
 - Check character colors, touch targets, forbidden elements before marking any screen complete
 - Run `DESIGN_QA_CHECKLIST.md` verification at end of each visual phase
 
-## Domain Expertise
+---
 
-None (no matching expertise folder available)
+## Completed Milestones
 
-## Phases
-
-**Phase Numbering:**
-- Integer phases (1, 2, 3): Planned milestone work
-- Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
-
-- [x] **Phase 1: Foundation** - Xcode project, design system, basic components
-- [x] **Phase 2: Core Screens** - Loading, player selection, home, navigation
-- [x] **Phase 3: Activities** - 4 playable games (puzzle, labyrinth, dice, numbers)
-- [x] **Phase 4: Reward System** - Coins, celebrations, treasure, YouTube redemption
-- [x] **Phase 5: Audio Integration** - 3-channel audio, ElevenLabs voices, effects
-- [x] **Phase 6: Parent Features** - Gate, dashboard, video management, time limits
-- [x] **Phase 7: Polish & Testing** - QA validation, accessibility, full playthrough
-- [ ] **Phase 8: Asset Production** - Generate UI components, backgrounds, animations
-
-## Phase Details
+<details>
+<summary>v1.0 MVP (Phases 1-8) — SHIPPED 2026-01-13</summary>
 
 ### Phase 1: Foundation
 **Goal**: Xcode project running on iPad simulator with design system in place
-**Depends on**: Nothing (first phase)
-**Research**: Unlikely (established SwiftUI patterns)
-**Plans**: 3 plans
-
-Plans:
-- [x] 01-01: Project setup (Xcode, git, folder structure, Lottie dependency)
-- [x] 01-02: Design system (BennieColors, BennieTypography, color compliance)
-- [x] 01-03: Core components (WoodButton, WoodSign, ProgressBar)
-
-**Playbook validation**: Colors match palette, touch targets ≥96pt
+**Plans**: 3 plans (complete)
+- [x] 01-01: Project setup
+- [x] 01-02: Design system
+- [x] 01-03: Core components
 
 ### Phase 2: Core Screens
 **Goal**: Full navigation flow from loading → player select → home
-**Depends on**: Phase 1
-**Research**: Unlikely (standard SwiftUI navigation)
-**Plans**: 3 plans
-
-Plans:
-- [x] 02-01: State management (GameState, PlayerData, navigation coordinator)
-- [x] 02-02: Loading & player selection screens
-- [x] 02-03: Home screen with activity signs and treasure chest
-
-**Playbook validation**: Bennie brown (#8C7259, NO clothing), Lemminge blue (#6FA8DC)
+**Plans**: 3 plans (complete)
+- [x] 02-01: State management
+- [x] 02-02: Loading & player selection
+- [x] 02-03: Home screen
 
 ### Phase 3: Activities
 **Goal**: All 4 activities playable with level progression
-**Depends on**: Phase 2
-**Research**: Unlikely (internal game logic)
-**Plans**: 4 plans
-
-Plans:
-- [x] 03-01: Puzzle Matching (dual grid, color picker, pattern validation)
-- [x] 03-02: Labyrinth (path tracing, touch validation, START→ZIEL)
-- [x] 03-03: Würfel/Dice (dice animation, number buttons 1-6)
-- [x] 03-04: Wähle die Zahl (numbers 1-10, number selection)
-
-**Playbook validation**: German UI only, positive feedback only (never "Falsch")
+**Plans**: 4 plans (complete)
+- [x] 03-01: Puzzle Matching
+- [x] 03-02: Labyrinth
+- [x] 03-03: Würfel/Dice
+- [x] 03-04: Wähle die Zahl
 
 ### Phase 4: Reward System
-**Goal**: Complete coin → celebration → YouTube loop working
-**Depends on**: Phase 3
-**Research**: Likely (YouTube embedding)
-**Research topics**: WKWebView YouTube embed, hiding controls, preventing related videos, time tracking
-**Plans**: 3 plans
-
-Plans:
-- [x] 04-01: Coin economy (+1 per level, celebration at 5-coin intervals)
-- [x] 04-02: Celebration overlay (confetti, character animations, voice)
-- [x] 04-03: Treasure & video (redemption, selection, controlled playback)
-
-**Playbook validation**: Celebration triggers at 5, 10, 15, 20 coins; 10 coins = 5 min, 20 coins = 12 min
+**Goal**: Complete coin → celebration → YouTube loop
+**Plans**: 3 plans (complete)
+- [x] 04-01: Coin economy
+- [x] 04-02: Celebration overlay
+- [x] 04-03: Treasure & video
 
 ### Phase 5: Audio Integration
-**Goal**: Full audio experience with narrator and Bennie voices
-**Depends on**: Phase 4
-**Research**: Likely (ElevenLabs API)
-**Research topics**: ElevenLabs German voice selection, API integration, voice quality settings
-**Plans**: 3 plans
-
-Plans:
-- [x] 05-01: AudioManager (3-channel: music, voice, effects; voice ducking)
-- [x] 05-02: Voice services (NarratorService, BennieService, SoundEffect enum)
-- [x] 05-03: Integration (trigger points, mute button, audio wired to all screens)
-
-**Playbook validation**: Voice ducking works, mute control affects all channels
+**Goal**: Full audio experience with voices
+**Plans**: 3 plans (complete)
+- [x] 05-01: AudioManager
+- [x] 05-02: Voice services
+- [x] 05-03: Integration
 
 ### Phase 6: Parent Features
-**Goal**: Parents can manage videos, time limits, and activity locks
-**Depends on**: Phase 5
-**Research**: Unlikely (internal CRUD with SwiftData)
-**Plans**: 2 plans
-
-Plans:
-- [x] 06-01: Parent gate (math question) and dashboard (per-player stats)
-- [x] 06-02: Video management and time limit controls
-
-**Playbook validation**: Math gate range 5-15, graceful time limit enforcement
+**Goal**: Parents can manage videos and time limits
+**Plans**: 2 plans (complete)
+- [x] 06-01: Parent gate & dashboard
+- [x] 06-02: Video & time management
 
 ### Phase 7: Polish & Testing
 **Goal**: Polished app ready for TestFlight
-**Depends on**: Phase 6
-**Research**: Unlikely (standard QA patterns)
-**Plans**: 2 plans
-
-Plans:
-- [x] 07-01: Design QA (touch targets, colors, accessibility, animations)
-- [x] 07-02: Full playthrough (0→100 coins journey, edge cases, persistence)
-
-**Playbook validation**: Run full DESIGN_QA_CHECKLIST.md, 100% critical + 90% high priority = PASS
+**Plans**: 2 plans (complete)
+- [x] 07-01: Design QA
+- [x] 07-02: Full playthrough
 
 ### Phase 8: Asset Production
-**Goal**: Generate and import all visual/audio assets for production
-**Depends on**: Phase 7
-**Research**: Likely (Gemini Imagen API, Ludo.ai)
-**Plans**: 3 plans
+**Goal**: Generate and import all visual/audio assets
+**Plans**: 3 plans (complete)
+- [x] 08-01: UI Components
+- [x] 08-02: Background Images
+- [x] 08-03: Lottie Animations
 
-Plans:
-- [x] 08-01: UI Components (buttons, signs, progress bar, treasure chest)
-- [x] 08-02: Background Images (4 forest parallax layers)
-- [ ] 08-03: Lottie Animations (15 character animations)
+**Total: 8 phases, 23 plans, 100% complete**
 
-**Playbook validation**: All generated assets match brand colors, style guide
+</details>
 
-## Progress
+---
 
-**Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
+## v1.1 TestFlight (Planned)
 
-| Phase | Plans Complete | Status | Completed |
-|-------|----------------|--------|-----------|
-| 1. Foundation | 3/3 | Complete | 2026-01-12 |
-| 2. Core Screens | 3/3 | Complete | 2026-01-12 |
-| 3. Activities | 4/4 | Complete | 2026-01-12 |
-| 4. Reward System | 3/3 | Complete | 2026-01-12 |
-| 5. Audio Integration | 3/3 | Complete | 2026-01-12 |
-| 6. Parent Features | 2/2 | Complete | 2026-01-12 |
-| 7. Polish & Testing | 2/2 | Complete | 2026-01-12 |
-| 8. Asset Production | 2/3 | In Progress | — |
-| **Total** | **22/23** | | |
+*Run `/gsd:discuss-milestone` or `/gsd:new-milestone` to plan v1.1*
+
+Candidate phases:
+- Voice audio generation (ElevenLabs)
+- Lottie Xcode integration
+- TestFlight deployment
+- Real-device testing
+
+---
+
+## Progress Summary
+
+| Milestone | Phases | Plans | Status | Date |
+|-----------|--------|-------|--------|------|
+| v1.0 MVP | 1-8 | 23/23 | SHIPPED | 2026-01-13 |
+| v1.1 TestFlight | TBD | TBD | Planned | — |

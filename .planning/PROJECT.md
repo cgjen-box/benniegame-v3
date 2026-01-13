@@ -71,14 +71,14 @@ A calming, journey-based learning experience in a magical forest world with:
 
 ## Key Activities
 
-| Activity | Category | Description |
-|----------|----------|-------------|
-| Puzzle Matching | Rätsel | Match color patterns on dual grids |
-| Labyrinth | Rätsel | Trace path from START to ZIEL |
-| Würfel | Zahlen | Identify dice values 1-6 |
-| Wähle die Zahl | Zahlen | Select numbers 1-10 with tracing |
-| Zeichnen | (Locked) | Drawing activities (future) |
-| Logik | (Locked) | Logic puzzles (future) |
+| Activity | Category | Description | Status |
+|----------|----------|-------------|--------|
+| Puzzle Matching | Rätsel | Match color patterns on dual grids | v1.0 |
+| Labyrinth | Rätsel | Trace path from START to ZIEL | v1.0 |
+| Würfel | Zahlen | Identify dice values 1-6 | v1.0 |
+| Wähle die Zahl | Zahlen | Select numbers 1-10 with tracing | v1.0 |
+| Zeichnen | (Locked) | Drawing activities (future) | Deferred |
+| Logik | (Locked) | Logic puzzles (future) | Deferred |
 
 ## Design Constraints (Critical)
 
@@ -93,5 +93,62 @@ A calming, journey-based learning experience in a magical forest world with:
 
 ---
 
-**Status**: 🟡 Active Development (Phase 1 Ready)
-**Last Updated**: 2026-01-12
+## Current State (v1.0 MVP)
+
+**Shipped:** 2026-01-13
+
+**Codebase:**
+- 8,230 lines of Swift
+- 95 project files
+- 13 Lottie animations
+- 4-layer parallax backgrounds
+
+**Tech Stack Validated:**
+- SwiftUI + SwiftData (local persistence)
+- WKWebView for YouTube (CSS-injected controls hidden)
+- Lottie PNG-embedded animations
+- 3-channel AudioManager architecture
+
+**What Works:**
+- 4 playable activities with level progression
+- Coin rewards → celebration → YouTube loop
+- Parent math gate + dashboard
+- German-only UI with positive feedback
+
+**Known Issues:**
+- Voice audio files need generation (structure exists)
+- Lottie files need manual Xcode import
+- Real-device testing pending
+
+## Requirements
+
+### Validated (v1.0)
+
+- [x] Design system with autism-friendly colors
+- [x] 96pt minimum touch targets
+- [x] Positive-only feedback (no "Falsch")
+- [x] 4 playable activities
+- [x] Coin economy with celebration milestones
+- [x] YouTube reward redemption
+- [x] Parent gate and dashboard
+- [x] 3-channel audio architecture
+
+### Active (v1.1)
+
+- [ ] Generate voice audio via ElevenLabs
+- [ ] Import Lottie files to Xcode build
+- [ ] TestFlight deployment
+- [ ] Real-device testing with target users
+
+### Out of Scope
+
+- Mobile app (iPad only)
+- App Store (TestFlight family distribution)
+- Multiplayer
+- Cloud sync
+- Additional languages (German only)
+
+---
+
+**Status**: SHIPPED v1.0 MVP
+**Last Updated**: 2026-01-13 after v1.0 milestone

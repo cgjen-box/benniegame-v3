@@ -400,6 +400,29 @@ LUDO_PASS=your_password
 
 ## Related Documentation
 
-- `LUDO_WORKFLOW.md` - Detailed workflow
+- `LUDO_CDP_WORKFLOW.md` - **CDP automation guide** (recommended)
+- `LESSONS_LEARNED.md` - Troubleshooting and insights
+- `LUDO_WORKFLOW.md` - Detailed workflow (MCP-based)
 - `validate_lottie.py` - Quality checks
 - `spritesheet_processor.py` - Grid detection algorithm
+
+---
+
+## CDP Automation (Recommended)
+
+The MCP-based workflow has been superseded by direct CDP automation:
+
+```bash
+# Launch Chrome in debug mode
+./scripts/launch-chrome-debug.sh https://app.ludo.ai
+
+# Log in manually (one-time, session persists)
+
+# Run batch automation
+python scripts/ludo_batch_process.py
+
+# Or single animation
+python scripts/ludo_batch_process.py bennie waving
+```
+
+See `LUDO_CDP_WORKFLOW.md` for complete documentation.

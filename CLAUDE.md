@@ -83,6 +83,23 @@ This project uses the GSD framework for planning and execution.
 - `starter-kits/gemini-image-pro-3/` — Image generation
 - `starter-kits/ludo-animation-pipeline/` — Lottie animations
 
+### Animation Pipeline (CDP Automation)
+
+For generating Lottie animations via Ludo.ai:
+
+```bash
+# 1. Launch Chrome in debug mode
+./scripts/launch-chrome-debug.sh https://app.ludo.ai
+
+# 2. Run batch automation (after logging in)
+python scripts/ludo_batch_process.py
+```
+
+**Key Documentation**:
+- `starter-kits/ludo-animation-pipeline/LUDO_CDP_WORKFLOW.md` — Full CDP workflow
+- `starter-kits/ludo-animation-pipeline/LESSONS_LEARNED.md` — Troubleshooting
+- `.planning/context/animation-pipeline.md` — Plan mode context
+
 ---
 
 ## Coin Economy
