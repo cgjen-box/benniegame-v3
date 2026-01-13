@@ -3,389 +3,308 @@ import SwiftUI
 // ═══════════════════════════════════════════════════════════════════════════
 // LoadingView - Initial game loading screen
 // ═══════════════════════════════════════════════════════════════════════════
-// Shows forest background, Bennie waving, Lemminge peeking, and progress bar
-// Auto-transitions to player selection after completion
+// Matches Reference_Loading Screen.png:
+// - Bennie on LEFT, Lemminge on RIGHT
+// - Title sign centered top, progress bar centered bottom
 // ═══════════════════════════════════════════════════════════════════════════
 
-/// Loading screen shown on app launch
-/// Features forest background, title sign, Bennie character, Lemminge, and progress bar
 struct LoadingView: View {
-    // MARK: - Environment
-
     @Environment(AppCoordinator.self) private var coordinator
     @Environment(NarratorService.self) private var narrator
 
-    // MARK: - State
-
-    /// Loading progress from 0.0 to 1.0
     @State private var progress: CGFloat = 0.0
-
-    /// Whether loading is complete
     @State private var isComplete: Bool = false
-
-    /// Lemminge bob animation
     @State private var lemmingeBob: Bool = false
 
-    // MARK: - Constants
-
-    /// Duration of the loading animation in seconds
     private let loadingDuration: Double = 2.0
-
-    /// Delay before transitioning after completion
     private let transitionDelay: Double = 0.5
-
-    // MARK: - Body
 
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                // Forest background with parallax layers
-                ForestBackground()
+                // Forest background - use the layered background but subtle
+                Image("Backgrounds/forest_layer_far")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .clipped()
 
-                // Title sign (top center, hanging from branch)
-                VStack {
-                    titleSign
-                        .padding(.top, 60)
+                // Main content layout matching reference
+                VStack(spacing: 0) {
+                    // TOP: Title sign hanging from branch
+                    titleSignWithBranch
+                        .padding(.top, 20)
+
                     Spacer()
-                }
 
-                // Main content area
-                HStack(alignment: .bottom, spacing: 0) {
-                    // Bennie on the left
-                    bennieView
-                        .frame(width: geometry.size.width * 0.35)
+                    // MIDDLE: Bennie LEFT, Lemminge RIGHT
+                    HStack(alignment: .bottom, spacing: 0) {
+                        // LEFT: Bennie
+                        Image("Characters/Bennie/bennie_waving")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: geometry.size.height * 0.55)
+                            .padding(.leading, geometry.size.width * 0.05)
 
-                    // Center content (progress bar)
-                    VStack {
                         Spacer()
-                        progressSection(geometry: geometry)
-                            .padding(.bottom, 60)
-                    }
-                    .frame(width: geometry.size.width * 0.3)
 
-                    // Right side (Lemminge peeking)
-                    Spacer()
-                        .frame(width: geometry.size.width * 0.35)
+                        // RIGHT: Lemminge peeking from tree positions
+                        lemmingeColumn(geometry: geometry)
+                            .padding(.trailing, geometry.size.width * 0.03)
+                    }
+
+                    // BOTTOM: Progress bar centered
+                    progressBarSection(geometry: geometry)
+                        .padding(.bottom, 30)
                 }
 
-                // Lemminge positioned around the edges
-                lemmingeOverlay(geometry: geometry)
+                // Bottom left corner lemminge (like in reference)
+                VStack {
+                    Spacer()
+                    HStack {
+                        Image("Characters/Lemminge/lemminge_idle")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 60)
+                            .offset(y: lemmingeBob ? -3 : 3)
+                            .padding(.leading, 20)
+                            .padding(.bottom, 80)
+                        Spacer()
+                    }
+                }
             }
         }
+        .ignoresSafeArea()
         .onAppear {
             startLoading()
-            startLemmingeBob()
+            withAnimation(.easeInOut(duration: 1.5).repeatForever(autoreverses: true)) {
+                lemmingeBob = true
+            }
         }
     }
 
-    // MARK: - Subviews
+    // MARK: - Title Sign with Branch (matching reference)
 
-    /// Title sign hanging from branch
-    private var titleSign: some View {
+    private var titleSignWithBranch: some View {
         VStack(spacing: 0) {
-            // Branch and rope
-            HStack(spacing: 0) {
-                Image(systemName: "leaf.fill")
-                    .font(.system(size: 24))
-                    .foregroundColor(BennieColors.woodland)
-                    .rotationEffect(.degrees(-45))
-
-                Rectangle()
-                    .fill(BennieColors.woodDark)
-                    .frame(width: 200, height: 8)
-                    .overlay(
-                        // Wood grain lines
-                        HStack(spacing: 20) {
-                            ForEach(0..<4, id: \.self) { _ in
-                                Rectangle()
-                                    .fill(BennieColors.woodMedium)
-                                    .frame(width: 2, height: 6)
-                            }
-                        }
-                    )
-
-                Image(systemName: "leaf.fill")
-                    .font(.system(size: 24))
-                    .foregroundColor(BennieColors.woodland)
-                    .rotationEffect(.degrees(45))
-            }
-
-            // Rope segments
-            HStack(spacing: 80) {
-                RopeSegment()
-                RopeSegment()
-            }
-
-            // Sign body
+            // Horizontal branch with leaves (more natural like reference)
             ZStack {
-                // Wood background with grain texture
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(BennieColors.woodMedium)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(BennieColors.woodDark, lineWidth: 3)
+                // Natural branch shape
+                Capsule()
+                    .fill(
+                        LinearGradient(
+                            colors: [BennieColors.woodDark, Color(hex: "5D3A1A"), BennieColors.woodDark],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
                     )
+                    .frame(width: 380, height: 16)
+                    .rotationEffect(.degrees(-2))
+
+                // Leaves cluster on left
+                HStack(spacing: -8) {
+                    Image(systemName: "leaf.fill")
+                        .font(.system(size: 20))
+                        .foregroundColor(BennieColors.woodland)
+                        .rotationEffect(.degrees(-45))
+                    Image(systemName: "leaf.fill")
+                        .font(.system(size: 16))
+                        .foregroundColor(Color(hex: "5A7A52"))
+                        .rotationEffect(.degrees(-20))
+                }
+                .offset(x: -200, y: -8)
+
+                // Leaves cluster on right
+                HStack(spacing: -8) {
+                    Image(systemName: "leaf.fill")
+                        .font(.system(size: 16))
+                        .foregroundColor(Color(hex: "5A7A52"))
+                        .rotationEffect(.degrees(20))
+                    Image(systemName: "leaf.fill")
+                        .font(.system(size: 20))
+                        .foregroundColor(BennieColors.woodland)
+                        .rotationEffect(.degrees(45))
+                }
+                .offset(x: 200, y: -8)
+            }
+
+            // Ropes connecting branch to sign
+            HStack(spacing: 200) {
+                ropeSegment
+                ropeSegment
+            }
+
+            // Wooden sign with natural wood grain appearance
+            ZStack {
+                // Main sign body
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(
+                        LinearGradient(
+                            colors: [BennieColors.woodMedium, BennieColors.woodLight, BennieColors.woodMedium],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                    .frame(width: 300, height: 100)
                     .overlay(
-                        // Subtle grain lines
-                        VStack(spacing: 12) {
-                            ForEach(0..<3, id: \.self) { _ in
-                                Rectangle()
-                                    .fill(BennieColors.woodLight.opacity(0.3))
-                                    .frame(height: 1)
-                            }
-                        }
-                        .padding(.horizontal, 20)
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(BennieColors.woodDark, lineWidth: 4)
                     )
 
-                // Text
                 VStack(spacing: 4) {
                     Text("Waldabenteuer")
-                        .font(BennieFont.title(32))
+                        .font(BennieFont.title(30))
                         .foregroundColor(BennieColors.textOnWood)
-
                     Text("lädt")
                         .font(BennieFont.button(24))
-                        .foregroundColor(BennieColors.textOnWood.opacity(0.9))
+                        .foregroundColor(BennieColors.textOnWood)
                 }
             }
-            .frame(width: 280, height: 100)
-            .shadow(color: BennieColors.woodDark.opacity(0.3), radius: 4, x: 2, y: 4)
+            .shadow(color: .black.opacity(0.3), radius: 6, y: 5)
         }
     }
 
-    /// Rope segment connecting branch to sign
-    private struct RopeSegment: View {
-        var body: some View {
-            VStack(spacing: 0) {
-                ForEach(0..<3, id: \.self) { _ in
-                    Capsule()
-                        .fill(BennieColors.rope)
-                        .frame(width: 8, height: 12)
-                }
+    private var ropeSegment: some View {
+        VStack(spacing: 1) {
+            ForEach(0..<4, id: \.self) { _ in
+                Capsule()
+                    .fill(BennieColors.rope)
+                    .frame(width: 6, height: 8)
             }
         }
     }
 
-    /// Bennie character view using actual asset
-    private var bennieView: some View {
-        VStack(spacing: 8) {
-            Spacer()
+    // MARK: - Lemminge Column (right side, matching reference)
 
-            Image("bennie_waving")
+    private func lemmingeColumn(geometry: GeometryProxy) -> some View {
+        VStack(spacing: 15) {
+            // Top lemminge
+            Image("Characters/Lemminge/lemminge_curious")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 280)
-                .scaleEffect(isComplete ? 1.05 : 1.0)
-                .animation(.easeInOut(duration: 0.3), value: isComplete)
+                .frame(height: 70)
+                .offset(y: lemmingeBob ? -4 : 4)
 
-            if isComplete {
-                Text("Bereit!")
-                    .font(BennieFont.button(20))
-                    .foregroundColor(BennieColors.textDark)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                    .background(
-                        Capsule()
-                            .fill(BennieColors.cream.opacity(0.9))
-                    )
-                    .transition(.scale.combined(with: .opacity))
-            }
+            // Middle lemminge
+            Image("Characters/Lemminge/lemminge_excited")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 65)
+                .offset(x: -10)
+                .offset(y: lemmingeBob ? 3 : -3)
+
+            // Another lemminge
+            Image("Characters/Lemminge/lemminge_hiding")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 60)
+                .offset(y: lemmingeBob ? -2 : 2)
+
+            // Bottom lemminge
+            Image("Characters/Lemminge/lemminge_mischievous")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 65)
+                .offset(x: 5)
+                .offset(y: lemmingeBob ? 4 : -4)
         }
-        .padding(.bottom, 40)
-        .padding(.leading, 40)
     }
 
-    /// Progress section with berry-decorated log bar
-    private func progressSection(geometry: GeometryProxy) -> some View {
-        VStack(spacing: 16) {
-            // Berry-decorated log progress bar
-            LoadingProgressBar(progress: progress)
-                .frame(width: min(geometry.size.width * 0.5, 450), height: 44)
+    // MARK: - Progress Bar (centered bottom, log style with berries matching reference)
+
+    private func progressBarSection(geometry: GeometryProxy) -> some View {
+        VStack(spacing: 8) {
+            // Log-style progress bar with percentage to the right (like reference)
+            HStack(spacing: 12) {
+                ZStack {
+                    // Log background with bark texture effect
+                    Capsule()
+                        .fill(
+                            LinearGradient(
+                                colors: [BennieColors.woodDark, BennieColors.woodMedium, BennieColors.woodDark],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        )
+                        .frame(width: min(geometry.size.width * 0.45, 450), height: 40)
+                        .overlay(
+                            Capsule()
+                                .stroke(BennieColors.woodDark.opacity(0.5), lineWidth: 2)
+                        )
+
+                    // Progress fill (green like reference)
+                    HStack {
+                        Capsule()
+                            .fill(BennieColors.success)
+                            .frame(width: max((min(geometry.size.width * 0.45, 450) - 10) * progress, 10), height: 30)
+                            .padding(.leading, 5)
+                        Spacer()
+                    }
+                    .frame(width: min(geometry.size.width * 0.45, 450))
+
+                    // Berry/leaf decorations on the log (matching reference style)
+                    HStack(spacing: 25) {
+                        berryDecoration(color: Color(hex: "8B4513")) // brown berry
+                        leafDecoration()
+                        berryDecoration(color: Color(hex: "C04040")) // red berry
+                        leafDecoration()
+                        berryDecoration(color: Color(hex: "4040A0")) // blue berry
+                    }
+                    .offset(y: -24)
+                }
+
+                // Percentage to the right of bar (like reference)
+                Text("\(Int(progress * 100))%")
+                    .font(BennieFont.button(18))
+                    .foregroundColor(BennieColors.textDark)
+            }
 
             // Loading text
             Text("Lade Spielewelt...")
                 .font(BennieFont.body())
                 .foregroundColor(BennieColors.textDark)
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
-                .background(
-                    Capsule()
-                        .fill(BennieColors.cream.opacity(0.8))
-                )
         }
     }
 
-    /// Lemminge peeking from various positions
-    private func lemmingeOverlay(geometry: GeometryProxy) -> some View {
-        ZStack {
-            // Top right Lemminge (curious, peeking from tree)
-            Image("lemminge_curious")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 80)
-                .offset(x: geometry.size.width * 0.35, y: -geometry.size.height * 0.25)
-                .offset(y: lemmingeBob ? -5 : 5)
+    private func leafDecoration() -> some View {
+        Image(systemName: "leaf.fill")
+            .font(.system(size: 12))
+            .foregroundColor(BennieColors.woodland)
+            .rotationEffect(.degrees(-20))
+    }
 
-            // Right side Lemminge (hiding, peeking from hole)
-            Image("lemminge_hiding")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 70)
-                .offset(x: geometry.size.width * 0.40, y: -geometry.size.height * 0.05)
-                .offset(y: lemmingeBob ? 5 : -5)
-
-            // Far right Lemminge (excited)
-            Image("lemminge_excited")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 75)
-                .offset(x: geometry.size.width * 0.38, y: geometry.size.height * 0.15)
-                .offset(y: lemmingeBob ? -3 : 3)
-
-            // Bottom left corner Lemminge (idle)
-            Image("lemminge_idle")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 60)
-                .offset(x: -geometry.size.width * 0.40, y: geometry.size.height * 0.35)
-                .offset(y: lemmingeBob ? 4 : -4)
-        }
-        .animation(.easeInOut(duration: 1.5).repeatForever(autoreverses: true), value: lemmingeBob)
+    private func berryDecoration(color: Color) -> some View {
+        Circle()
+            .fill(color)
+            .frame(width: 14, height: 14)
+            .overlay(
+                Circle()
+                    .fill(color.opacity(0.6))
+                    .frame(width: 6, height: 6)
+                    .offset(x: -2, y: -2)
+            )
     }
 
     // MARK: - Loading Logic
 
-    /// Start the loading animation and transition
     private func startLoading() {
-        // Animate progress from 0 to 1 over the loading duration
         withAnimation(.linear(duration: loadingDuration)) {
             progress = 1.0
         }
 
-        // Mark as complete and transition after loading
         DispatchQueue.main.asyncAfter(deadline: .now() + loadingDuration) {
-            withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) {
-                isComplete = true
-            }
-
-            // Play loading complete audio
+            isComplete = true
             narrator.playLoadingComplete()
 
-            // Transition to player selection after a brief delay
             DispatchQueue.main.asyncAfter(deadline: .now() + transitionDelay) {
                 coordinator.transition(to: .playerSelection)
             }
         }
     }
-
-    /// Start the Lemminge bobbing animation
-    private func startLemmingeBob() {
-        lemmingeBob = true
-    }
 }
-
-// MARK: - Loading Progress Bar
-
-/// Custom progress bar styled as a berry-decorated log
-/// Different from the coin-based ProgressBar component
-private struct LoadingProgressBar: View {
-    let progress: CGFloat
-
-    var body: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .leading) {
-                // Log background (trough)
-                Capsule()
-                    .fill(BennieColors.woodDark)
-                    .overlay(
-                        // Wood grain lines
-                        HStack(spacing: 30) {
-                            ForEach(0..<Int(geometry.size.width / 50), id: \.self) { _ in
-                                Capsule()
-                                    .fill(BennieColors.woodMedium.opacity(0.5))
-                                    .frame(width: 3, height: geometry.size.height * 0.6)
-                            }
-                        }
-                    )
-                    .overlay(
-                        Capsule()
-                            .stroke(BennieColors.woodDark.opacity(0.6), lineWidth: 2)
-                    )
-
-                // Fill bar (berry-colored gradient)
-                Capsule()
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                BennieColors.success,
-                                BennieColors.success.opacity(0.85)
-                            ],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
-                    .frame(width: max((geometry.size.width - 8) * progress, 0))
-                    .padding(4)
-
-                // Berry decorations along the top
-                HStack(spacing: 40) {
-                    ForEach(0..<4, id: \.self) { index in
-                        Circle()
-                            .fill(berryColor(for: index))
-                            .frame(width: 12, height: 12)
-                            .offset(y: -geometry.size.height * 0.35)
-                    }
-                }
-                .padding(.horizontal, 30)
-
-                // Percentage text
-                Text("\(Int(progress * 100))%")
-                    .font(BennieFont.button(18))
-                    .foregroundColor(BennieColors.textOnWood)
-                    .shadow(color: BennieColors.woodDark.opacity(0.5), radius: 1, x: 0, y: 1)
-                    .frame(maxWidth: .infinity, alignment: .center)
-            }
-        }
-    }
-
-    /// Berry colors for decoration
-    private func berryColor(for index: Int) -> Color {
-        let colors: [Color] = [
-            Color(hex: "#8B4513"), // Brown berry
-            Color(hex: "#6B4423"), // Dark berry
-            Color(hex: "#99BF8C"), // Green berry
-            Color(hex: "#8B4513")  // Brown berry
-        ]
-        return colors[index % colors.count]
-    }
-}
-
-// MARK: - Previews
 
 #Preview("LoadingView") {
-    let audioManager = AudioManager()
-    return LoadingView()
+    LoadingView()
         .environment(AppCoordinator())
-        .environment(NarratorService(audioManager: audioManager))
-}
-
-#Preview("LoadingProgressBar - 20%") {
-    LoadingProgressBar(progress: 0.2)
-        .frame(width: 400, height: 44)
-        .padding()
-        .background(BennieColors.cream)
-}
-
-#Preview("LoadingProgressBar - 50%") {
-    LoadingProgressBar(progress: 0.5)
-        .frame(width: 400, height: 44)
-        .padding()
-        .background(BennieColors.cream)
-}
-
-#Preview("LoadingProgressBar - Full") {
-    LoadingProgressBar(progress: 1.0)
-        .frame(width: 400, height: 44)
-        .padding()
-        .background(BennieColors.cream)
+        .environment(NarratorService(audioManager: AudioManager()))
 }
