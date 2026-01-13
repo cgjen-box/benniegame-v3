@@ -7,27 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04421A33C8EA1871983AE5A5 /* bennie_wrong_number_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 809E70B3061D468F747EFEA2 /* bennie_wrong_number_1.mp3 */; };
+		05990AD999070B266475ACE0 /* success_wunderbar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3A690B70FDAA6DF48530759D /* success_wunderbar.mp3 */; };
+		0947AD00D928DECB1C0A8527 /* narrator_choose_number_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 068D660524F10A2EF15F1B91 /* narrator_choose_number_4.mp3 */; };
+		0953708DD4021115C9AEDE2C /* bennie_puzzle_start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF8237DA319D411265A357BD /* bennie_puzzle_start.mp3 */; };
+		0CCE91368A47A8DA3871BDA7 /* narrator_choose_number_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 262E0F89D32A7F4A7CC6AF9E /* narrator_choose_number_6.mp3 */; };
+		1665595928873704C5AD09B6 /* narrator_choose_number_8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D278F09D95FB23DFACEC3B2F /* narrator_choose_number_8.mp3 */; };
+		17EA11B46BC0EB5D34984C2D /* narrator_puzzle_start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E282C64BB8597DC4381BB95E /* narrator_puzzle_start.mp3 */; };
+		1898B2C54B208F2368431BCA /* bennie_celebration_30.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89E9BC83EA767D197F7CE1DB /* bennie_celebration_30.mp3 */; };
+		1CAF401000157357A541B00C /* bennie_video_time_up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 170775ABC754DEEE9D2009A7 /* bennie_video_time_up.mp3 */; };
+		1CC6A3CF87F03F5066089EA5 /* bennie_labyrinth_wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61E1178AFB81812BE6311237 /* bennie_labyrinth_wrong.mp3 */; };
+		1FDFE2075E8A7DE8B5DDA075 /* bennie_wrong_number_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 29C2F688FEAA73B7E6C3A048 /* bennie_wrong_number_5.mp3 */; };
+		21E6303A0C84DB3F22A79AD1 /* bennie_wrong_number_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 483EDAFDF49BB36111C9C082 /* bennie_wrong_number_2.mp3 */; };
+		232EACE1870C52F8A88F307B /* bennie_wrong_number_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25BFE1A29863F2DCE3E03F8D /* bennie_wrong_number_3.mp3 */; };
+		284F4862C9D6092399E6272B /* bennie_puzzle_hint_10s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D0037815340A2A4389D2A695 /* bennie_puzzle_hint_10s.mp3 */; };
+		2A81FE0DCB22759BAC114946 /* bennie_video_1min_warning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 917F01687AAA308D2E90CDA8 /* bennie_video_1min_warning.mp3 */; };
+		3043B5F10269DFE283C77DA8 /* bennie_treasure_under10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED20AFED2B64F6DBAB670919 /* bennie_treasure_under10.mp3 */; };
+		34F7EA2E36CDA51AE20491B7 /* bennie_choose_hint_10s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 329E861802F79DBC94091E67 /* bennie_choose_hint_10s.mp3 */; };
+		368E1BDA63AC5C8AFE4B5B05 /* narrator_choose_number_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF5936987739D38AA30AE16C /* narrator_choose_number_1.mp3 */; };
+		37EBF1BF16CE9B37364A788E /* bennie_celebration_20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46E291890C7E5B848DE0EE90 /* bennie_celebration_20.mp3 */; };
+		3D743FCD89A9BBA7E524E588 /* narrator_choose_number_10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D8237C4F82D3B8631757E6C /* narrator_choose_number_10.mp3 */; };
+		412DD16E19A4597309EAA4C3 /* narrator_dice_start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CC7E1843A65F2012EA23F27 /* narrator_dice_start.mp3 */; };
+		42B2A03A89B9F5A132F456A7 /* narrator_show_number_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 368BB08F44B1F763A0B43E81 /* narrator_show_number_6.mp3 */; };
+		492794B79403BE91B5BBFE92 /* narrator_hello_oliver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BEF6DB6560FB880CEF75FDF /* narrator_hello_oliver.mp3 */; };
+		55184389F81F5E58A064F788 /* bennie_dice_hint_10s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 88C6E450727F07F3CF9471E3 /* bennie_dice_hint_10s.mp3 */; };
+		570CE30C967BA5B70BA1C2C9 /* bennie_celebration_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 039280D18A0E9799BF920F04 /* bennie_celebration_5.mp3 */; };
+		6145455978C9A275A62B1166 /* bennie_labyrinth_start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CDD407866B887C65E6CC2CBF /* bennie_labyrinth_start.mp3 */; };
+		6AE12F556C7CBD72FD2DDFD1 /* narrator_choose_number_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0083A7781A6799C34AC31D04 /* narrator_choose_number_2.mp3 */; };
+		700F16BF32DA53D8F629130B /* narrator_show_number_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BAB0381D2DBF6D3ACC39825C /* narrator_show_number_2.mp3 */; };
+		7618E18077E8C34E983FBEC6 /* bennie_locked.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2801E0022980064CF8FDBB2D /* bennie_locked.mp3 */; };
+		78A4F4CAE3F464B6F643F038 /* success_super.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EB1F81FEED02FF40A5B629D7 /* success_super.mp3 */; };
+		7CF5D0B39E991359E512D8B7 /* narrator_show_number_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D7138E37ED8DFAD81C053C28 /* narrator_show_number_1.mp3 */; };
+		7F34FE2AFC2A982ABB8B2A06 /* narrator_film_ab.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4531182C0C9B8A67802ECF29 /* narrator_film_ab.mp3 */; };
+		807F13F6DB1A82F0FD9BFAE2 /* bennie_dice_hint_20s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96C9B02FA14DEB6958B8C4BC /* bennie_dice_hint_20s.mp3 */; };
+		8088CCE7F60B2BB564D61F4B /* narrator_choose_number_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BCB40E020D85AC09CFD59D57 /* narrator_choose_number_3.mp3 */; };
+		8435A9CAF753E4A00602E7E5 /* narrator_choose_number_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B287DEF56632003E769879BD /* narrator_choose_number_5.mp3 */; };
+		849F8FB9D94FE3C1738FA4BC /* narrator_home_question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD3E4B0F1221947B58D9E4BB /* narrator_home_question.mp3 */; };
+		889D2328A5CD62EF9CFEAEAA /* narrator_choose_number_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 145DE9C49D47F668D5F8A886 /* narrator_choose_number_7.mp3 */; };
+		8AAFC2E36F5BE715B2BA7DD9 /* narrator_loading_complete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ABA65F310A868846E959DD7D /* narrator_loading_complete.mp3 */; };
+		8BB303EF3859C14A4725082D /* bennie_greeting_oliver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FABC0F92AAA7D9A4216575F9 /* bennie_greeting_oliver.mp3 */; };
+		93FA44F23A4BD3BCE167AB48 /* bennie_choose_hint_20s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B94C2D01B335279828B9AA8A /* bennie_choose_hint_20s.mp3 */; };
+		95DEE524491CB6EDCB2F305C /* success_toll_gemacht.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 28112C77E235734CAA899A5D /* success_toll_gemacht.mp3 */; };
+		99E1FDEDF0895317F99EDEAF /* bennie_treasure_10to19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4854BC3ED62F2EF4787AE2 /* bennie_treasure_10to19.mp3 */; };
+		9FA3AD1567D8BAC3BEB44E5E /* success_bravo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92DEAE2C903EC25F504EF12B /* success_bravo.mp3 */; };
 		A1000001299E000100000001 /* BennieGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002299E000100000001 /* BennieGameApp.swift */; };
 		A1000003299E000100000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000004299E000100000001 /* ContentView.swift */; };
 		A1000005299E000100000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000006299E000100000001 /* Assets.xcassets */; };
-		VS000001299E000100000001 /* VideoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = VS000002299E000100000001 /* VideoStore.swift */; };
-		VM000001299E000100000001 /* VideoManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = VM000002299E000100000001 /* VideoManagementView.swift */; };
-		PS000001299E000100000001 /* ParentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = PS000002299E000100000001 /* ParentSettings.swift */; };
-		TS000001299E000100000001 /* TimeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = TS000002299E000100000001 /* TimeSettingsView.swift */; };
+		ADD8856B598F9DEAB2B71174 /* bennie_puzzle_hint_20s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F60DCB786EA4CCEFC39F1643 /* bennie_puzzle_hint_20s.mp3 */; };
+		AE79CAAEB09B8C0CB40D7285 /* narrator_show_number_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAB1F8FE772F0E953E551B3A /* narrator_show_number_3.mp3 */; };
 		AM000001299E000100000001 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AM000002299E000100000001 /* AudioManager.swift */; };
-		NS000001299E000100000001 /* NarratorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = NS000002299E000100000001 /* NarratorService.swift */; };
-		BS000001299E000100000001 /* BennieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BS000002299E000100000001 /* BennieService.swift */; };
-		SE000001299E000100000001 /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = SE000002299E000100000001 /* SoundEffects.swift */; };
-		MB000001299E000100000001 /* MuteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = MB000002299E000100000001 /* MuteButton.swift */; };
 		B1000001299E000100000001 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000002299E000100000001 /* AppCoordinator.swift */; };
 		B1000003299E000100000001 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000004299E000100000001 /* Extensions.swift */; };
+		B243391C0EBFCAB0F278E945 /* bennie_greeting_part2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBDA8BF945838A7BC011D82A /* bennie_greeting_part2.mp3 */; };
+		B6A49E791B4944ABE142842E /* narrator_hello_alexander.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 616952A0CD7AC96E66B15AE5 /* narrator_hello_alexander.mp3 */; };
+		B83B38203EA32FB86D26D005 /* bennie_celebration_25.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 599ED041B8A12CB7C57BFD64 /* bennie_celebration_25.mp3 */; };
+		B8CD0638AD1D0936AD1B072F /* bennie_greeting_alexander.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 422654D7B723C7096029F955 /* bennie_greeting_alexander.mp3 */; };
+		BAB747D8DFC3BABC151136F3 /* success_das_hast_du.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E03A9ABF74C6C87D19C2A072 /* success_das_hast_du.mp3 */; };
+		BB9499A4BA015AB8E0955927 /* narrator_show_number_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12027C2AADAE15F0F630787B /* narrator_show_number_5.mp3 */; };
+		BS000001299E000100000001 /* BennieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BS000002299E000100000001 /* BennieService.swift */; };
+		C18E5A79B0DF917EFD351C6D /* bennie_labyrinth_hint.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F942D5F1243EFE920D18D677 /* bennie_labyrinth_hint.mp3 */; };
+		C1F69F92B73F6A50FE9362EB /* success_perfekt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CBFA92C910D705249FC711FE /* success_perfekt.mp3 */; };
+		C987A0A94AC035D16B0E6148 /* narrator_choose_number_9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EAC1139646709041F4F40B30 /* narrator_choose_number_9.mp3 */; };
+		CCF0D3E5A17790DFC1B4D5D1 /* bennie_treasure_over20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9386F0BE90DCA44AE8A8D679 /* bennie_treasure_over20.mp3 */; };
+		CE8242B10D10011A45FA68BC /* narrator_player_question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DFF5CDC83B7ED79E00E4083 /* narrator_player_question.mp3 */; };
+		CFDEBBF75D56CD6B8CE548CC /* bennie_dice_hint_30s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C97671DDEE0C87868BEB8A5 /* bennie_dice_hint_30s.mp3 */; };
+		CFFED2EEDC89036CD2589655 /* success_ja_genau.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9A748A74E4738E0DA2F24B2D /* success_ja_genau.mp3 */; };
+		D1000001299E000100000001 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D1000002299E000100000001 /* Lottie */; };
+		D51446EB08BD07F6F7352B20 /* bennie_return_part2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7528A83C5059FBA9CA69BA08 /* bennie_return_part2.mp3 */; };
 		E1000001299E000100000001 /* BennieColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000002299E000100000001 /* BennieColors.swift */; };
 		E1000003299E000100000001 /* BennieTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000004299E000100000001 /* BennieTypography.swift */; };
+		EB0FB85753D928F8264042B1 /* bennie_wrong_number_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 99CFFA123F6E9C72391883FB /* bennie_wrong_number_6.mp3 */; };
+		EF7134605D88DE3B99FB8F9E /* bennie_celebration_15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 93E016E7FCD82484D686FDF7 /* bennie_celebration_15.mp3 */; };
 		F1000001299E000100000001 /* ChildFriendlyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000002299E000100000001 /* ChildFriendlyButton.swift */; };
 		F1000003299E000100000001 /* WoodButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000004299E000100000001 /* WoodButton.swift */; };
 		F1000005299E000100000001 /* WoodSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000006299E000100000001 /* WoodSign.swift */; };
 		F1000007299E000100000001 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000008299E000100000001 /* ProgressBar.swift */; };
-		D1000001299E000100000001 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D1000002299E000100000001 /* Lottie */; };
+		F1000009299E000100000001 /* ForestBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F100000A299E000100000001 /* ForestBackground.swift */; };
+		F2A6D8C6E7005990348C74B3 /* narrator_show_number_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95683B6D0CB0292F7493C9C5 /* narrator_show_number_4.mp3 */; };
+		F5028F53A2E41EFC26E2B63F /* bennie_celebration_10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA3679EEA50C11774C449A3F /* bennie_celebration_10.mp3 */; };
+		F7D523F1E2E590C11EB7B834 /* bennie_wrong_number_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FDC3318AB6C586402205446 /* bennie_wrong_number_4.mp3 */; };
+		FBFF94914233298F1621F4B4 /* bennie_return_part1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B24953B619502183A8A02068 /* bennie_return_part1.mp3 */; };
+		FF5B67B1CCE75A2464B0F2D2 /* narrator_labyrinth_start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 626B3668D8DD09670107B548 /* narrator_labyrinth_start.mp3 */; };
 		G1000001299E000100000001 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = G1000002299E000100000001 /* GameState.swift */; };
 		G1000003299E000100000001 /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = G1000004299E000100000001 /* PlayerData.swift */; };
 		G1000005299E000100000001 /* PlayerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = G1000006299E000100000001 /* PlayerStore.swift */; };
@@ -38,36 +98,107 @@
 		I1000003299E000100000001 /* ZahlenSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I1000004299E000100000001 /* ZahlenSelectionView.swift */; };
 		I1000005299E000100000001 /* TreasureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I1000006299E000100000001 /* TreasureView.swift */; };
 		I1000007299E000100000001 /* ParentGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = I1000008299E000100000001 /* ParentGateView.swift */; };
-		PD000001299E000100000001 /* ParentDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PD000002299E000100000001 /* ParentDashboardView.swift */; };
 		J1000001299E000100000001 /* PuzzleMatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = J1000002299E000100000001 /* PuzzleMatchingView.swift */; };
 		J1000003299E000100000001 /* LabyrinthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = J1000004299E000100000001 /* LabyrinthView.swift */; };
 		K1000001299E000100000001 /* WuerfelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = K1000002299E000100000001 /* WuerfelView.swift */; };
 		K1000003299E000100000001 /* WaehleZahlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = K1000004299E000100000001 /* WaehleZahlView.swift */; };
 		L1000001299E000100000001 /* CoinFlyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = L1000002299E000100000001 /* CoinFlyAnimation.swift */; };
 		M1000001299E000100000001 /* CelebrationOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = M1000002299E000100000001 /* CelebrationOverlay.swift */; };
+		MB000001299E000100000001 /* MuteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = MB000002299E000100000001 /* MuteButton.swift */; };
 		N1000001299E000100000001 /* VideoSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = N1000002299E000100000001 /* VideoSelectionView.swift */; };
 		N1000003299E000100000001 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = N1000004299E000100000001 /* VideoPlayerView.swift */; };
+		NS000001299E000100000001 /* NarratorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = NS000002299E000100000001 /* NarratorService.swift */; };
+		PD000001299E000100000001 /* ParentDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PD000002299E000100000001 /* ParentDashboardView.swift */; };
+		PS000001299E000100000001 /* ParentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = PS000002299E000100000001 /* ParentSettings.swift */; };
+		SE000001299E000100000001 /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = SE000002299E000100000001 /* SoundEffects.swift */; };
+		TS000001299E000100000001 /* TimeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = TS000002299E000100000001 /* TimeSettingsView.swift */; };
+		VM000001299E000100000001 /* VideoManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = VM000002299E000100000001 /* VideoManagementView.swift */; };
+		VS000001299E000100000001 /* VideoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = VS000002299E000100000001 /* VideoStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A1000007299E000100000001 /* BennieGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BennieGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0083A7781A6799C34AC31D04 /* narrator_choose_number_2.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_choose_number_2.mp3; sourceTree = "<group>"; };
+		039280D18A0E9799BF920F04 /* bennie_celebration_5.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_celebration_5.mp3; sourceTree = "<group>"; };
+		068D660524F10A2EF15F1B91 /* narrator_choose_number_4.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_choose_number_4.mp3; sourceTree = "<group>"; };
+		12027C2AADAE15F0F630787B /* narrator_show_number_5.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_show_number_5.mp3; sourceTree = "<group>"; };
+		145DE9C49D47F668D5F8A886 /* narrator_choose_number_7.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_choose_number_7.mp3; sourceTree = "<group>"; };
+		170775ABC754DEEE9D2009A7 /* bennie_video_time_up.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_video_time_up.mp3; sourceTree = "<group>"; };
+		1C97671DDEE0C87868BEB8A5 /* bennie_dice_hint_30s.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_dice_hint_30s.mp3; sourceTree = "<group>"; };
+		25BFE1A29863F2DCE3E03F8D /* bennie_wrong_number_3.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_wrong_number_3.mp3; sourceTree = "<group>"; };
+		262E0F89D32A7F4A7CC6AF9E /* narrator_choose_number_6.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_choose_number_6.mp3; sourceTree = "<group>"; };
+		2801E0022980064CF8FDBB2D /* bennie_locked.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_locked.mp3; sourceTree = "<group>"; };
+		28112C77E235734CAA899A5D /* success_toll_gemacht.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = success_toll_gemacht.mp3; sourceTree = "<group>"; };
+		29C2F688FEAA73B7E6C3A048 /* bennie_wrong_number_5.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_wrong_number_5.mp3; sourceTree = "<group>"; };
+		2D4854BC3ED62F2EF4787AE2 /* bennie_treasure_10to19.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_treasure_10to19.mp3; sourceTree = "<group>"; };
+		329E861802F79DBC94091E67 /* bennie_choose_hint_10s.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_choose_hint_10s.mp3; sourceTree = "<group>"; };
+		368BB08F44B1F763A0B43E81 /* narrator_show_number_6.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_show_number_6.mp3; sourceTree = "<group>"; };
+		3A690B70FDAA6DF48530759D /* success_wunderbar.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = success_wunderbar.mp3; sourceTree = "<group>"; };
+		3FDC3318AB6C586402205446 /* bennie_wrong_number_4.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_wrong_number_4.mp3; sourceTree = "<group>"; };
+		422654D7B723C7096029F955 /* bennie_greeting_alexander.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_greeting_alexander.mp3; sourceTree = "<group>"; };
+		4531182C0C9B8A67802ECF29 /* narrator_film_ab.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_film_ab.mp3; sourceTree = "<group>"; };
+		46E291890C7E5B848DE0EE90 /* bennie_celebration_20.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_celebration_20.mp3; sourceTree = "<group>"; };
+		483EDAFDF49BB36111C9C082 /* bennie_wrong_number_2.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_wrong_number_2.mp3; sourceTree = "<group>"; };
+		599ED041B8A12CB7C57BFD64 /* bennie_celebration_25.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_celebration_25.mp3; sourceTree = "<group>"; };
+		5D8237C4F82D3B8631757E6C /* narrator_choose_number_10.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_choose_number_10.mp3; sourceTree = "<group>"; };
+		616952A0CD7AC96E66B15AE5 /* narrator_hello_alexander.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_hello_alexander.mp3; sourceTree = "<group>"; };
+		61E1178AFB81812BE6311237 /* bennie_labyrinth_wrong.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_labyrinth_wrong.mp3; sourceTree = "<group>"; };
+		626B3668D8DD09670107B548 /* narrator_labyrinth_start.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_labyrinth_start.mp3; sourceTree = "<group>"; };
+		6BEF6DB6560FB880CEF75FDF /* narrator_hello_oliver.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_hello_oliver.mp3; sourceTree = "<group>"; };
+		7528A83C5059FBA9CA69BA08 /* bennie_return_part2.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_return_part2.mp3; sourceTree = "<group>"; };
+		7CC7E1843A65F2012EA23F27 /* narrator_dice_start.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_dice_start.mp3; sourceTree = "<group>"; };
+		809E70B3061D468F747EFEA2 /* bennie_wrong_number_1.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_wrong_number_1.mp3; sourceTree = "<group>"; };
+		88C6E450727F07F3CF9471E3 /* bennie_dice_hint_10s.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_dice_hint_10s.mp3; sourceTree = "<group>"; };
+		89E9BC83EA767D197F7CE1DB /* bennie_celebration_30.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_celebration_30.mp3; sourceTree = "<group>"; };
+		8DFF5CDC83B7ED79E00E4083 /* narrator_player_question.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_player_question.mp3; sourceTree = "<group>"; };
+		917F01687AAA308D2E90CDA8 /* bennie_video_1min_warning.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_video_1min_warning.mp3; sourceTree = "<group>"; };
+		92DEAE2C903EC25F504EF12B /* success_bravo.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = success_bravo.mp3; sourceTree = "<group>"; };
+		9386F0BE90DCA44AE8A8D679 /* bennie_treasure_over20.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_treasure_over20.mp3; sourceTree = "<group>"; };
+		93E016E7FCD82484D686FDF7 /* bennie_celebration_15.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_celebration_15.mp3; sourceTree = "<group>"; };
+		95683B6D0CB0292F7493C9C5 /* narrator_show_number_4.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_show_number_4.mp3; sourceTree = "<group>"; };
+		96C9B02FA14DEB6958B8C4BC /* bennie_dice_hint_20s.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_dice_hint_20s.mp3; sourceTree = "<group>"; };
+		99CFFA123F6E9C72391883FB /* bennie_wrong_number_6.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_wrong_number_6.mp3; sourceTree = "<group>"; };
+		9A748A74E4738E0DA2F24B2D /* success_ja_genau.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = success_ja_genau.mp3; sourceTree = "<group>"; };
 		A1000002299E000100000001 /* BennieGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BennieGameApp.swift; sourceTree = "<group>"; };
-		AM000002299E000100000001 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		NS000002299E000100000001 /* NarratorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarratorService.swift; sourceTree = "<group>"; };
-		BS000002299E000100000001 /* BennieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BennieService.swift; sourceTree = "<group>"; };
-		SE000002299E000100000001 /* SoundEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffects.swift; sourceTree = "<group>"; };
-		MB000002299E000100000001 /* MuteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteButton.swift; sourceTree = "<group>"; };
 		A1000004299E000100000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1000006299E000100000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1000007299E000100000001 /* BennieGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BennieGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1000008299E000100000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABA65F310A868846E959DD7D /* narrator_loading_complete.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_loading_complete.mp3; sourceTree = "<group>"; };
+		AM000002299E000100000001 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		B1000002299E000100000001 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B1000004299E000100000001 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B24953B619502183A8A02068 /* bennie_return_part1.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_return_part1.mp3; sourceTree = "<group>"; };
+		B287DEF56632003E769879BD /* narrator_choose_number_5.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_choose_number_5.mp3; sourceTree = "<group>"; };
+		B94C2D01B335279828B9AA8A /* bennie_choose_hint_20s.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_choose_hint_20s.mp3; sourceTree = "<group>"; };
+		BAB0381D2DBF6D3ACC39825C /* narrator_show_number_2.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_show_number_2.mp3; sourceTree = "<group>"; };
+		BCB40E020D85AC09CFD59D57 /* narrator_choose_number_3.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_choose_number_3.mp3; sourceTree = "<group>"; };
+		BF5936987739D38AA30AE16C /* narrator_choose_number_1.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_choose_number_1.mp3; sourceTree = "<group>"; };
+		BF8237DA319D411265A357BD /* bennie_puzzle_start.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_puzzle_start.mp3; sourceTree = "<group>"; };
+		BS000002299E000100000001 /* BennieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BennieService.swift; sourceTree = "<group>"; };
+		CAB1F8FE772F0E953E551B3A /* narrator_show_number_3.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_show_number_3.mp3; sourceTree = "<group>"; };
+		CBFA92C910D705249FC711FE /* success_perfekt.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = success_perfekt.mp3; sourceTree = "<group>"; };
+		CD3E4B0F1221947B58D9E4BB /* narrator_home_question.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_home_question.mp3; sourceTree = "<group>"; };
+		CDD407866B887C65E6CC2CBF /* bennie_labyrinth_start.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_labyrinth_start.mp3; sourceTree = "<group>"; };
+		D0037815340A2A4389D2A695 /* bennie_puzzle_hint_10s.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_puzzle_hint_10s.mp3; sourceTree = "<group>"; };
+		D278F09D95FB23DFACEC3B2F /* narrator_choose_number_8.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_choose_number_8.mp3; sourceTree = "<group>"; };
+		D7138E37ED8DFAD81C053C28 /* narrator_show_number_1.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_show_number_1.mp3; sourceTree = "<group>"; };
+		E03A9ABF74C6C87D19C2A072 /* success_das_hast_du.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = success_das_hast_du.mp3; sourceTree = "<group>"; };
 		E1000002299E000100000001 /* BennieColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BennieColors.swift; sourceTree = "<group>"; };
 		E1000004299E000100000001 /* BennieTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BennieTypography.swift; sourceTree = "<group>"; };
+		E282C64BB8597DC4381BB95E /* narrator_puzzle_start.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_puzzle_start.mp3; sourceTree = "<group>"; };
+		EAC1139646709041F4F40B30 /* narrator_choose_number_9.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = narrator_choose_number_9.mp3; sourceTree = "<group>"; };
+		EB1F81FEED02FF40A5B629D7 /* success_super.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = success_super.mp3; sourceTree = "<group>"; };
+		ED20AFED2B64F6DBAB670919 /* bennie_treasure_under10.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_treasure_under10.mp3; sourceTree = "<group>"; };
 		F1000002299E000100000001 /* ChildFriendlyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildFriendlyButton.swift; sourceTree = "<group>"; };
 		F1000004299E000100000001 /* WoodButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodButton.swift; sourceTree = "<group>"; };
 		F1000006299E000100000001 /* WoodSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodSign.swift; sourceTree = "<group>"; };
 		F1000008299E000100000001 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		F100000A299E000100000001 /* ForestBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestBackground.swift; sourceTree = "<group>"; };
+		F60DCB786EA4CCEFC39F1643 /* bennie_puzzle_hint_20s.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_puzzle_hint_20s.mp3; sourceTree = "<group>"; };
+		F942D5F1243EFE920D18D677 /* bennie_labyrinth_hint.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_labyrinth_hint.mp3; sourceTree = "<group>"; };
+		FA3679EEA50C11774C449A3F /* bennie_celebration_10.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_celebration_10.mp3; sourceTree = "<group>"; };
+		FABC0F92AAA7D9A4216575F9 /* bennie_greeting_oliver.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_greeting_oliver.mp3; sourceTree = "<group>"; };
+		FBDA8BF945838A7BC011D82A /* bennie_greeting_part2.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = bennie_greeting_part2.mp3; sourceTree = "<group>"; };
 		G1000002299E000100000001 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		G1000004299E000100000001 /* PlayerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
 		G1000006299E000100000001 /* PlayerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStore.swift; sourceTree = "<group>"; };
@@ -78,19 +209,22 @@
 		I1000004299E000100000001 /* ZahlenSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZahlenSelectionView.swift; sourceTree = "<group>"; };
 		I1000006299E000100000001 /* TreasureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureView.swift; sourceTree = "<group>"; };
 		I1000008299E000100000001 /* ParentGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentGateView.swift; sourceTree = "<group>"; };
-		PD000002299E000100000001 /* ParentDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDashboardView.swift; sourceTree = "<group>"; };
 		J1000002299E000100000001 /* PuzzleMatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleMatchingView.swift; sourceTree = "<group>"; };
 		J1000004299E000100000001 /* LabyrinthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabyrinthView.swift; sourceTree = "<group>"; };
 		K1000002299E000100000001 /* WuerfelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WuerfelView.swift; sourceTree = "<group>"; };
 		K1000004299E000100000001 /* WaehleZahlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaehleZahlView.swift; sourceTree = "<group>"; };
 		L1000002299E000100000001 /* CoinFlyAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFlyAnimation.swift; sourceTree = "<group>"; };
 		M1000002299E000100000001 /* CelebrationOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationOverlay.swift; sourceTree = "<group>"; };
+		MB000002299E000100000001 /* MuteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteButton.swift; sourceTree = "<group>"; };
 		N1000002299E000100000001 /* VideoSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSelectionView.swift; sourceTree = "<group>"; };
 		N1000004299E000100000001 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
-		VS000002299E000100000001 /* VideoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStore.swift; sourceTree = "<group>"; };
-		VM000002299E000100000001 /* VideoManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManagementView.swift; sourceTree = "<group>"; };
+		NS000002299E000100000001 /* NarratorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarratorService.swift; sourceTree = "<group>"; };
+		PD000002299E000100000001 /* ParentDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDashboardView.swift; sourceTree = "<group>"; };
 		PS000002299E000100000001 /* ParentSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentSettings.swift; sourceTree = "<group>"; };
+		SE000002299E000100000001 /* SoundEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffects.swift; sourceTree = "<group>"; };
 		TS000002299E000100000001 /* TimeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingsView.swift; sourceTree = "<group>"; };
+		VM000002299E000100000001 /* VideoManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManagementView.swift; sourceTree = "<group>"; };
+		VS000002299E000100000001 /* VideoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +239,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		426C8E4C1E5F7C96C1F726BC /* Success */ = {
+			isa = PBXGroup;
+			children = (
+				92DEAE2C903EC25F504EF12B /* success_bravo.mp3 */,
+				E03A9ABF74C6C87D19C2A072 /* success_das_hast_du.mp3 */,
+				9A748A74E4738E0DA2F24B2D /* success_ja_genau.mp3 */,
+				CBFA92C910D705249FC711FE /* success_perfekt.mp3 */,
+				EB1F81FEED02FF40A5B629D7 /* success_super.mp3 */,
+				28112C77E235734CAA899A5D /* success_toll_gemacht.mp3 */,
+				3A690B70FDAA6DF48530759D /* success_wunderbar.mp3 */,
+			);
+			name = Success;
+			path = Success;
+			sourceTree = "<group>";
+		};
+		56BCF0273BA05B2DF896E528 /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				F4F30BCCBF6DFAD631CF9D0F /* Narrator */,
+				810D37C43B3FC570A1C4D949 /* Bennie */,
+				426C8E4C1E5F7C96C1F726BC /* Success */,
+			);
+			name = Voice;
+			path = Voice;
+			sourceTree = "<group>";
+		};
+		810D37C43B3FC570A1C4D949 /* Bennie */ = {
+			isa = PBXGroup;
+			children = (
+				FA3679EEA50C11774C449A3F /* bennie_celebration_10.mp3 */,
+				93E016E7FCD82484D686FDF7 /* bennie_celebration_15.mp3 */,
+				46E291890C7E5B848DE0EE90 /* bennie_celebration_20.mp3 */,
+				599ED041B8A12CB7C57BFD64 /* bennie_celebration_25.mp3 */,
+				89E9BC83EA767D197F7CE1DB /* bennie_celebration_30.mp3 */,
+				039280D18A0E9799BF920F04 /* bennie_celebration_5.mp3 */,
+				329E861802F79DBC94091E67 /* bennie_choose_hint_10s.mp3 */,
+				B94C2D01B335279828B9AA8A /* bennie_choose_hint_20s.mp3 */,
+				88C6E450727F07F3CF9471E3 /* bennie_dice_hint_10s.mp3 */,
+				96C9B02FA14DEB6958B8C4BC /* bennie_dice_hint_20s.mp3 */,
+				1C97671DDEE0C87868BEB8A5 /* bennie_dice_hint_30s.mp3 */,
+				422654D7B723C7096029F955 /* bennie_greeting_alexander.mp3 */,
+				FABC0F92AAA7D9A4216575F9 /* bennie_greeting_oliver.mp3 */,
+				FBDA8BF945838A7BC011D82A /* bennie_greeting_part2.mp3 */,
+				F942D5F1243EFE920D18D677 /* bennie_labyrinth_hint.mp3 */,
+				CDD407866B887C65E6CC2CBF /* bennie_labyrinth_start.mp3 */,
+				61E1178AFB81812BE6311237 /* bennie_labyrinth_wrong.mp3 */,
+				2801E0022980064CF8FDBB2D /* bennie_locked.mp3 */,
+				D0037815340A2A4389D2A695 /* bennie_puzzle_hint_10s.mp3 */,
+				F60DCB786EA4CCEFC39F1643 /* bennie_puzzle_hint_20s.mp3 */,
+				BF8237DA319D411265A357BD /* bennie_puzzle_start.mp3 */,
+				B24953B619502183A8A02068 /* bennie_return_part1.mp3 */,
+				7528A83C5059FBA9CA69BA08 /* bennie_return_part2.mp3 */,
+				2D4854BC3ED62F2EF4787AE2 /* bennie_treasure_10to19.mp3 */,
+				9386F0BE90DCA44AE8A8D679 /* bennie_treasure_over20.mp3 */,
+				ED20AFED2B64F6DBAB670919 /* bennie_treasure_under10.mp3 */,
+				917F01687AAA308D2E90CDA8 /* bennie_video_1min_warning.mp3 */,
+				170775ABC754DEEE9D2009A7 /* bennie_video_time_up.mp3 */,
+				809E70B3061D468F747EFEA2 /* bennie_wrong_number_1.mp3 */,
+				483EDAFDF49BB36111C9C082 /* bennie_wrong_number_2.mp3 */,
+				25BFE1A29863F2DCE3E03F8D /* bennie_wrong_number_3.mp3 */,
+				3FDC3318AB6C586402205446 /* bennie_wrong_number_4.mp3 */,
+				29C2F688FEAA73B7E6C3A048 /* bennie_wrong_number_5.mp3 */,
+				99CFFA123F6E9C72391883FB /* bennie_wrong_number_6.mp3 */,
+			);
+			name = Bennie;
+			path = Bennie;
+			sourceTree = "<group>";
+		};
 		A100000A299E000100000001 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +356,42 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		C1000003299E000100000001 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				C1000009299E000100000001 /* Loading */,
+				C100000A299E000100000001 /* PlayerSelection */,
+				C100000B299E000100000001 /* Home */,
+				C100000C299E000100000001 /* Activities */,
+				C100000D299E000100000001 /* Celebration */,
+				C100000E299E000100000001 /* Treasure */,
+				C100000F299E000100000001 /* Video */,
+				C1000010299E000100000001 /* Parent */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C1000004299E000100000001 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				C1000011299E000100000001 /* Theme */,
+				C1000012299E000100000001 /* Components */,
+				C1000013299E000100000001 /* Characters */,
+				C1000014299E000100000001 /* Layout */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		C1000005299E000100000001 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1000006299E000100000001 /* Assets.xcassets */,
+				C1000015299E000100000001 /* Lottie */,
+				C1000016299E000100000001 /* Audio */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C1000006299E000100000001 /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,21 +421,6 @@
 				B1000004299E000100000001 /* Extensions.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		C1000003299E000100000001 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				C1000009299E000100000001 /* Loading */,
-				C100000A299E000100000001 /* PlayerSelection */,
-				C100000B299E000100000001 /* Home */,
-				C100000C299E000100000001 /* Activities */,
-				C100000D299E000100000001 /* Celebration */,
-				C100000E299E000100000001 /* Treasure */,
-				C100000F299E000100000001 /* Video */,
-				C1000010299E000100000001 /* Parent */,
-			);
-			path = Features;
 			sourceTree = "<group>";
 		};
 		C1000009299E000100000001 /* Loading */ = {
@@ -231,26 +454,6 @@
 				I100000B299E000100000001 /* Zahlen */,
 			);
 			path = Activities;
-			sourceTree = "<group>";
-		};
-		I100000A299E000100000001 /* Raetsel */ = {
-			isa = PBXGroup;
-			children = (
-				I1000002299E000100000001 /* RaetselSelectionView.swift */,
-				J1000002299E000100000001 /* PuzzleMatchingView.swift */,
-				J1000004299E000100000001 /* LabyrinthView.swift */,
-			);
-			path = Raetsel;
-			sourceTree = "<group>";
-		};
-		I100000B299E000100000001 /* Zahlen */ = {
-			isa = PBXGroup;
-			children = (
-				I1000004299E000100000001 /* ZahlenSelectionView.swift */,
-				K1000002299E000100000001 /* WuerfelView.swift */,
-				K1000004299E000100000001 /* WaehleZahlView.swift */,
-			);
-			path = Zahlen;
 			sourceTree = "<group>";
 		};
 		C100000D299E000100000001 /* Celebration */ = {
@@ -289,17 +492,6 @@
 			path = Parent;
 			sourceTree = "<group>";
 		};
-		C1000004299E000100000001 /* Design */ = {
-			isa = PBXGroup;
-			children = (
-				C1000011299E000100000001 /* Theme */,
-				C1000012299E000100000001 /* Components */,
-				C1000013299E000100000001 /* Characters */,
-				C1000014299E000100000001 /* Layout */,
-			);
-			path = Design;
-			sourceTree = "<group>";
-		};
 		C1000011299E000100000001 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +508,7 @@
 				F1000004299E000100000001 /* WoodButton.swift */,
 				F1000006299E000100000001 /* WoodSign.swift */,
 				F1000008299E000100000001 /* ProgressBar.swift */,
+				F100000A299E000100000001 /* ForestBackground.swift */,
 				L1000002299E000100000001 /* CoinFlyAnimation.swift */,
 				MB000002299E000100000001 /* MuteButton.swift */,
 			);
@@ -336,16 +529,6 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
-		C1000005299E000100000001 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A1000006299E000100000001 /* Assets.xcassets */,
-				C1000015299E000100000001 /* Lottie */,
-				C1000016299E000100000001 /* Audio */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		C1000015299E000100000001 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +543,7 @@
 				C1000018299E000100000001 /* Bennie */,
 				C1000019299E000100000001 /* Music */,
 				C100001A299E000100000001 /* Effects */,
+				56BCF0273BA05B2DF896E528 /* Voice */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -390,6 +574,59 @@
 			children = (
 			);
 			path = Effects;
+			sourceTree = "<group>";
+		};
+		F4F30BCCBF6DFAD631CF9D0F /* Narrator */ = {
+			isa = PBXGroup;
+			children = (
+				BF5936987739D38AA30AE16C /* narrator_choose_number_1.mp3 */,
+				5D8237C4F82D3B8631757E6C /* narrator_choose_number_10.mp3 */,
+				0083A7781A6799C34AC31D04 /* narrator_choose_number_2.mp3 */,
+				BCB40E020D85AC09CFD59D57 /* narrator_choose_number_3.mp3 */,
+				068D660524F10A2EF15F1B91 /* narrator_choose_number_4.mp3 */,
+				B287DEF56632003E769879BD /* narrator_choose_number_5.mp3 */,
+				262E0F89D32A7F4A7CC6AF9E /* narrator_choose_number_6.mp3 */,
+				145DE9C49D47F668D5F8A886 /* narrator_choose_number_7.mp3 */,
+				D278F09D95FB23DFACEC3B2F /* narrator_choose_number_8.mp3 */,
+				EAC1139646709041F4F40B30 /* narrator_choose_number_9.mp3 */,
+				7CC7E1843A65F2012EA23F27 /* narrator_dice_start.mp3 */,
+				4531182C0C9B8A67802ECF29 /* narrator_film_ab.mp3 */,
+				616952A0CD7AC96E66B15AE5 /* narrator_hello_alexander.mp3 */,
+				6BEF6DB6560FB880CEF75FDF /* narrator_hello_oliver.mp3 */,
+				CD3E4B0F1221947B58D9E4BB /* narrator_home_question.mp3 */,
+				626B3668D8DD09670107B548 /* narrator_labyrinth_start.mp3 */,
+				ABA65F310A868846E959DD7D /* narrator_loading_complete.mp3 */,
+				8DFF5CDC83B7ED79E00E4083 /* narrator_player_question.mp3 */,
+				E282C64BB8597DC4381BB95E /* narrator_puzzle_start.mp3 */,
+				D7138E37ED8DFAD81C053C28 /* narrator_show_number_1.mp3 */,
+				BAB0381D2DBF6D3ACC39825C /* narrator_show_number_2.mp3 */,
+				CAB1F8FE772F0E953E551B3A /* narrator_show_number_3.mp3 */,
+				95683B6D0CB0292F7493C9C5 /* narrator_show_number_4.mp3 */,
+				12027C2AADAE15F0F630787B /* narrator_show_number_5.mp3 */,
+				368BB08F44B1F763A0B43E81 /* narrator_show_number_6.mp3 */,
+			);
+			name = Narrator;
+			path = Narrator;
+			sourceTree = "<group>";
+		};
+		I100000A299E000100000001 /* Raetsel */ = {
+			isa = PBXGroup;
+			children = (
+				I1000002299E000100000001 /* RaetselSelectionView.swift */,
+				J1000002299E000100000001 /* PuzzleMatchingView.swift */,
+				J1000004299E000100000001 /* LabyrinthView.swift */,
+			);
+			path = Raetsel;
+			sourceTree = "<group>";
+		};
+		I100000B299E000100000001 /* Zahlen */ = {
+			isa = PBXGroup;
+			children = (
+				I1000004299E000100000001 /* ZahlenSelectionView.swift */,
+				K1000002299E000100000001 /* WuerfelView.swift */,
+				K1000004299E000100000001 /* WaehleZahlView.swift */,
+			);
+			path = Zahlen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,6 +694,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1000005299E000100000001 /* Assets.xcassets in Resources */,
+				368E1BDA63AC5C8AFE4B5B05 /* narrator_choose_number_1.mp3 in Resources */,
+				3D743FCD89A9BBA7E524E588 /* narrator_choose_number_10.mp3 in Resources */,
+				6AE12F556C7CBD72FD2DDFD1 /* narrator_choose_number_2.mp3 in Resources */,
+				8088CCE7F60B2BB564D61F4B /* narrator_choose_number_3.mp3 in Resources */,
+				0947AD00D928DECB1C0A8527 /* narrator_choose_number_4.mp3 in Resources */,
+				8435A9CAF753E4A00602E7E5 /* narrator_choose_number_5.mp3 in Resources */,
+				0CCE91368A47A8DA3871BDA7 /* narrator_choose_number_6.mp3 in Resources */,
+				889D2328A5CD62EF9CFEAEAA /* narrator_choose_number_7.mp3 in Resources */,
+				1665595928873704C5AD09B6 /* narrator_choose_number_8.mp3 in Resources */,
+				C987A0A94AC035D16B0E6148 /* narrator_choose_number_9.mp3 in Resources */,
+				412DD16E19A4597309EAA4C3 /* narrator_dice_start.mp3 in Resources */,
+				7F34FE2AFC2A982ABB8B2A06 /* narrator_film_ab.mp3 in Resources */,
+				B6A49E791B4944ABE142842E /* narrator_hello_alexander.mp3 in Resources */,
+				492794B79403BE91B5BBFE92 /* narrator_hello_oliver.mp3 in Resources */,
+				849F8FB9D94FE3C1738FA4BC /* narrator_home_question.mp3 in Resources */,
+				FF5B67B1CCE75A2464B0F2D2 /* narrator_labyrinth_start.mp3 in Resources */,
+				8AAFC2E36F5BE715B2BA7DD9 /* narrator_loading_complete.mp3 in Resources */,
+				CE8242B10D10011A45FA68BC /* narrator_player_question.mp3 in Resources */,
+				17EA11B46BC0EB5D34984C2D /* narrator_puzzle_start.mp3 in Resources */,
+				7CF5D0B39E991359E512D8B7 /* narrator_show_number_1.mp3 in Resources */,
+				700F16BF32DA53D8F629130B /* narrator_show_number_2.mp3 in Resources */,
+				AE79CAAEB09B8C0CB40D7285 /* narrator_show_number_3.mp3 in Resources */,
+				F2A6D8C6E7005990348C74B3 /* narrator_show_number_4.mp3 in Resources */,
+				BB9499A4BA015AB8E0955927 /* narrator_show_number_5.mp3 in Resources */,
+				42B2A03A89B9F5A132F456A7 /* narrator_show_number_6.mp3 in Resources */,
+				F5028F53A2E41EFC26E2B63F /* bennie_celebration_10.mp3 in Resources */,
+				EF7134605D88DE3B99FB8F9E /* bennie_celebration_15.mp3 in Resources */,
+				37EBF1BF16CE9B37364A788E /* bennie_celebration_20.mp3 in Resources */,
+				B83B38203EA32FB86D26D005 /* bennie_celebration_25.mp3 in Resources */,
+				1898B2C54B208F2368431BCA /* bennie_celebration_30.mp3 in Resources */,
+				570CE30C967BA5B70BA1C2C9 /* bennie_celebration_5.mp3 in Resources */,
+				34F7EA2E36CDA51AE20491B7 /* bennie_choose_hint_10s.mp3 in Resources */,
+				93FA44F23A4BD3BCE167AB48 /* bennie_choose_hint_20s.mp3 in Resources */,
+				55184389F81F5E58A064F788 /* bennie_dice_hint_10s.mp3 in Resources */,
+				807F13F6DB1A82F0FD9BFAE2 /* bennie_dice_hint_20s.mp3 in Resources */,
+				CFDEBBF75D56CD6B8CE548CC /* bennie_dice_hint_30s.mp3 in Resources */,
+				B8CD0638AD1D0936AD1B072F /* bennie_greeting_alexander.mp3 in Resources */,
+				8BB303EF3859C14A4725082D /* bennie_greeting_oliver.mp3 in Resources */,
+				B243391C0EBFCAB0F278E945 /* bennie_greeting_part2.mp3 in Resources */,
+				C18E5A79B0DF917EFD351C6D /* bennie_labyrinth_hint.mp3 in Resources */,
+				6145455978C9A275A62B1166 /* bennie_labyrinth_start.mp3 in Resources */,
+				1CC6A3CF87F03F5066089EA5 /* bennie_labyrinth_wrong.mp3 in Resources */,
+				7618E18077E8C34E983FBEC6 /* bennie_locked.mp3 in Resources */,
+				284F4862C9D6092399E6272B /* bennie_puzzle_hint_10s.mp3 in Resources */,
+				ADD8856B598F9DEAB2B71174 /* bennie_puzzle_hint_20s.mp3 in Resources */,
+				0953708DD4021115C9AEDE2C /* bennie_puzzle_start.mp3 in Resources */,
+				FBFF94914233298F1621F4B4 /* bennie_return_part1.mp3 in Resources */,
+				D51446EB08BD07F6F7352B20 /* bennie_return_part2.mp3 in Resources */,
+				99E1FDEDF0895317F99EDEAF /* bennie_treasure_10to19.mp3 in Resources */,
+				CCF0D3E5A17790DFC1B4D5D1 /* bennie_treasure_over20.mp3 in Resources */,
+				3043B5F10269DFE283C77DA8 /* bennie_treasure_under10.mp3 in Resources */,
+				2A81FE0DCB22759BAC114946 /* bennie_video_1min_warning.mp3 in Resources */,
+				1CAF401000157357A541B00C /* bennie_video_time_up.mp3 in Resources */,
+				04421A33C8EA1871983AE5A5 /* bennie_wrong_number_1.mp3 in Resources */,
+				21E6303A0C84DB3F22A79AD1 /* bennie_wrong_number_2.mp3 in Resources */,
+				232EACE1870C52F8A88F307B /* bennie_wrong_number_3.mp3 in Resources */,
+				F7D523F1E2E590C11EB7B834 /* bennie_wrong_number_4.mp3 in Resources */,
+				1FDFE2075E8A7DE8B5DDA075 /* bennie_wrong_number_5.mp3 in Resources */,
+				EB0FB85753D928F8264042B1 /* bennie_wrong_number_6.mp3 in Resources */,
+				9FA3AD1567D8BAC3BEB44E5E /* success_bravo.mp3 in Resources */,
+				BAB747D8DFC3BABC151136F3 /* success_das_hast_du.mp3 in Resources */,
+				CFFED2EEDC89036CD2589655 /* success_ja_genau.mp3 in Resources */,
+				C1F69F92B73F6A50FE9362EB /* success_perfekt.mp3 in Resources */,
+				78A4F4CAE3F464B6F643F038 /* success_super.mp3 in Resources */,
+				95DEE524491CB6EDCB2F305C /* success_toll_gemacht.mp3 in Resources */,
+				05990AD999070B266475ACE0 /* success_wunderbar.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +784,7 @@
 				F1000003299E000100000001 /* WoodButton.swift in Sources */,
 				F1000005299E000100000001 /* WoodSign.swift in Sources */,
 				F1000007299E000100000001 /* ProgressBar.swift in Sources */,
+				F1000009299E000100000001 /* ForestBackground.swift in Sources */,
 				G1000001299E000100000001 /* GameState.swift in Sources */,
 				G1000003299E000100000001 /* PlayerData.swift in Sources */,
 				G1000005299E000100000001 /* PlayerStore.swift in Sources */,
